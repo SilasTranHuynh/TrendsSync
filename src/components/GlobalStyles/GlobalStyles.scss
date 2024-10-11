@@ -1,0 +1,16 @@
+@import 'normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Imbue:opsz,wght@10..100,100..900&display=swap');
+
+:root {
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Imbue', serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    text-rendering: optimizeSpeed;
+}
