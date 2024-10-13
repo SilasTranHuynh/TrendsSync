@@ -1,0 +1,140 @@
+.wrapper {
+    width: 100%;
+    height: 128px;
+    color: #fff;
+    text-shadow: 1px 1px black;
+}
+
+.header-top,
+.header-bottom {
+    width: 100%;
+    border-bottom: 2.5px solid black;
+    cursor: pointer;
+}
+
+.header-top {
+    height: 70px;
+    display: flex;
+    background: linear-gradient(to right, #284185, #8a58c3, #ce0dd5bf);
+}
+
+.header-bottom {
+    height: 58px;
+    background: linear-gradient(to left, #3b59ae, #9260cc, #c166da);
+}
+
+.logo {
+    position: relative;
+    align-self: center;
+    padding-right: 2px;
+    padding-left: 60px;
+    font-size: 46px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.logo-link {
+    text-decoration: none;
+    color: #fff;
+}
+
+.slogan {
+    position: relative;
+    align-self: center;
+    top: 10%;
+    font-size: 23px;
+    letter-spacing: 0.5px;
+}
+
+.media-page {
+    position: absolute;
+    align-self: center;
+    display: flex;
+    right: 0;
+    padding-right: 60px;
+}
+
+.media-page-instagram {
+    padding-right: 31px;
+}
+
+.media-page-facebook {
+    padding-right: 31px;
+}
+
+.media-logo {
+    width: 37px;
+    height: 37px;
+}
+
+.contents {
+    position: absolute;
+    line-height: 58px;
+    display: flex;
+    padding-left: 145px;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.topic,
+.hashtag,
+.post,
+.video {
+    margin-right: 160px;
+}
+
+.topic,
+.hashtag {
+    color: #fff;
+    text-decoration: none;
+}
+
+.inner-box {
+    margin-top: 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.inner-box:hover {
+    opacity: 0.5;
+}
+
+.user {
+    position: absolute;
+    align-self: center;
+    line-height: 58px;
+    display: flex;
+    right: 0;
+    padding-right: 145px;
+    align-items: center;
+}
+
+.bell {
+    position: relative;
+    display: flex;
+    top: 15%;
+    width: 37px;
+    height: 37px;
+}
+
+.separation {
+    width: 21px;
+    height: 58px;
+    border-left: 3px solid black;
+    margin-left: 14px;
+}
+
+.icon {
+    position: relative;
+    display: flex;
+    top: 15%;
+    width: 37px;
+    height: 37px;
+}
+
+.text {
+    margin-left: 12px;
+    font-size: 21px;
+    font-weight: 700;
+}
