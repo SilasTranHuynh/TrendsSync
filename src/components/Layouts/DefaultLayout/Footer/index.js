@@ -2,6 +2,10 @@ import classNames from 'classnames/bind';
 import styles from './footer.module.scss';
 import { Link } from 'react-router-dom';
 
+import facebookLogo from '~/assets/images/facebook_mediapagelogo.png';
+import instagramLogo from '~/assets/images/‌instagram_mediapagelogo.png';
+import tiktokLogo from '~/assets/images/tiktok_mediapagelogo.png';
+
 const cx = classNames.bind(styles);
 
 function Footer() {
@@ -73,6 +77,39 @@ function Footer() {
                     <Link to="/" className={cx('tiktok')}>
                         Tiktok
                     </Link>
+                </div>
+            </div>
+
+            <div className={cx('wrapper-mobile')}>
+                <div className={cx('logo')}>
+                    <Link to="/" className={cx('logo-link')}>
+                        TrendSync
+                    </Link>
+                </div>
+                <div className={cx('slogan')}>
+                    <span>Keep you in sync with future trends</span>
+                </div>
+                <div className={cx('contents-mobile')}>
+                    <Link to="/" className={cx('link-mobile')}>
+                        ACCOUNT
+                    </Link>
+                    <Link to="/" className={cx('link-mobile')}>
+                        PLATFORM
+                    </Link>
+                    <Link to="/" className={cx('link-mobile')}>
+                        CONTACT
+                    </Link>
+                    <div className={cx('media-page')}>
+                        <div className={cx('media-page-instagram')}>
+                            <img className={cx('media-logo')} src={instagramLogo} />
+                        </div>
+                        <div className={cx('media-page-facebook')}>
+                            <img className={cx('media-logo')} src={facebookLogo} />
+                        </div>
+                        <div className={cx('media-page-tiktok')}>
+                            <img className={cx('media-logo')} src={tiktokLogo} />
+                        </div>
+                    </div>
                 </div>
             </div>
         </footer>
