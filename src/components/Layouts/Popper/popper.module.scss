@@ -1,5 +1,56 @@
-.wrapper {
-    width: 160px;
-    height: auto;
-    background: linear-gradient(to left, #3b59ae, #9260cc, #c166da);
+// Desktop : Large - Small
+@media (min-width: 1201px) {
+    .wrapper {
+        width: 160px;
+        height: auto;
+        background: linear-gradient(to left, #3b59ae, #9260cc, #c166da);
+        border: 3px solid #000;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+    .wrapper {
+        width: 110px;
+        height: auto;
+        background: linear-gradient(to left, #3b59ae, #9260cc, #c166da);
+        border: 3px solid #000;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+// Tablet: Large - Medium - Small
+@media (min-width: 897px) and (max-width: 1024px) {
+    .wrapper {
+        width: 90px;
+        height: auto;
+        background: linear-gradient(to left, #3b59ae, #9260cc, #c166da);
+        border: 3px solid #000;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 896px) {
+    .wrapper {
+        width: 85px;
+        height: auto;
+        background: linear-gradient(to left, #3b59ae, #9260cc, #c166da);
+        border: 3px solid #000;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+@media (max-width: 769px) {
+    .wrapper {
+        width: 77px;
+        height: auto;
+        background: linear-gradient(to left, #3b59ae, #9260cc, #c166da);
+        border: 3px solid #000;
+        padding: 0;
+        margin: 0;
+    }
 }

@@ -1,0 +1,99 @@
+@media (min-width: 768px) {
+    .container {
+        background-color: white;
+        padding: 20px;
+        border: 1px solid #ddd;
+        margin: 0 auto;
+        width: 80%;
+        height: auto;
+    }
+
+    .trend-list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .trend-row {
+        display: flex;
+        align-items: center;
+        padding: 10px 0;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+
+    .trend-title {
+        font-size: 25px;
+        color: #333;
+        width: 50%;
+    }
+
+    .trend-volume {
+        display: flex;
+        position: relative;
+        justify-content: flex-end;
+        font-size: 20px;
+        color: #444;
+        width: 25%;
+    }
+
+    .trend-time {
+        display: flex;
+        font-size: 20px;
+        color: #666;
+        position: relative;
+        width: 25%;
+        justify-content: flex-end;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        background-color: white;
+        padding: 20px;
+        border: 1px solid #ddd;
+        margin: 0 auto;
+        width: 90%;
+        height: auto;
+    }
+
+    .trend-list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .trend-row {
+        display: flex;
+        align-items: center;
+        padding: 10px 0;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+
+    .trend-title {
+        font-size: 25px;
+        color: #333;
+        width: 36%;
+    }
+
+    .trend-volume {
+        display: flex;
+        position: relative;
+        justify-content: flex-end;
+        font-size: 20px;
+        color: #444;
+        width: 32%;
+    }
+
+    .trend-time {
+        display: flex;
+        font-size: 20px;
+        color: #666;
+        position: relative;
+        width: 32%;
+        justify-content: flex-end;
+    }
+}
