@@ -1,0 +1,225 @@
+.container {
+    width: 70%;
+    height: auto;
+    background-color: #fff;
+    justify-self: center;
+    font-size: 1.75rem;
+}
+
+.timeline-list a {
+    text-decoration: none;
+    color: #3035b7;
+}
+
+.timeline-list a:hover {
+    color: rgba(0, 0, 0, 0.503);
+}
+
+.hashtag-list {
+    display: flex;
+    flex-direction: column;
+    padding: 7px 0px 0px 0px;
+}
+
+.hashtag-card {
+    display: flex;
+    border-bottom: 1px solid #eee;
+    height: 45px;
+    line-height: 45px;
+}
+
+.hashtag-card:hover {
+    background: rgba(231, 231, 231, 0.819);
+}
+
+// Extra Large
+@media (min-width: 1201px) {
+    .container {
+        width: 70%;
+        height: auto;
+        background-color: #fff;
+        justify-self: center;
+        font-size: 1.75rem;
+    }
+
+    .main-title {
+        font-size: 3.75rem;
+        padding: 10px 0px 10px 0px;
+    }
+
+    .timeline-list {
+        height: 45px;
+        justify-self: center;
+        line-height: 45px;
+        padding: 0px 0px 15px 0px;
+        border: 1px solid #eee;
+        background: rgba(231, 231, 231, 0.819);
+    }
+
+    .timeline-list a {
+        font-size: 1.75rem;
+        padding: 11px;
+    }
+
+    .hashtag-time,
+    .hashtag-view {
+        width: 20%;
+        text-align: right;
+        padding-right: 20px;
+    }
+
+    .hashtag-rank {
+        width: 5%;
+        text-align: center;
+    }
+
+    .hashtag-title {
+        width: 55%;
+        text-align: left;
+        padding-left: 20px;
+    }
+}
+
+//Large + Medium
+@media (min-width: 769px) and (max-width: 1200px) {
+    .container {
+        width: 70%;
+        height: auto;
+        background-color: #fff;
+        justify-self: center;
+        font-size: 1.75rem;
+    }
+
+    .main-title {
+        font-size: 3.25rem;
+        padding: 10px 0px 10px 0px;
+    }
+
+    .timeline-list {
+        height: 45px;
+        justify-self: center;
+        line-height: 45px;
+        padding: 0px 0px 15px 0px;
+        border: 1px solid #eee;
+        background: rgba(231, 231, 231, 0.819);
+    }
+
+    .timeline-list a {
+        font-size: 1.75rem;
+        padding: 10px;
+    }
+
+    .hashtag-time,
+    .hashtag-view {
+        width: 20%;
+        text-align: right;
+        padding-right: 15px;
+    }
+
+    .hashtag-rank {
+        width: 5%;
+        text-align: center;
+    }
+
+    .hashtag-title {
+        width: 55%;
+        text-align: left;
+        padding-left: 15px;
+    }
+}
+
+//Small
+@media (min-width: 577px) and (max-width: 768px) {
+    .container {
+        width: 70%;
+        height: auto;
+        background-color: #fff;
+        justify-self: center;
+        font-size: 1.39rem;
+    }
+
+    .main-title {
+        font-size: 3rem;
+        padding: 10px 0px 10px 0px;
+    }
+
+    .timeline-list {
+        height: 45px;
+        justify-self: center;
+        line-height: 45px;
+        padding: 0px 0px 15px 0px;
+        border: 1px solid #eee;
+        background: rgba(231, 231, 231, 0.819);
+    }
+
+    .timeline-list a {
+        font-size: 1.5rem;
+        padding: 6px;
+    }
+
+    .hashtag-time,
+    .hashtag-view {
+        width: 18%;
+        text-align: right;
+        padding-right: 15px;
+    }
+
+    .hashtag-rank {
+        width: 5%;
+        text-align: center;
+    }
+
+    .hashtag-title {
+        width: 59%;
+        text-align: left;
+        padding-left: 15px;
+    }
+}
+
+//Extra Small
+@media (max-width: 576px) {
+    .container {
+        width: 70%;
+        height: auto;
+        background-color: #fff;
+        justify-self: center;
+        font-size: 1.3rem;
+    }
+
+    .main-title {
+        font-size: 2.9rem;
+        padding: 10px 0px 10px 0px;
+    }
+
+    .timeline-list {
+        height: 42px;
+        justify-self: center;
+        line-height: 42px;
+        padding: 0px 0px 15px 0px;
+        border: 1px solid #eee;
+        background: rgba(231, 231, 231, 0.819);
+    }
+
+    .timeline-list a {
+        font-size: 1.2rem;
+        padding: 2.75px;
+    }
+
+    .hashtag-time,
+    .hashtag-view {
+        width: 20%;
+        text-align: right;
+        padding-right: 3px;
+    }
+
+    .hashtag-rank {
+        width: 5%;
+        text-align: center;
+    }
+
+    .hashtag-title {
+        width: 55%;
+        text-align: left;
+        padding-left: 15px;
+    }
+}
