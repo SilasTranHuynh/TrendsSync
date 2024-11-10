@@ -3,6 +3,9 @@ import Hashtag from '~/pages/Hashtag';
 import Topic from '~/pages/Topic';
 import PostReddit from '~/pages/PostReddit';
 import PostNews from '~/pages/PostNews';
+import VideoVN  from '~/pages/VideoVN'; 
+import VideoUS from '~/pages/VideoUS';
+import VideoKR from '~/pages/VideoKR';
 
 const publicRoutes = [
     { path: '/', component: Home },
@@ -10,6 +13,9 @@ const publicRoutes = [
     { path: '/topic', component: Topic },
     { path: '/postReddit', component: PostReddit },
     { path: '/postNews', component: PostNews },
+    { path: '/videoVN', component: VideoVN},
+    { path: '/videoUS', component: VideoUS},
+    { path: '/videoKR', component: VideoKR}
 ];
 
 const privateRoutes = [];
