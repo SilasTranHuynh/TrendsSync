@@ -1,99 +1,241 @@
-@media (min-width: 768px) {
+.timeline-list a {
+    text-decoration: none;
+    color: #3035b7;
+}
+
+.timeline-list a:hover {
+    color: rgba(0, 0, 0, 0.503);
+}
+
+.topic-list {
+    display: flex;
+    flex-direction: column;
+    padding: 7px 0px 0px 0px;
+}
+
+.topic-card {
+    display: flex;
+    border-bottom: 1px solid #eee;
+    height: 45px;
+    line-height: 45px;
+}
+
+.topic-card:hover {
+    background: rgba(231, 231, 231, 0.819);
+}
+
+// Extra Large
+@media (min-width: 1201px) {
     .container {
-        background-color: white;
-        padding: 20px;
-        border: 1px solid #ddd;
-        margin: 0 auto;
-        width: 80%;
+        width: 85%;
         height: auto;
+        background-color: #fff;
+        justify-self: center;
+        font-size: 1.75rem;
     }
 
-    .trend-list {
-        display: flex;
-        flex-direction: column;
+    .main-title {
+        font-size: 3.75rem;
+        padding: 10px 0px 10px 0px;
+        text-align: center;
     }
 
-    .trend-row {
-        display: flex;
-        align-items: center;
-        padding: 10px 0;
-        border-bottom: 1px solid #eee;
-        position: relative;
-        width: 100%;
-        height: auto;
+    .timeline-list {
+        height: 45px;
+        justify-self: center;
+        line-height: 45px;
+        padding: 0px 0px 15px 0px;
+        border: 1px solid #eee;
+        background: rgba(231, 231, 231, 0.819);
     }
 
-    .trend-title {
-        font-size: 25px;
-        color: #333;
+    .timeline-list a {
+        font-size: 1.75rem;
+        padding: 11px;
+    }
+
+    .topic-time,
+    .topic-view {
+        width: 15%;
+        text-align: right;
+        padding-right: 20px;
+    }
+
+    .topic-rank {
+        width: 5%;
+        text-align: center;
+    }
+
+    .topic-title {
         width: 50%;
+        text-align: left;
+        padding-left: 20px;
     }
 
-    .trend-volume {
-        display: flex;
-        position: relative;
-        justify-content: flex-end;
-        font-size: 20px;
-        color: #444;
-        width: 25%;
-    }
-
-    .trend-time {
-        display: flex;
-        font-size: 20px;
-        color: #666;
-        position: relative;
-        width: 25%;
-        justify-content: flex-end;
+    .topic-chart {
+        width: 15%;
     }
 }
 
-@media (max-width: 768px) {
+//Large + Medium
+@media (min-width: 769px) and (max-width: 1200px) {
     .container {
-        background-color: white;
-        padding: 20px;
-        border: 1px solid #ddd;
-        margin: 0 auto;
-        width: 90%;
+        width: 85%;
         height: auto;
+        background-color: #fff;
+        justify-self: center;
+        font-size: 1.75rem;
     }
 
-    .trend-list {
-        display: flex;
-        flex-direction: column;
+    .main-title {
+        font-size: 3.25rem;
+        padding: 10px 0px 10px 0px;
+        text-align: center;
     }
 
-    .trend-row {
-        display: flex;
-        align-items: center;
-        padding: 10px 0;
-        border-bottom: 1px solid #eee;
-        position: relative;
-        width: 100%;
+    .timeline-list {
+        height: 45px;
+        justify-self: center;
+        line-height: 45px;
+        padding: 0px 0px 15px 0px;
+        border: 1px solid #eee;
+        background: rgba(231, 231, 231, 0.819);
+    }
+
+    .timeline-list a {
+        font-size: 1.75rem;
+        padding: 10px;
+    }
+
+    .topic-time,
+    .topic-view {
+        width: 15%;
+        text-align: right;
+        padding-right: 15px;
+    }
+
+    .topic-rank {
+        width: 5%;
+        text-align: right;
+    }
+
+    .topic-title {
+        width: 43%;
+        text-align: left;
+        padding-left: 30px;
+    }
+
+    .topic-chart {
+        width: 22%;
+    }
+}
+
+//Small
+@media (min-width: 577px) and (max-width: 768px) {
+    .container {
+        width: 85%;
         height: auto;
+        background-color: #fff;
+        justify-self: center;
+        font-size: 1.39rem;
     }
 
-    .trend-title {
-        font-size: 25px;
-        color: #333;
-        width: 36%;
+    .main-title {
+        font-size: 3rem;
+        padding: 10px 0px 10px 0px;
+        text-align: center;
     }
 
-    .trend-volume {
-        display: flex;
-        position: relative;
-        justify-content: flex-end;
-        font-size: 20px;
-        color: #444;
-        width: 32%;
+    .timeline-list {
+        height: 45px;
+        justify-self: center;
+        line-height: 45px;
+        padding: 0px 0px 15px 0px;
+        border: 1px solid #eee;
+        background: rgba(231, 231, 231, 0.819);
     }
 
-    .trend-time {
-        display: flex;
-        font-size: 20px;
-        color: #666;
-        position: relative;
-        width: 32%;
-        justify-content: flex-end;
+    .timeline-list a {
+        font-size: 1.5rem;
+        padding: 6px;
+    }
+
+    .topic-time,
+    .topic-view {
+        width: 18%;
+        text-align: right;
+        padding-right: 15px;
+    }
+
+    .topic-rank {
+        width: 5%;
+        text-align: center;
+    }
+
+    .topic-title {
+        width: 59%;
+        text-align: left;
+        padding-left: 15px;
+    }
+
+    .topic-chart {
+        width: 25%;
+        text-align: right;
+        display: none;
+    }
+}
+
+//Extra Small
+@media (max-width: 576px) {
+    .container {
+        width: 85%;
+        height: auto;
+        background-color: #fff;
+        justify-self: center;
+        font-size: 1.3rem;
+    }
+
+    .main-title {
+        font-size: 2.9rem;
+        padding: 10px 0px 10px 0px;
+        text-align: center;
+    }
+
+    .timeline-list {
+        height: 42px;
+        justify-self: center;
+        line-height: 42px;
+        padding: 0px 0px 15px 0px;
+        border: 1px solid #eee;
+        background: rgba(231, 231, 231, 0.819);
+    }
+
+    .timeline-list a {
+        font-size: 1.35rem;
+        padding: 4px;
+    }
+
+    .topic-time,
+    .topic-view {
+        width: 20%;
+        text-align: right;
+        padding-right: 4px;
+    }
+
+    .topic-rank {
+        width: 5%;
+        text-align: center;
+    }
+
+    .topic-title {
+        width: 55%;
+        text-align: left;
+        padding-left: 15px;
+    }
+
+    .topic-chart {
+        width: 25%;
+        text-align: right;
+        display: none;
     }
 }

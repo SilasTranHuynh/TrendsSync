@@ -1,34 +1,90 @@
 .container {
-    max-width: 800px;
-    margin: 20px auto;
+    width: 70%;
+    height: auto;
+    background-color: #fff;
+    justify-self: center;
+    overflow-y: auto;
 }
 
-.post {
-    position: relative;
-    background-color: rgba(254, 254, 254, 0.5);
-    padding: 15px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    height: 450px;
-}
-
-.post-header {
+.news-author {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-    font-size: 12px;
-    color: #777;
-}
-
-.post-body h2 {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.post-body img {
     position: relative;
-    width: 100%;
-    height: 330px;
-    border: 2.5px solid rgba(199, 200, 112, 0.4);
-    object-fit: contain;
+}
+
+.news-source {
+    display: flex;
+    position: relative;
+}
+
+.news-title,
+.news-time,
+.news-source {
+    padding-left: 3px;
+}
+
+.news-author {
+    padding-right: 3px;
+}
+
+@media (min-width: 993px) {
+    .main-title {
+        font-size: 3.25rem;
+        padding: 40px 0px 30px 0px;
+        text-align: center;
+    }
+
+    .waiting {
+        font-size: 1.75rem;
+    }
+
+    .news-list {
+        display: flex;
+        flex-direction: column;
+        padding: 7px 0px 0px 0px;
+        justify-self: center;
+        width: 65%;
+    }
+
+    .news-card {
+        width: 100%;
+        height: auto;
+        border-bottom: 2px solid #1e1e1e5b;
+        margin: 10px 0px 10px 0px;
+    }
+
+    .news-card:hover {
+        background-color: rgba(121, 120, 120, 0.262);
+        border: 1px solid rgba(121, 120, 120, 0.064);
+        border-radius: 6px;
+    }
+
+    .source-author {
+        display: flex;
+        font-size: 1.75rem;
+        position: relative;
+        justify-content: space-between;
+    }
+
+    .news-thumbnail {
+        width: 100%;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .news-thumbnail-img {
+        max-width: 90%;
+        width: auto;
+        height: 100%;
+        object-fit: contain;
+        align-self: center;
+    }
+
+    .news-title {
+        font-size: 2.25rem;
+    }
+
+    .news-time {
+        font-size: 1.75rem;
+    }
 }
