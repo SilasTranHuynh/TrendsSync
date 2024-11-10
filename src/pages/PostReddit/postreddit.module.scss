@@ -1,44 +1,95 @@
 .container {
-    max-width: 800px;
-    margin: 20px auto;
+    width: 70%;
+    height: auto;
+    background-color: #fff;
+    justify-self: center;
+    overflow-y: auto;
 }
 
-.post {
-    position: relative;
-    background-color: rgba(254, 254, 254, 0.5);
-    padding: 15px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    height: 450px;
-}
-
-.post-header {
+.reddit-author {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-    font-size: 12px;
-    color: #777;
-}
-
-.post-body h2 {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.post-body img {
     position: relative;
-    width: 100%;
-    height: 330px;
-    border: 2.5px solid rgba(199, 200, 112, 0.4);
-    object-fit: contain;
 }
 
-.post-footer {
+.reddit-time {
     display: flex;
-    position: absolute;
-    justify-content: space-between;
-    margin-top: 10px;
-    font-size: 12px;
-    color: #777;
-    bottom: 3%;
+    position: relative;
+}
+
+.reddit-title,
+.reddit-upvotes,
+.reddit-author {
+    padding-left: 3px;
+}
+
+.reddit-time {
+    padding-right: 3px;
+}
+
+//
+@media (min-width: 993px) {
+    .main-title {
+        font-size: 3.25rem;
+        padding: 40px 0px 30px 0px;
+        text-align: center;
+    }
+
+    .waiting {
+        font-size: 1.75rem;
+    }
+
+    .reddit-list {
+        display: flex;
+        flex-direction: column;
+        padding: 7px 0px 0px 0px;
+        justify-self: center;
+        width: 65%;
+    }
+
+    .reddit-card {
+        width: 100%;
+        height: auto;
+        border-bottom: 2px solid #1e1e1e5b;
+        margin: 10px 0px 10px 0px;
+    }
+
+    .reddit-card:hover {
+        background-color: rgba(121, 120, 120, 0.262);
+        border: 1px solid rgba(121, 120, 120, 0.064);
+        border-radius: 6px;
+    }
+
+    .author-time {
+        display: flex;
+        font-size: 1.75rem;
+        position: relative;
+        justify-content: space-between;
+    }
+
+    .reddit-thumbnail {
+        width: 100%;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .reddit-thumbnail-img {
+        max-width: 100%;
+        width: auto;
+        height: 100%;
+        object-fit: contain;
+        align-self: center;
+    }
+
+    .reddit-title {
+        font-size: 2.25rem;
+    }
+
+    .reddit-upvotes {
+        font-size: 1.75rem;
+    }
+}
+
+//
+@media (max-width: 992px) {
 }
