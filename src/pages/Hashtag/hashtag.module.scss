@@ -32,6 +32,37 @@
     background: rgba(231, 231, 231, 0.819);
 }
 
+// Định dạng cho tiêu đề của các cột
+.hashtag-header {
+    display: flex;
+    font-weight: bold;
+    border-bottom: 2px solid #ddd;
+    padding: 10px 0;
+    background-color: #f5f5f5;
+}
+
+.header-rank,
+.header-title,
+.header-view {
+    padding: 0 10px;
+}
+
+.header-rank {
+    width: 5%;
+    text-align: center;
+}
+
+.header-title {
+    width: 55%;
+    text-align: left;
+}
+
+.header-view {
+    width: 20%;
+    text-align: right;
+    padding-right: 20px;
+}
+
 // Extra Large
 @media (min-width: 1201px) {
     .container {
@@ -80,7 +111,7 @@
     }
 }
 
-//Large + Medium
+// Large + Medium
 @media (min-width: 769px) and (max-width: 1200px) {
     .container {
         width: 70%;
@@ -128,7 +159,7 @@
     }
 }
 
-//Small
+// Small
 @media (min-width: 577px) and (max-width: 768px) {
     .container {
         width: 70%;
@@ -176,7 +207,7 @@
     }
 }
 
-//Extra Small
+// Extra Small
 @media (max-width: 576px) {
     .container {
         width: 70%;
