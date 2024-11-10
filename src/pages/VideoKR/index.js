@@ -1,75 +1,42 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './videokr.module.scss';
 import classNames from 'classnames/bind';
+import axios from 'axios';
 
 const cx = classNames.bind(styles);
 
-
-const VideoCard = ({ title, videoId, singer, thumbnailUrl  }) => (
-  <div className="video-card">
-    <div className="thumbnail">
-        <img src={thumbnailUrl} />
-    </div>
-    <p className="size">{title} - Video {videoId}</p>
-    <p className="size">{singer}</p>
-  </div>
-);
-
-const CountrySection = ({ country }) => (
-  <div className="country-section">
-    <h2 className="country-section">{country.name}</h2>
-    <div className="video-row">
-      {country.videos.map((video, idx) => (
-        <VideoCard 
-          key={idx} 
-          title={country.name} 
-          videoId={video.id}  // id video
-          singer={video.singer} // truyen ten ca si
-          thumbnailUrl={video.thumbnailUrl} // link video
-        />
-      ))}
-    </div>
+const VideoCard = ({ rank, hashtag }) => (
+  <div className={cx("video-card")}>
+    <p className={cx("size")}>Rank: {rank}</p>
+    <p className={cx("size")}>Hashtag: {hashtag}</p>
   </div>
 );
 
 const VideoKR = () => {
-    const countries = [
-        {
-          name: "ÂM NHẠC",
-          videos: [ 
-            { id: 1, singer: "Ca sĩ I", thumbnailUrl: "https://th.bing.com/th/id/OIP.wBbZMv7l1fsd-Ep-P9UbKgAAAA?rs=1&pid=ImgDetMain" },
-            { id: 2, singer: "Ca sĩ J", thumbnailUrl: "https://th.bing.com/th/id/OIP.wBbZMv7l1fsd-Ep-P9UbKgAAAA?rs=1&pid=ImgDetMain" },
-            { id: 3, singer: "Ca sĩ K", thumbnailUrl: "https://th.bing.com/th/id/OIP.wBbZMv7l1fsd-Ep-P9UbKgAAAA?rs=1&pid=ImgDetMain" },
-            { id: 4, singer: "Ca sĩ L", thumbnailUrl: "https://th.bing.com/th/id/OIP.wBbZMv7l1fsd-Ep-P9UbKgAAAA?rs=1&pid=ImgDetMain" },
-          ],
-        },
-        {
-          name: "GIẢI TRÍ",
-          videos: [
-            { id: 1, singer: "Ca sĩ M", thumbnailUrl: "https://th.bing.com/th/id/OIP.wBbZMv7l1fsd-Ep-P9UbKgAAAA?rs=1&pid=ImgDetMain" },
-            { id: 2, singer: "Ca sĩ N", thumbnailUrl: "https://th.bing.com/th/id/OIP.wBbZMv7l1fsd-Ep-P9UbKgAAAA?rs=1&pid=ImgDetMain" },
-            { id: 3, singer: "Ca sĩ O", thumbnailUrl: "https://th.bing.com/th/id/OIP.wBbZMv7l1fsd-Ep-P9UbKgAAAA?rs=1&pid=ImgDetMain" },
-            { id: 4, singer: "Ca sĩ P", thumbnailUrl: "https://th.bing.com/th/id/OIP.wBbZMv7l1fsd-Ep-P9UbKgAAAA?rs=1&pid=ImgDetMain" },
-          ],
-        },
-        {
-          name: "PHIM ẢNH",
-          videos: [ 
-            { id: 1, singer: "Ca sĩ Q ", thumbnailUrl: "https://th.bing.com/th/id/OIP.wBbZMv7l1fsd-Ep-P9UbKgAAAA?rs=1&pid=ImgDetMain" },
-            { id: 2, singer: "Ca sĩ R", thumbnailUrl: "https://th.bing.com/th/id/OIP.wBbZMv7l1fsd-Ep-P9UbKgAAAA?rs=1&pid=ImgDetMain" },
-            { id: 3, singer: "Ca sĩ S", thumbnailUrl: "https://th.bing.com/th/id/OIP.wBbZMv7l1fsd-Ep-P9UbKgAAAA?rs=1&pid=ImgDetMain" },
-            { id: 4, singer: "Ca sĩ T", thumbnailUrl: "https://th.bing.com/th/id/OIP.wBbZMv7l1fsd-Ep-P9UbKgAAAA?rs=1&pid=ImgDetMain" },
-          ],
-        },
-      ];
+  const [videosData, setVideosData] = useState([]);
 
+  useEffect(() => {
+    axios.get('http://localhost:5000/api/get-data')
+      .then((response) => {
+        setVideosData(response.data);
+      })
+      .catch((error) => {
+        console.error("Lỗi khi lấy dữ liệu từ API:", error);
+      });
+  }, []);
 
   return (
-    <div className="gallery-container">
-      <h1 className="size_title">Những Video Xu Hướng Hiện Nay Ở Hàn Quốc </h1>
-      {countries.map((country, index) => (
-        <CountrySection key={index} country={country} />
-      ))}
+    <div className={cx("gallery-container")}>
+      <h1 className={cx("size_title")}>Những Hashtag Xu Hướng Hiện Nay</h1>
+      <div className={cx("video-row")}>
+        {videosData.map((item, index) => (
+          <VideoCard 
+            key={index} 
+            rank={item.Rank}  
+            hashtag={item.Hashtag}  
+          />
+        ))}
+      </div>
     </div>
   );
 };

@@ -11,7 +11,7 @@ request = youtube.videos().list(
     chart='mostPopular',       
     regionCode='VN',            
     maxResults=10,             
-    videoCategoryId='10'        # ID của danh mục âm nhạc
+    videoCategoryId='20'        # ID của danh mục âm nhạc
 )
 response = request.execute()
 
@@ -38,6 +38,6 @@ for video in response['items']:
 df = pd.DataFrame(data)
 
 # Lưu DataFrame vào file CSV
-df.to_csv('youtube_trends.csv', index=False, encoding='utf-8')
+df.to_csv('youtube_trends_game.csv', index=False, encoding='utf-8')
 
 print("Dữ liệu đã được lưu vào file youtube_trends.csv")
