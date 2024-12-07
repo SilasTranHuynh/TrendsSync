@@ -20,6 +20,7 @@ const publicRoutes = [
     { path: '/videoKR', component: VideoKR},
     { path: '/twitter', component: Twitter},
     { path: '/search', component: Search},
+    { path: '/videoKR', component: VideoKR}
 ];
 
 const privateRoutes = [];

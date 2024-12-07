@@ -15,6 +15,9 @@
     font-weight: bold;
     text-align: center;
     margin-bottom: 20px;
+.timeline-list a {
+    text-decoration: none;
+    color: #3035b7; 
 }
 
 .hashtag-card {
@@ -83,7 +86,7 @@
 .seeall-button {
     padding: 10px 20px;
     background-color: #3035b7;
-    color: white;
+    color: #fff;
     border: none;
     border-radius: 5px;
     font-size: 1.6rem;
@@ -108,6 +111,7 @@
     .main-title {
         font-size: 3.75rem;
         padding: 10px 0px 10px 0px;
+        text-align: center;
     }
 
     .timeline-list {
@@ -156,6 +160,7 @@
     .main-title {
         font-size: 3.25rem;
         padding: 10px 0px 10px 0px;
+        text-align: center;
     }
 
     .timeline-list {
@@ -204,6 +209,7 @@
     .main-title {
         font-size: 3rem;
         padding: 10px 0px 10px 0px;
+        text-align: center;
     }
 
     .timeline-list {
@@ -252,6 +258,7 @@
     .main-title {
         font-size: 2.9rem;
         padding: 10px 0px 10px 0px;
+        text-align: center;
     }
 
     .timeline-list {
