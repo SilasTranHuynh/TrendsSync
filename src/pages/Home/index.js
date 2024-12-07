@@ -88,7 +88,7 @@ function Home() {
         // Gọi API lấy dữ liệu Twitter
         const fetchTwitterData = async () => {
             try {
-                const response = await axios.get("http://localhost:3000/api/twitter-trends");
+                const response = await axios.get("http://localhost:4900/api/twitter-trends");
                 setTwitterTrends(response.data);
             } catch (error) {
                 console.error("Error fetching Twitter trends", error);
@@ -105,7 +105,7 @@ function Home() {
     useEffect(() => {
         const fetchGoogleTrendsData = async () => {
             try {
-                const response = await axios.get("http://localhost:3000/api/google-trends");
+                const response = await axios.get("http://localhost:4900/api/google-trends");
                 console.log(response.data);  // Kiểm tra dữ liệu ở đây
                 setGoogleTrends(response.data);  // Lưu dữ liệu vào state
             } catch (error) {
@@ -124,7 +124,7 @@ function Home() {
     useEffect(() => {
       const fetchTikTokTrends = async () => {
         try {
-          const response = await fetch('http://localhost:3000/api/tiktok-trends'); // Đảm bảo đường dẫn API đúng
+          const response = await fetch('http://localhost:4900/api/tiktok-trends'); // Đảm bảo đường dẫn API đúng
           const data = await response.json();
           setTiktokTrends(data); // Lưu dữ liệu TikTok vào state
         } catch (error) {

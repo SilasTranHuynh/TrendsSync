@@ -21,7 +21,6 @@
     "normalize.css": "^8.0.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "concurrently": "^9.1.0",
     "react-router-dom": "^6.26.2",
     "react-scripts": "5.0.1",
     "react-slick": "^0.30.2",
@@ -31,7 +30,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "concurrently \"react-app-rewired start\" \"node server2.js\"",
+    "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
     "eject": "react-scripts eject"

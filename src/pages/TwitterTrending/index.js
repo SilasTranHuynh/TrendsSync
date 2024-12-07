@@ -20,7 +20,7 @@ const Twitter = () => {
     const [displayAll, setDisplayAll] = useState(false);
 
     useEffect(() => {
-        axios.get("http://localhost:3000/api/twitter-trends")
+        axios.get("http://localhost:4900/api/twitter-trends")
             .then(response => setData(response.data))
             .catch(error => console.error("Error fetching Twitter data:", error));
     }, []);

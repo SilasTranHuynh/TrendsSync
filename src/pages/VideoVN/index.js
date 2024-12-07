@@ -25,7 +25,7 @@ const VideoVN = () => {
     const [displayAll, setDisplayAll] = useState(false);
 
     useEffect(() => {
-        axios.get("http://localhost:3000/api/youtube-trends")
+        axios.get("http://localhost:4900/api/youtube-trends")
             .then(response => setData(response.data))
             .catch(error => console.error("Error fetching YouTube data:", error));
     }, []);
