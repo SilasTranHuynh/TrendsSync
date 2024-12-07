@@ -1,1 +1,2 @@
-web: node server2.js
+web: npm run start
+
