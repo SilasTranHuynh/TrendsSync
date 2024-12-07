@@ -76,15 +76,15 @@ function Header() {
                         render={(attrs) => (
                             <PopperWrapper>
                                 <div className="box" tabIndex="-1" {...attrs}>
-                                    <Link to="/" className={cx('inner-box')}>
+                                    <Link to="/videoVN" className={cx('inner-box')}>
                                         VIETNAM
                                     </Link>
                                     <br />
-                                    <Link to="/" className={cx('inner-box')}>
+                                    <Link to="/videokr" className={cx('inner-box')}>
                                         KOREA
                                     </Link>
                                     <br />
-                                    <Link to="/" className={cx('inner-box')}>
+                                    <Link to="/videous" className={cx('inner-box')}>
                                         AMERICA
                                     </Link>
                                 </div>
