@@ -29,12 +29,13 @@
     "swiper": "^11.1.14",
     "web-vitals": "^2.1.4"
   },
-  "scripts": {
-    "start": "react-app-rewired start",
-    "build": "react-app-rewired build",
-    "test": "react-app-rewired test",
-    "eject": "react-scripts eject"
-  },
+"scripts": {
+  "start": "concurrently \"react-app-rewired start\" \"node server2.js\"",
+  "build": "react-app-rewired build",
+  "test": "react-app-rewired test",
+  "eject": "react-scripts eject"
+},
+
   "eslintConfig": {
     "extends": [
       "react-app",
