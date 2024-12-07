@@ -189,7 +189,7 @@ app.get("/api/twitter-trends", async (req, res) => {
 // ==================== Khởi động server ====================
 
 // Khởi động server
-const PORT = 4900;
+const PORT = 3000;
 app.listen(PORT, async () => {
     console.log(`Server is running on http://localhost:${PORT}`);
     console.log("Fetching initial data...");
