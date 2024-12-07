@@ -1,33 +1,107 @@
+.container {
+    width: 40%;
+    height: 50%;
+    background-color: #3035b7;
+    font-family: 'Arial', sans-serif;
+    font-size: 1.6rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 20px;
+    border-radius: 50px;
+}
+
+.main-title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
 .timeline-list a {
     text-decoration: none;
-    color: #3035b7;
-}
-
-.timeline-list a:hover {
-    color: rgba(0, 0, 0, 0.503);
-}
-
-.hashtag-list {
-    display: flex;
-    flex-direction: column;
-    padding: 7px 0px 0px 0px;
+    color: #3035b7; 
 }
 
 .hashtag-card {
     display: flex;
-    border-bottom: 1px solid #eee;
-    height: 45px;
-    line-height: 45px;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #101010;
+    align-items: center;
 }
 
 .hashtag-card:hover {
-    background: rgba(231, 231, 231, 0.819);
+    background: rgba(231, 231, 231, 0.5);
+}
+
+.hashtag-header {
+    display: flex;
+    font-weight: bold;
+    border-bottom: 2px solid #c97272;
+    padding: 10px 0;
+    background-color: #fafafa;
+    border-radius: 15px 15px 0 0;
+}
+
+
+
+.hashtag-list {
+    text-align: left;
+    font-family: 'dosis';
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-rank{
+    padding: 0 10px;
+    text-align: left;
+}
+
+.header-title{
+    padding: 0 10px;
+    text-align: left;
+    margin-left: 20px;
+}
+.header-view{
+    padding: 0 10px;
+    text-align: right;
+}
+
+.header-rank {
+    width: 15%;
+}
+
+.header-title {
+    width: 55%;
+}
+
+.header-view {
+    width: 30%;
+}
+
+.see-all-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.seeall-button {
+    padding: 10px 20px;
+    background-color: #3035b7;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.seeall-button:hover {
+    background-color: #2a2f91;
 }
 
 // Extra Large
 @media (min-width: 1201px) {
     .container {
-        width: 70%;
+        width: 60%;
         height: auto;
         background-color: #fff;
         justify-self: center;
@@ -73,7 +147,7 @@
     }
 }
 
-//Large + Medium
+// Large + Medium
 @media (min-width: 769px) and (max-width: 1200px) {
     .container {
         width: 70%;
@@ -122,7 +196,7 @@
     }
 }
 
-//Small
+// Small
 @media (min-width: 577px) and (max-width: 768px) {
     .container {
         width: 70%;
@@ -171,7 +245,7 @@
     }
 }
 
-//Extra Small
+// Extra Small
 @media (max-width: 576px) {
     .container {
         width: 70%;

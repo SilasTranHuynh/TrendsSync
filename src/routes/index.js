@@ -6,6 +6,8 @@ import PostNews from '~/pages/PostNews';
 import VideoVN  from '~/pages/VideoVN'; 
 import VideoUS from '~/pages/VideoUS';
 import VideoKR from '~/pages/VideoKR';
+import Twitter from '~/pages/TwitterTrending';
+import Search from '~/pages/SearchTrending';
 
 const publicRoutes = [
     { path: '/', component: Home },
@@ -15,6 +17,9 @@ const publicRoutes = [
     { path: '/postNews', component: PostNews },
     { path: '/videoVN', component: VideoVN},
     { path: '/videoUS', component: VideoUS},
+    { path: '/videoKR', component: VideoKR},
+    { path: '/twitter', component: Twitter},
+    { path: '/search', component: Search},
     { path: '/videoKR', component: VideoKR}
 ];
 

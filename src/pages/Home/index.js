@@ -3,58 +3,24 @@ import styles from './home.module.scss';
 import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
+import TrendSection from './TrendSection.js';
+import GoogleTrendSection from './GoogleTrendSection.js';
+import TiktokTrendSection from './TiktokTrendSection.js';
+import TwitterSection from './TwitterSection.js';
+
+
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+
 
 import locationLogo from '~/assets/images/location.png';
+import VideoCard from './videoCard.js'
 import phoneLogo from '~/assets/images/phone.png';
 import mailLogo from '~/assets/images/mail.png';
 
 const cx = classNames.bind(styles);
 
-//Trend
-const TrendCard = ({ trendTitle, trendView }) => (
-    <div className={cx('trend-card')}>
-        <p className={cx('trend-title')}>{trendTitle}</p>
-        <p className={cx('trend-view')}>{trendView}</p>
-    </div>
-);
 
-const TrendSection = ({ trend }) => (
-    <div className={cx('trend-component')}>
-        <div className={cx('trend-list')}>
-            {trend.trendContents.map((trendContent, index) => (
-                <TrendCard key={index} trendTitle={trendContent.trendTitle} trendView={trendContent.trendView} />
-            ))}
-        </div>
-        <Link to="/topic" className={cx('seeall')}>
-            See all
-        </Link>
-    </div>
-);
-
-//Hashtag
-const HashtagCard = ({ hashtagTitle, hashtagView }) => (
-    <div className={cx('hashtag-card')}>
-        <p className={cx('hashtag-title')}>{hashtagTitle}</p>
-        <p className={cx('hashtag-view')}>{hashtagView}</p>
-    </div>
-);
-
-const HashtagSection = ({ hashtag }) => (
-    <div className={cx('hashtag-component')}>
-        <div className={cx('hashtag-list')}>
-            {hashtag.hashtagContents.map((hashtagContent, index) => (
-                <HashtagCard
-                    key={index}
-                    hashtagTitle={hashtagContent.hashtagTitle}
-                    hashtagView={hashtagContent.hashtagView}
-                />
-            ))}
-        </div>
-        <Link to="/hashtag" className={cx('seeall')}>
-            See all
-        </Link>
-    </div>
-);
 
 //Post
 const PostCard = ({ postTitle, thumbnailUrl }) => (
@@ -85,59 +51,91 @@ const MediaPlatform = ({ platform }) => (
     </div>
 );
 
-//Video
-const VideoCard = ({ videoTitle, thumbnailUrl, videoOwner, videoView }) => (
-    <div className={cx('video-card')}>
-        <div className={cx('video-thumbnail')}>
-            <img src={thumbnailUrl} />
-        </div>
-        <p className={cx('video-title')}>{videoTitle}</p>
-        <div className={cx('owner-view')}>
-            <p className={cx('video-owner')}>{videoOwner}</p>
-            <p className={cx('video-view')}>{videoView}</p>
-        </div>
-    </div>
-);
-
-const CountryOfOrigin = ({ country }) => (
-    <div className={cx('video-component')}>
-        <div className={cx('video-list')}>
-            {country.videos.map((video, index) => (
-                <VideoCard
-                    key={index}
-                    videoTitle={video.videoTitle}
-                    thumbnailUrl={video.thumbnailUrl}
-                    videoOwner={video.videoOwner}
-                    videoView={video.videoView}
-                />
-            ))}
-        </div>
-    </div>
-);
-
 function Home() {
-    //Trend
+
+    const [youtubeTrends, setYoutubeTrends] = useState([]);
+
+    useEffect(() => {
+        const fetchYouTubeTrends = async () => {
+            try {
+                const response = await axios.get("http://localhost:5000/api/youtube-trends");
+                setYoutubeTrends(response.data);  // Lưu dữ liệu vào state
+            } catch (error) {
+                console.error("Error fetching YouTube trends:", error);
+            }
+        };
+
+        fetchYouTubeTrends();
+    }, []);  // Fetch dữ liệu một lần khi component được render
+
     const trends = [
         {
             trendContents: [
-                { trendTitle: 'Test', trendView: '100' },
-                { trendTitle: 'Test', trendView: '100' },
-                { trendTitle: 'Test', trendView: '100' },
+                { trendTitle: 'Trend 1', trendView: '1000' },
+                { trendTitle: 'Trend 2', trendView: '1500' },
+                { trendTitle: 'Trend 3', trendView: '1200' },
+                { trendTitle: 'Trend 1', trendView: '1000' },
+                { trendTitle: 'Trend 2', trendView: '1500' },
             ],
         },
     ];
 
-    //Hashtag
-    const hashtags = [
-        {
-            hashtagContents: [
-                { hashtagTitle: 'Test', hashtagView: '100' },
-                { hashtagTitle: 'Test', hashtagView: '100' },
-                { hashtagTitle: 'Test', hashtagView: '100' },
-                { hashtagTitle: 'Test', hashtagView: '100' },
-            ],
-        },
-    ];
+
+    //twitter-xu-huong
+    const [twitterTrends, setTwitterTrends] = useState([]);
+
+    useEffect(() => {
+        // Gọi API lấy dữ liệu Twitter
+        const fetchTwitterData = async () => {
+            try {
+                const response = await axios.get("http://localhost:4900/api/twitter-trends");
+                setTwitterTrends(response.data);
+            } catch (error) {
+                console.error("Error fetching Twitter trends", error);
+            }
+        };
+
+        fetchTwitterData();
+    }, []); // Chạy một lần khi component được render
+
+
+    const [googleTrends, setGoogleTrends] = useState([]);
+
+    // Fetch Google Trends data from API
+    useEffect(() => {
+        const fetchGoogleTrendsData = async () => {
+            try {
+                const response = await axios.get("http://localhost:4900/api/google-trends");
+                console.log(response.data);  // Kiểm tra dữ liệu ở đây
+                setGoogleTrends(response.data);  // Lưu dữ liệu vào state
+            } catch (error) {
+                console.error("Error fetching Google Trends:", error);
+            }
+        };
+    
+        fetchGoogleTrendsData();
+    }, []);
+
+
+
+    const [tiktokTrends, setTiktokTrends] = useState([]);
+
+    // Tiktok-xu-huong
+    useEffect(() => {
+      const fetchTikTokTrends = async () => {
+        try {
+          const response = await fetch('http://localhost:4900/api/tiktok-trends'); // Đảm bảo đường dẫn API đúng
+          const data = await response.json();
+          setTiktokTrends(data); // Lưu dữ liệu TikTok vào state
+        } catch (error) {
+          console.error('Error fetching TikTok trends:', error);
+        }
+      };
+      
+      fetchTikTokTrends();
+    }, []);
+
+
 
     //Post
     const platforms = [
@@ -177,99 +175,103 @@ function Home() {
         },
     ];
 
-    //Video
-    const countries = [
-        {
-            videos: [
-                {
-                    videoTitle: 'Test',
-                    thumbnailUrl: 'https://th.bing.com/th/id/OIP.wBbZMv7l1fsd-Ep-P9UbKgAAAA?rs=1&pid=ImgDetMain',
-                    videoOwner: 'TrendsSync',
-                    videoView: '1000',
-                },
-                {
-                    videoTitle: 'Test',
-                    thumbnailUrl: 'https://th.bing.com/th/id/OIP.wBbZMv7l1fsd-Ep-P9UbKgAAAA?rs=1&pid=ImgDetMain',
-                    videoOwner: 'TrendsSync',
-                    videoView: '1000',
-                },
-                {
-                    videoTitle: 'Test',
-                    thumbnailUrl: 'https://th.bing.com/th/id/OIP.wBbZMv7l1fsd-Ep-P9UbKgAAAA?rs=1&pid=ImgDetMain',
-                    videoOwner: 'TrendsSync',
-                    videoView: '1000',
-                },
-                {
-                    videoTitle: 'Test',
-                    thumbnailUrl: 'https://th.bing.com/th/id/OIP.wBbZMv7l1fsd-Ep-P9UbKgAAAA?rs=1&pid=ImgDetMain',
-                    videoOwner: 'TrendsSync',
-                    videoView: '1000',
-                },
-            ],
-        },
-    ];
+
 
     return (
         <div className={cx('container')}>
             <div className={cx('left-column')}>
-                <div className={cx('row')}>
-                    <h2 className={cx('title')}>Featured Trends</h2>
-                    {trends.map((trend, index) => (
-                        <TrendSection key={index} trend={trend} />
-                    ))}
+                <div className={cx('trends-card-row')}>
+                    <div className={cx('trend-section-row')}>
+                        {trends.length > 0 ? (
+                            trends.map((trend, index) => (
+                                <TrendSection key={index} trends={trend} />
+                            ))
+                        ) : (
+                            <p>No featured trends available</p>
+                        )}
+                    </div>
+
+                         <div className="trend-section-row">
+                            {/* Pass dữ liệu Twitter vào TwitterSection */}
+                            {twitterTrends.length > 0 ? (
+                                <TwitterSection hashtags={{ hashtagContents: twitterTrends }} />
+                            ) : (
+                                <p>No Twitter trends available</p>
+                            )}
+                        </div>
                 </div>
-                <div className={cx('row')}>
-                    <h2 className={cx('title')}>Popular Hashtags</h2>
-                    {hashtags.map((hashtag, index) => (
-                        <HashtagSection key={index} hashtag={hashtag} />
-                    ))}
-                </div>
-                <div className={cx('row row-2')}>
-                    <h2 className={cx('title')}>Featured Posts</h2>
-                    {platforms.map((platform, index) => (
-                        <MediaPlatform key={index} platform={platform} />
-                    ))}
+    
+                <div className={cx('trends-card-row')}>
+                    <div className={cx('trend-section-row')}>
+                        {googleTrends.length > 0 ? (
+                                    <GoogleTrendSection googleSearch = {{ googleContents : googleTrends}}/>
+                                
+                            ) : (
+                                <p>No Google trends available</p>
+                            )}
+                    </div>
+    
+                    <div className={cx('trend-section-row')}>
+                        {tiktokTrends.length > 0 ? (
+                            <TiktokTrendSection tiktokTrends={{ tiktokContents: tiktokTrends }} />
+                        ) : (
+                            <p>No TikTok trends available</p>
+                        )}
+                        </div>
                 </div>
             </div>
-
-            <div className={cx('right-column')}>
-                <h2 className={cx('title')}>Popular Videos</h2>
-                <div className={cx('country-section')}>
-                    <ul className={cx('list-country')}>
-                        <li className={cx('country-component')}>
-                            <p>Test1</p>
-                        </li>
-                    </ul>
-                    <ul className={cx('list-section')}>
-                        <li className={cx('section-component')}>
-                            <p>Test2</p>
-                        </li>
-                    </ul>
+    
+            <div className={cx('right2-column')}>
+            <div className={cx('video2-card-main')}>
+                <h2 className={cx('cardvideo-title-new')}>Âm nhạc thịnh hành</h2>
+                <div className={cx('video2-card-container')}>
+                    {youtubeTrends.length > 0 ? (
+                        youtubeTrends.map((youtubeTrend, index) => (
+                            <VideoCard
+                                key={index}
+                                youtubeTrend={youtubeTrend}  // Truyền youtubeTrend toàn bộ đối tượng
+                            />
+                        ))
+                    ) : (
+                        <p>No YouTube trends available</p>
+                    )}
                 </div>
-                {countries.map((country, index) => (
-                    <CountryOfOrigin key={index} country={country} />
+            </div>
+                    
+                 {/* Adding "See All" link at the bottom */}
+                    <div className={cx('see-all-container')}>
+                    <Link to="/videovn" className={cx('seeall2')}>
+                        See all
+                    </Link>
+                    </div>
+            </div>
+    
+            <div className={cx('row row-2')}>
+                <h2 className={cx('title')}>Featured Posts</h2>
+                {platforms.map((platform, index) => (
+                    <MediaPlatform key={index} platform={platform} />
                 ))}
             </div>
-
+    
             <div className={cx('contact-section')}>
                 <h2 className={cx('section-heading')}>Contact Mailbox</h2>
                 <div className={cx('form-section')}>
                     <div className={cx('contact-left-column')}>
                         <p>
                             <a href="#" className={cx('contact-location')}>
-                                <img className={cx('contact-logo')} src={locationLogo}></img>
+                                <img className={cx('contact-logo')} src={locationLogo} alt="Location" />
                             </a>
                             Chicago, US
                         </p>
                         <p>
                             <a className={cx('contact-phone')}>
-                                <img className={cx('contact-logo')} src={phoneLogo}></img>
+                                <img className={cx('contact-logo')} src={phoneLogo} alt="Phone" />
                             </a>
                             Phone: +00 151515
                         </p>
                         <p>
                             <a className={cx('contact-email')}>
-                                <img className={cx('contact-logo')} src={mailLogo}></img>
+                                <img className={cx('contact-logo')} src={mailLogo} alt="Mail" />
                             </a>
                             Email: mail@mail.com
                         </p>
@@ -299,7 +301,6 @@ function Home() {
                             <div className={cx('contact-row')}>
                                 <div className={cx('informations-1')}>
                                     <textarea
-                                        type="text"
                                         placeholder="Message"
                                         required
                                         name="message"
@@ -314,6 +315,7 @@ function Home() {
             </div>
         </div>
     );
+    
 }
 
 export default Home;
