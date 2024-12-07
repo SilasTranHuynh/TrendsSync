@@ -1,28 +1,28 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import classNames from 'classnames/bind';
-import styles from './hashtag.module.scss';
+import styles from './twitter.module.scss';
 
 const cx = classNames.bind(styles);
 
-const HashtagCard = ({ rank, hashtag, views }) => {
+const TwitterCard = ({ rank, content, tweets }) => {
     return (
-        <div className={cx('hashtag-card')}>
-            <p className={cx('hashtag-rank')}>{rank}</p>
-            <p className={cx('hashtag-title')}>{hashtag}</p>
-            <p className={cx('hashtag-view')}>{views}</p>
+        <div className={cx('twitter-card')}>
+            <p className={cx('twitter-rank')}>{rank}</p>
+            <p className={cx('twitter-content')}>{content}</p>
+            <p className={cx('twitter-tweets')}>{tweets}</p>
         </div>
     );
 };
 
-const Hashtag = () => {
+const Twitter = () => {
     const [data, setData] = useState([]);
     const [displayAll, setDisplayAll] = useState(false);
 
     useEffect(() => {
-        axios.get("http://localhost:4900/api/tiktok-trends")
+        axios.get("http://localhost:4900/api/twitter-trends")
             .then(response => setData(response.data))
-            .catch(error => console.error("Error fetching TikTok data:", error));
+            .catch(error => console.error("Error fetching Twitter data:", error));
     }, []);
 
     const toggleSeeAll = () => {
@@ -34,19 +34,19 @@ const Hashtag = () => {
 
     return (
         <div className={cx('container')}>
-            <h1 className={cx('main-title')}>Hashtag Thịnh Hành</h1>
-            <div className={cx('hashtag-header')}>
+            <h1 className={cx('main-title')}>Twitter Thịnh Hành</h1>
+            <div className={cx('twitter-header')}>
                 <p className={cx('header-rank')}>Rank</p>
-                <p className={cx('header-title')}>Hashtag</p>
-                <p className={cx('header-view')}>Lượt Đăng</p>
+                <p className={cx('header-content')}>Nội dung</p>
+                <p className={cx('header-tweets')}>Lượt Đăng</p>
             </div>
-            <div className={cx('hashtag-list')}>
+            <div className={cx('twitter-list')}>
                 {displayedData.map((item, index) => (
-                    <HashtagCard
+                    <TwitterCard
                         key={index}
                         rank={`#${item.Rank}`}
-                        hashtag={item.Hashtag}
-                        views={item.Views}
+                        content={item.Content}
+                        tweets={item.Tweets}
                     />
                 ))}
             </div>
@@ -61,4 +61,4 @@ const Hashtag = () => {
     );
 };
 
-export default Hashtag;
+export default Twitter;

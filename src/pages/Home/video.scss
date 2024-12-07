@@ -1,0 +1,90 @@
+.video2-card-main {
+    width: 500px;
+    height: 800px;
+    background-color: #daa5a5;
+    border-radius: 8px;
+    padding: 15px;
+    gap: 20px; // khoang cach giua card chinh voi cac card con ben trong 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+  }
+  
+  .video2-card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; // khoang cach giua cac card ben trong 
+  }
+  
+  .video2-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 450px;
+    height: 150px;
+  }
+  
+  .video2-thumbnail img {
+    width: 140px;
+    height: 100px;
+    border-radius: 5px;
+  }
+  
+  .owner2-view {
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align items at the top of the column */
+  }
+
+  .video2-title {
+    font-size: 18px;
+    font-family: dosis;
+    font-weight: bold;
+    color: #333;
+  
+  }
+  
+  .video2-owner {
+    
+    font-size: 14px;
+    font-family: dosis;
+    font-size: 12px;
+    color: #777;
+  }
+  
+  .video2-view {
+    font-size: 14px;
+    font-family: dosis;
+    color: #666;
+  }
+
+  
+  
+  .right2-column {
+    gap: 50px;
+    flex: 0 0 35%; /* Chiều rộng của cột bên phải */
+  }
+  
+.cardvideo-title-new{
+    position: sticky;
+    top: 0;
+    font-family: dosis;
+    color: #fdfdfd;
+    text-align: center;
+    background-color: #080808; /* Đảm bảo tiêu đề có nền khi cố định */
+    z-index: 10; /* Đảm bảo tiêu đề luôn nằm trên các phần tử khác */
+    padding: 10px; /* Cảm giác thoải mái cho tiêu đề */
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Tạo hiệu ứng đổ bóng */
+    width: 100%; /* Đảm bảo tiêu đề chiếm toàn bộ chiều rộng của container */
+    height: 40px;
+  }
+  .container {
+    display: flex; /* Align left and right columns side by side */
+    gap: 20px; /* Adjust space between the two columns */
+  }

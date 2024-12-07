@@ -1,5 +1,5 @@
-.container {
-    width: 40%;
+.container1 {
+    width: 60%;
     height: 50%;
     background-color: #3035b7;
     font-family: 'Arial', sans-serif;
@@ -17,7 +17,7 @@
     margin-bottom: 20px;
 }
 
-.hashtag-card {
+.twitter-card {
     display: flex;
     justify-content: space-between;
     padding: 15px;
@@ -25,11 +25,11 @@
     align-items: center;
 }
 
-.hashtag-card:hover {
+.twitter-card:hover {
     background: rgba(231, 231, 231, 0.5);
 }
 
-.hashtag-header {
+.twitter-header {
     display: flex;
     font-weight: bold;
     border-bottom: 2px solid #c97272;
@@ -38,9 +38,13 @@
     border-radius: 15px 15px 0 0;
 }
 
+.header-rank{
+    padding: 0 ;
+    margin-left: 10px;
+    text-align: left;
+}
 
-
-.hashtag-list {
+.twitter-list {
     text-align: left;
     font-family: 'dosis';
     font-size: 2rem;
@@ -48,17 +52,14 @@
     flex-direction: column;
 }
 
-.header-rank{
-    padding: 0 10px;
-    text-align: left;
-}
 
-.header-title{
+
+.header-content{
     padding: 0 10px;
+    margin-left:20px;
     text-align: left;
-    margin-left: 20px;
 }
-.header-view{
+.header-tweets{
     padding: 0 10px;
     text-align: right;
 }
@@ -67,11 +68,11 @@
     width: 15%;
 }
 
-.header-title {
+.header-content {
     width: 55%;
 }
 
-.header-view {
+.header-tweets  {
     width: 30%;
 }
 
@@ -97,7 +98,7 @@
 
 // Extra Large
 @media (min-width: 1201px) {
-    .container {
+    .container1 {
         width: 60%;
         height: auto;
         background-color: #fff;
@@ -124,19 +125,19 @@
         padding: 11px;
     }
 
-    .hashtag-time,
-    .hashtag-view {
+    .twitter-time,
+    .twitter-tweets {
         width: 20%;
         text-align: right;
         padding-right: 20px;
     }
 
-    .hashtag-rank {
+    .twitter-rank {
         width: 5%;
         text-align: center;
     }
 
-    .hashtag-title {
+    .twitter-content {
         width: 55%;
         text-align: left;
         padding-left: 20px;
@@ -172,19 +173,19 @@
         padding: 10px;
     }
 
-    .hashtag-time,
-    .hashtag-view {
+    .twitter-time,
+    .twitter-tweets {
         width: 20%;
         text-align: right;
         padding-right: 15px;
     }
 
-    .hashtag-rank {
+    .twitter-rank {
         width: 5%;
         text-align: center;
     }
 
-    .hashtag-title {
+    .twitter-content {
         width: 55%;
         text-align: left;
         padding-left: 15px;
@@ -220,19 +221,19 @@
         padding: 6px;
     }
 
-    .hashtag-time,
-    .hashtag-view {
+    .twitter-time,
+    .twitter-tweets {
         width: 18%;
         text-align: right;
         padding-right: 15px;
     }
 
-    .hashtag-rank {
+    .twitter-rank {
         width: 5%;
         text-align: center;
     }
 
-    .hashtag-title {
+    .twitter-title {
         width: 59%;
         text-align: left;
         padding-left: 15px;
@@ -268,19 +269,19 @@
         padding: 2.75px;
     }
 
-    .hashtag-time,
-    .hashtag-view {
+    .twitter-time,
+    .twitter-tweets {
         width: 20%;
         text-align: right;
         padding-right: 3px;
     }
 
-    .hashtag-rank {
+    .twitter-rank {
         width: 5%;
         text-align: center;
     }
 
-    .hashtag-title {
+    .twitter-content {
         width: 55%;
         text-align: left;
         padding-left: 15px;
