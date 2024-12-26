@@ -1,3 +1,12 @@
+.wrapper {
+    position: fixed;
+}
+
+.text {
+    text-decoration: none;
+    color: #fff;
+}
+
 // Desktop : Large - Small
 @media (min-width: 1201px) {
     .header-top-mobile,
@@ -38,17 +47,26 @@
         font-size: 46px;
         font-weight: bold;
         letter-spacing: 1.5px;
+        display: inline-block;
     }
 
     .logo-link {
+        display: block;
         text-decoration: none;
         color: #fff;
+        height: 40px;
+        width: auto;
+        font-size: 36px;
+    }
+
+    .logo-link span{
+    
     }
 
     .slogan {
         position: relative;
         align-self: center;
-        top: 10%;
+        top: 17%;
         font-size: 21px;
         letter-spacing: 0.5px;
     }
@@ -192,12 +210,13 @@
     .logo-link {
         text-decoration: none;
         color: #fff;
+        font-size: 33px;
     }
 
     .slogan {
         position: relative;
         align-self: center;
-        top: 10%;
+        top: 14%;
         font-size: 21px;
         letter-spacing: 0.5px;
     }
@@ -294,6 +313,7 @@
         margin-left: 12px;
         font-size: 21px;
         font-weight: 700;
+        text-decoration: none;
     }
 }
 
@@ -342,12 +362,13 @@
     .logo-link {
         text-decoration: none;
         color: #fff;
+        font-size: 30px;
     }
 
     .slogan {
         position: relative;
         align-self: center;
-        top: 10%;
+        top: 13%;
         font-size: 21px;
         letter-spacing: 0.5px;
     }
@@ -444,6 +465,7 @@
         margin-left: 12px;
         font-size: 21px;
         font-weight: 700;
+        text-decoration: none;
     }
 }
 
@@ -491,12 +513,13 @@
     .logo-link {
         text-decoration: none;
         color: #fff;
+        font-size: 28px;
     }
 
     .slogan {
         position: relative;
         align-self: center;
-        top: 10%;
+        top: 12%;
         font-size: 21px;
         letter-spacing: 0.5px;
     }
@@ -593,6 +616,7 @@
         margin-left: 12px;
         font-size: 21px;
         font-weight: 700;
+        text-decoration: none;
     }
 }
 
@@ -641,6 +665,7 @@
     .logo-link {
         text-decoration: none;
         color: #fff;
+        font-size: 26px;
     }
 
     .slogan {
@@ -666,6 +691,7 @@
         font-size: 18px;
         font-weight: 700;
         line-height: 70px;
+        text-decoration: none;
     }
 
     .media-page {
@@ -790,6 +816,7 @@
     .logo-link {
         text-decoration: none;
         color: #fff;
+        font-size: 25px;
     }
 
     .slogan {
@@ -815,6 +842,7 @@
         font-size: 18px;
         font-weight: 700;
         line-height: 70px;
+        text-decoration: none;
     }
 
     .media-page {
@@ -961,6 +989,7 @@
 
     .text {
         display: none;
+        text-decoration: none;
     }
 
     .media-page {

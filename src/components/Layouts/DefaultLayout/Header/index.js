@@ -18,7 +18,7 @@ function Header() {
             <div className={cx('header-top')}>
                 <div className={cx('logo')}>
                     <Link to="/" className={cx('logo-link')}>
-                        TrendSync
+                        <span>TrendSync</span>
                     </Link>
                 </div>
                 <div className={cx('slogan')}>
@@ -76,15 +76,15 @@ function Header() {
                         render={(attrs) => (
                             <PopperWrapper>
                                 <div className="box" tabIndex="-1" {...attrs}>
-                                    <Link to="/videoVN" className={cx('inner-box')}>
+                                    <Link to="/" className={cx('inner-box')}>
                                         VIETNAM
                                     </Link>
                                     <br />
-                                    <Link to="/videokr" className={cx('inner-box')}>
+                                    <Link to="/" className={cx('inner-box')}>
                                         KOREA
                                     </Link>
                                     <br />
-                                    <Link to="/videous" className={cx('inner-box')}>
+                                    <Link to="/" className={cx('inner-box')}>
                                         AMERICA
                                     </Link>
                                 </div>
@@ -100,7 +100,9 @@ function Header() {
                     <img className={cx('bell')} src={bellIcon} />
                     <div className={cx('separation')}> </div>
                     <img className={cx('icon')} src={userIcon} />
-                    <span className={cx('text')}>Log In</span>
+                    <Link to="/signinsignup" className={cx("text")}>
+                        <span>Sign In</span>
+                    </Link>
                 </div>
             </div>
 
@@ -117,7 +119,9 @@ function Header() {
                 </div>
                 <div className={cx('login-mobile')}>
                     <img className={cx('icon')} src={userIcon} />
-                    <span className={cx('text')}>Log In</span>
+                    <Link to="/signinsignup" className={cx("text")}>
+                        <span>Sign In</span>
+                    </Link>
                 </div>
                 <div className={cx('media-page')}>
                     <div className={cx('media-page-instagram')}>

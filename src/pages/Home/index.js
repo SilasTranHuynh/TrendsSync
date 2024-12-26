@@ -7,11 +7,11 @@ import TrendSection from './TrendSection.js';
 import GoogleTrendSection from './GoogleTrendSection.js';
 import TiktokTrendSection from './TiktokTrendSection.js';
 import TwitterSection from './TwitterSection.js';
-
+import RedditTrendSection from './RedditTrendSection';
+import NewsTrendSection from './NewsTrendSection';
 
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-
 
 import locationLogo from '~/assets/images/location.png';
 import VideoCard from './videoCard.js'
@@ -20,39 +20,41 @@ import mailLogo from '~/assets/images/mail.png';
 
 const cx = classNames.bind(styles);
 
-
-
-//Post
-const PostCard = ({ postTitle, thumbnailUrl }) => (
-    <div className={cx('post-card')}>
-        <div className={cx('post-thumbnail')}>
-            <img className={cx('post-thumbnail-img')} src={thumbnailUrl} />
-        </div>
-        <p className={cx('post-title')}>{postTitle}</p>
-    </div>
-);
-
-const MediaPlatform = ({ platform }) => (
-    <div className={cx('post-component')}>
-        <div className={cx('post-component-wrapper')}>
-            <h3 className={cx('platform-title')}>{platform.name}</h3>
-            <div className={cx('post-list')}>
-                {platform.posts.map((post, index) => (
-                    <PostCard key={index} postTitle={post.postTitle} thumbnailUrl={post.thumbnailUrl} />
-                ))}
-            </div>
-        </div>
-        <Link
-            to={platform.name === 'Reddit' ? '/postReddit' : platform.name === 'News' ? '/postNews' : '#'}
-            className={cx('seeall')}
-        >
-            See all
-        </Link>
-    </div>
-);
-
 function Home() {
+    // Reddit xu huong
+    const [redditTrends, setRedditTrends] = useState([]);
 
+    useEffect(() => {
+        // Fetch dữ liệu từ backend API
+        const fetchRedditTrends = async () => {
+            try {
+                const response = await fetch('http://localhost:3000/top-posts');
+                const data = await response.json();
+                setRedditTrends(data);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        };
+        fetchRedditTrends();
+    }, []);
+
+    // News xu huong
+    const [newsTrends, setNewsTrends] = useState([]);
+
+    useEffect(() => {
+        // Fetch dữ liệu từ backend API
+        const fetchNewsTrends = async () => {
+            try {
+                const response = await axios.get('http://localhost:3000/top-headlines');
+                setNewsTrends(response.data.newsposts);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        };
+        fetchNewsTrends();
+    }, []);
+
+    // Youtube xu huong
     const [youtubeTrends, setYoutubeTrends] = useState([]);
 
     useEffect(() => {
@@ -80,8 +82,7 @@ function Home() {
         },
     ];
 
-
-    //twitter-xu-huong
+    // Twitter xu huong
     const [twitterTrends, setTwitterTrends] = useState([]);
 
     useEffect(() => {
@@ -101,7 +102,7 @@ function Home() {
 
     const [googleTrends, setGoogleTrends] = useState([]);
 
-    // Fetch Google Trends data from API
+    // Google xu huong
     useEffect(() => {
         const fetchGoogleTrendsData = async () => {
             try {
@@ -116,11 +117,9 @@ function Home() {
         fetchGoogleTrendsData();
     }, []);
 
-
-
+    // Tiktok xu huong
     const [tiktokTrends, setTiktokTrends] = useState([]);
 
-    // Tiktok-xu-huong
     useEffect(() => {
       const fetchTikTokTrends = async () => {
         try {
@@ -135,50 +134,9 @@ function Home() {
       fetchTikTokTrends();
     }, []);
 
-
-
-    //Post
-    const platforms = [
-        {
-            name: 'Reddit',
-            posts: [
-                {
-                    postTitle: 'Test',
-                    thumbnailUrl: 'https://th.bing.com/th/id/OIP.wBbZMv7l1fsd-Ep-P9UbKgAAAA?rs=1&pid=ImgDetMain',
-                },
-                {
-                    postTitle: 'Test',
-                    thumbnailUrl: 'https://th.bing.com/th/id/OIP.wBbZMv7l1fsd-Ep-P9UbKgAAAA?rs=1&pid=ImgDetMain',
-                },
-                {
-                    postTitle: 'Test',
-                    thumbnailUrl: 'https://th.bing.com/th/id/OIP.wBbZMv7l1fsd-Ep-P9UbKgAAAA?rs=1&pid=ImgDetMain',
-                },
-            ],
-        },
-        {
-            name: 'News',
-            posts: [
-                {
-                    postTitle: 'Test',
-                    thumbnailUrl: 'https://th.bing.com/th/id/OIP.wBbZMv7l1fsd-Ep-P9UbKgAAAA?rs=1&pid=ImgDetMain',
-                },
-                {
-                    postTitle: 'Test',
-                    thumbnailUrl: 'https://th.bing.com/th/id/OIP.wBbZMv7l1fsd-Ep-P9UbKgAAAA?rs=1&pid=ImgDetMain',
-                },
-                {
-                    postTitle: 'Test',
-                    thumbnailUrl: 'https://th.bing.com/th/id/OIP.wBbZMv7l1fsd-Ep-P9UbKgAAAA?rs=1&pid=ImgDetMain',
-                },
-            ],
-        },
-    ];
-
-
-
     return (
         <div className={cx('container')}>
+
             <div className={cx('left-column')}>
                 <div className={cx('trends-card-row')}>
                     <div className={cx('trend-section-row')}>
@@ -191,24 +149,23 @@ function Home() {
                         )}
                     </div>
 
-                         <div className="trend-section-row">
-                            {/* Pass dữ liệu Twitter vào TwitterSection */}
-                            {twitterTrends.length > 0 ? (
-                                <TwitterSection hashtags={{ hashtagContents: twitterTrends }} />
-                            ) : (
-                                <p>No Twitter trends available</p>
-                            )}
-                        </div>
+                    <div className="trend-section-row">
+                        {/* Pass dữ liệu Twitter vào TwitterSection */}
+                        {twitterTrends.length > 0 ? (
+                            <TwitterSection hashtags={{ hashtagContents: twitterTrends }} />
+                        ) : (
+                            <p>No Twitter trends available</p>
+                        )}
+                    </div>
                 </div>
     
                 <div className={cx('trends-card-row')}>
                     <div className={cx('trend-section-row')}>
                         {googleTrends.length > 0 ? (
-                                    <GoogleTrendSection googleSearch = {{ googleContents : googleTrends}}/>
-                                
-                            ) : (
-                                <p>No Google trends available</p>
-                            )}
+                            <GoogleTrendSection googleSearch = {{ googleContents : googleTrends}}/>
+                        ) : (
+                            <p>No Google trends available</p>
+                        )}
                     </div>
     
                     <div className={cx('trend-section-row')}>
@@ -217,40 +174,52 @@ function Home() {
                         ) : (
                             <p>No TikTok trends available</p>
                         )}
-                        </div>
+                    </div>
                 </div>
+
             </div>
     
             <div className={cx('right2-column')}>
-            <div className={cx('video2-card-main')}>
-                <h2 className={cx('cardvideo-title-new')}>Âm nhạc thịnh hành</h2>
-                <div className={cx('video2-card-container')}>
-                    {youtubeTrends.length > 0 ? (
-                        youtubeTrends.map((youtubeTrend, index) => (
-                            <VideoCard
-                                key={index}
-                                youtubeTrend={youtubeTrend}  // Truyền youtubeTrend toàn bộ đối tượng
-                            />
-                        ))
-                    ) : (
-                        <p>No YouTube trends available</p>
-                    )}
+                <div className={cx('video2-card-main')}>
+                    <h2 className={cx('cardvideo-title-new')}>Âm nhạc thịnh hành</h2>
+                    <div className={cx('video2-card-container')}>
+                        {youtubeTrends.length > 0 ? (
+                            youtubeTrends.map((youtubeTrend, index) => (
+                                <VideoCard
+                                    key={index}
+                                    youtubeTrend={youtubeTrend}  // Truyền youtubeTrend toàn bộ đối tượng
+                                />
+                            ))
+                        ) : (
+                            <p>No YouTube trends available</p>
+                        )}
+                    </div>
                 </div>
-            </div>
                     
-                 {/* Adding "See All" link at the bottom */}
-                    <div className={cx('see-all-container')}>
+                <div className={cx('see-all-container')}>
                     <Link to="/videovn" className={cx('seeall2')}>
                         See all
                     </Link>
-                    </div>
+                </div>
             </div>
     
-            <div className={cx('row row-2')}>
-                <h2 className={cx('title')}>Featured Posts</h2>
-                {platforms.map((platform, index) => (
-                    <MediaPlatform key={index} platform={platform} />
-                ))}
+            
+            <div className={cx('row')}>
+                <h2 className={cx('title')}>Reddit Trending Posts</h2>
+                {redditTrends.length > 0 ? (
+                    <RedditTrendSection redditTrends={{ redditContents: redditTrends }} />
+                ) : (
+                    <p>No Reddit trends available</p>
+                )}
+            </div>
+
+            <div className={cx('row')}>
+                <h2 className={cx('title')}>News Trending Posts</h2>
+                {newsTrends.length > 0 ? (
+                    <NewsTrendSection newsTrends={{ newsContents: newsTrends }} />
+                ) : (
+                    <p>No News trends available</p>
+                )}
             </div>
     
             <div className={cx('contact-section')}>

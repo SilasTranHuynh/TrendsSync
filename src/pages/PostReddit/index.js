@@ -40,9 +40,10 @@ function PostReddit() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
+        // Fetch dữ liệu từ backend API
         const fetchRedditPosts = async () => {
             try {
-                const response = await fetch('http://localhost:3000/topPosts');
+                const response = await fetch('http://localhost:3000/top-posts');
                 const data = await response.json();
                 setReddits([{ redditContents: data }]);
                 setLoading(false);
@@ -53,6 +54,7 @@ function PostReddit() {
         };
         fetchRedditPosts();
     }, []);
+    
 
     return (
         <div className={cx('container')}>

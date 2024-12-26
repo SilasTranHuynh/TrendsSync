@@ -3,7 +3,7 @@ const express = require('express');
 const axios = require('axios');
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT_POST;
 
 const cors = require('cors');
 app.use(cors());
@@ -35,8 +35,8 @@ app.get('/getToken', async (req, res) => {
     }
 });
 
-// API để lấy các bài viết nổi bật
-app.get('/topPosts', async (req, res) => {
+// API để lấy các bài viết nổi bật của Reddit
+app.get('/top-posts', async (req, res) => {
     try {
         if (!tokenCache) {
             const tokenResponse = await axios.get('http://localhost:3000/getToken');
@@ -54,15 +54,14 @@ app.get('/topPosts', async (req, res) => {
             },
         });
 
-        const posts = redditResponse.data.data.children.map((post) => ({
-            redditAuthor: post.data.author,
-            redditTime: new Date(post.data.created_utc * 1000).toLocaleString(),
-            thumbnailUrl: post.data.thumbnail.startsWith('http') ? post.data.thumbnail : '',
-            redditTitle: post.data.title,
-            redditUpvotes: `↑ ${post.data.score}`,
+        const redditTrends = redditResponse.data.data.children.map((redditTrend) => ({
+            redditAuthor: redditTrend.data.author,
+            redditTime: new Date(redditTrend.data.created_utc * 1000).toLocaleString(),
+            thumbnailUrl: redditTrend.data.thumbnail.startsWith('http') ? redditTrend.data.thumbnail : '',
+            redditTitle: redditTrend.data.title,
+            redditUpvotes: `↑ ${redditTrend.data.score}`,
         }));
-
-        res.json(posts);
+        res.json(redditTrends);
     } catch (error) {
         console.error('Error: ', error.response ? error.response.data : error.message);
         res.status(500).send('Error retrieving top posts');
@@ -76,7 +75,7 @@ app.get('/top-headlines', async (req, res) => {
             params: {
                 country: 'us', // Mã quốc gia
                 apiKey: apiKey,
-                pageSize: 20,
+                pageSize: 30,
             },
         });
 
@@ -90,7 +89,7 @@ app.get('/top-headlines', async (req, res) => {
                 thumbnailUrl: newspost.urlToImage, // URL hình ảnh
                 newsTime: new Date(newspost.publishedAt).toLocaleString(), // Thời gian xuất bản
             }));
-            res.json({ newsContents: newsposts });
+            res.json({ newsposts });
         } else {
             console.error('No articles found', response.data);
             res.status(404).json({ message: 'No articles found' });
@@ -100,6 +99,10 @@ app.get('/top-headlines', async (req, res) => {
         res.status(500).json({ message: 'Failed to fetch news' });
     }
 });
+
+// Google trending - Danh mục được tìm kiếm nhiều
+//const fetchGoogleTrendingCategoryScraping = async () => {}
+
 
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
