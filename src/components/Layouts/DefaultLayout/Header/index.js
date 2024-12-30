@@ -38,64 +38,6 @@ function Header() {
             </div>
 
             <div className={cx('header-bottom')}>
-                <div className={cx('contents')}>
-                    <Link to="/topic" className={cx('topic')}>
-                        TOPIC
-                    </Link>
-
-                    <Link to="/hashtag" className={cx('hashtag')}>
-                        HASHTAG
-                    </Link>
-
-                    <Tippy
-                        placement="bottom-start"
-                        offset={[0, -0.5]}
-                        interactive
-                        render={(attrs) => (
-                            <PopperWrapper>
-                                <div className="box" tabIndex="-1" {...attrs}>
-                                    <Link to="/postReddit" className={cx('inner-box')}>
-                                        REDDIT
-                                    </Link>
-                                    <br></br>
-                                    <Link to="/postNews" className={cx('inner-box')}>
-                                        NEWS
-                                    </Link>
-                                </div>
-                            </PopperWrapper>
-                        )}
-                    >
-                        <div className={cx('post')}>
-                            <span>POST</span>
-                        </div>
-                    </Tippy>
-                    <Tippy
-                        placement="bottom-start"
-                        offset={[0, -0.5]}
-                        interactive
-                        render={(attrs) => (
-                            <PopperWrapper>
-                                <div className="box" tabIndex="-1" {...attrs}>
-                                    <Link to="/" className={cx('inner-box')}>
-                                        VIETNAM
-                                    </Link>
-                                    <br />
-                                    <Link to="/" className={cx('inner-box')}>
-                                        KOREA
-                                    </Link>
-                                    <br />
-                                    <Link to="/" className={cx('inner-box')}>
-                                        AMERICA
-                                    </Link>
-                                </div>
-                            </PopperWrapper>
-                        )}
-                    >
-                        <div className={cx('video')}>
-                            <span>VIDEO</span>
-                        </div>
-                    </Tippy>
-                </div>
                 <div className={cx('user')}>
                     <img className={cx('bell')} src={bellIcon} />
                     <div className={cx('separation')}> </div>
@@ -105,6 +47,7 @@ function Header() {
                     </Link>
                 </div>
             </div>
+
 
             <div className={cx('header-top-mobile')}>
                 <div className={cx('logo-slogan')}>
@@ -117,12 +60,7 @@ function Header() {
                         <span>Keep you in sync with future trends</span>
                     </div>
                 </div>
-                <div className={cx('login-mobile')}>
-                    <img className={cx('icon')} src={userIcon} />
-                    <Link to="/signinsignup" className={cx("text")}>
-                        <span>Sign In</span>
-                    </Link>
-                </div>
+    
                 <div className={cx('media-page')}>
                     <div className={cx('media-page-instagram')}>
                         <img className={cx('media-logo')} src={instagramLogo} />
@@ -137,66 +75,13 @@ function Header() {
             </div>
 
             <div className={cx('header-bottom-mobile')}>
-                <div className={cx('contents')}>
-                    <Link to="/topic" className={cx('topic')}>
-                        TOPIC
-                    </Link>
-
-                    <Link to="/hashtag" className={cx('hashtag')}>
-                        HASHTAG
-                    </Link>
-
-                    <Tippy
-                        placement="bottom-start"
-                        offset={[0, -0.5]}
-                        interactive
-                        render={(attrs) => (
-                            <PopperWrapper>
-                                <div className="box" tabIndex="-1" {...attrs}>
-                                    <Link to="/postReddit" className={cx('inner-box')}>
-                                        REDDIT
-                                    </Link>
-                                    <br></br>
-                                    <Link to="/postNews" className={cx('inner-box')}>
-                                        NEWS
-                                    </Link>
-                                </div>
-                            </PopperWrapper>
-                        )}
-                    >
-                        <div className={cx('post')}>
-                            <span>POST</span>
-                        </div>
-                    </Tippy>
-                    <Tippy
-                        placement="bottom-start"
-                        offset={[0, -0.5]}
-                        interactive
-                        render={(attrs) => (
-                            <PopperWrapper>
-                                <div className="box" tabIndex="-1" {...attrs}>
-                                    <Link to="/" className={cx('inner-box')}>
-                                        VIETNAM
-                                    </Link>
-                                    <br />
-                                    <Link to="/" className={cx('inner-box')}>
-                                        KOREA
-                                    </Link>
-                                    <br />
-                                    <Link to="/" className={cx('inner-box')}>
-                                        AMERICA
-                                    </Link>
-                                </div>
-                            </PopperWrapper>
-                        )}
-                    >
-                        <div className={cx('video')}>
-                            <span>VIDEO</span>
-                        </div>
-                    </Tippy>
-                </div>
                 <div className={cx('user')}>
                     <img className={cx('bell')} src={bellIcon} />
+                    <div className={cx('separation')}> </div>
+                    <img className={cx('icon')} src={userIcon} />
+                    <Link to="/signinsignup" className={cx("text")}>
+                        <span>Sign In</span>
+                    </Link>
                 </div>
             </div>
         </header>

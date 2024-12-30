@@ -3,7 +3,7 @@
     height: 800px;
     background-color: #daa5a5;
     border-radius: 8px;
-    padding: 15px;
+    padding: 15px 0 15px 15px;
     gap: 20px; // khoang cach giua card chinh voi cac card con ben trong 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow-y: auto;
@@ -68,6 +68,8 @@
   .right2-column {
     gap: 50px;
     flex: 0 0 35%; /* Chiều rộng của cột bên phải */
+    padding-left: 20px;
+    margin-top: 23px;
   }
   
 .cardvideo-title-new{
@@ -78,10 +80,11 @@
     text-align: center;
     background-color: #080808; /* Đảm bảo tiêu đề có nền khi cố định */
     z-index: 10; /* Đảm bảo tiêu đề luôn nằm trên các phần tử khác */
-    padding: 10px; /* Cảm giác thoải mái cho tiêu đề */
+    padding: 8px; /* Cảm giác thoải mái cho tiêu đề */
+    margin: 10px 0 20px 0;
     border-radius: 15px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Tạo hiệu ứng đổ bóng */
-    width: 100%; /* Đảm bảo tiêu đề chiếm toàn bộ chiều rộng của container */
+    width: 96%; /* Đảm bảo tiêu đề chiếm toàn bộ chiều rộng của container */
     height: 40px;
   }
   .container {

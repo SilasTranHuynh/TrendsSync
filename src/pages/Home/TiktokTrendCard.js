@@ -7,7 +7,7 @@ const cx = classNames.bind(styles);
 
 const TiktokTrendCard = ({ tiktokContents }) => (
   <div className={cx('tiktok-card')}>
-    <h2 className={cx('card-title-new')}>HashTag Xu Hướng</h2>
+    <h2 className={cx('card-title-new')}>Trending HashTags</h2>
     <div className={cx('card-header')}>
       <div className={cx('rank-tiktok')}>Rank</div>
       <div className={cx('content-tiktok')}>Content</div>

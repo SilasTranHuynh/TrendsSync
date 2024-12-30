@@ -8,7 +8,7 @@ const cx = classNames.bind(styles);
 
 const GoogleTrendCard = ({ googleContents }) => (
     <div className={cx('google-card')}>
-        <h2 className={cx('card-title-new')}>Tìm Kiếm Xu Hướng</h2>
+        <h2 className={cx('card-title-new')}>Trending Searches</h2>
         <div className={cx('card-header')}>
             <div className={cx('rank-google')}>Rank</div>
             <div className={cx('content-google')}>Content</div>

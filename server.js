@@ -1,4 +1,6 @@
 require('dotenv').config();
+const { Builder, By } = require("selenium-webdriver");
+const chrome = require("selenium-webdriver/chrome")
 const express = require('express');
 const axios = require('axios');
 
@@ -99,9 +101,6 @@ app.get('/top-headlines', async (req, res) => {
         res.status(500).json({ message: 'Failed to fetch news' });
     }
 });
-
-// Google trending - Danh mục được tìm kiếm nhiều
-//const fetchGoogleTrendingCategoryScraping = async () => {}
 
 
 app.listen(PORT, () => {

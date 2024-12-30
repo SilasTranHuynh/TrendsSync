@@ -6,7 +6,7 @@ const cx = classNames.bind(styles);
 
 const NewsCard = ({ newsContent }) => (
     <div className={cx('news-list')}>
-    {newsContent.slice(0, 6).map((content, index) => (
+    {newsContent.slice(0, 30).map((content, index) => (
     <div className={cx('news-card')} key={index}>
         <div className={cx('source-author')}>
             <p className={cx('news-source')}>{content.newsSource}</p>

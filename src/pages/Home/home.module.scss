@@ -2,129 +2,15 @@
     display: flex;
     flex-direction: row;
     width: 100%;
-    padding: 30px;
+    padding: 60px 30px 10px 30px;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .row {
     width: 90%;
     height: auto;
     padding: 10px;
-}
-
-.trend-component,
-.trend-list,
-.hashtag-component,
-.hashtag-list {
-    width: 100%;
-    height: auto;
-    position: relative;
-}
-
-.trend-list,
-.hashtag-list {
-    display: flex;
-}
-
-.post-component-wrapper {
-    display: flex;
-    align-items: center;
-}
-
-.post-thumbnail {
-    border: 1px solid rgba(254, 254, 254, 0.5);
-    width: 100%;
-    height: auto;
-}
-
-.post-thumbnail .post-thumbnail-img {
-    width: 100%;
-    height: auto;
-}
-
-.country-section {
-    width: 100%;
-    height: auto;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    margin-top: 10px;
-    border: 1.5px solid rgba(254, 254, 254, 0.5);
-}
-
-.country-section ul {
-    width: 100%;
-    height: 30px;
-    list-style-type: none;
-    font-size: 21px;
-    margin: 0;
-}
-
-.list-country {
-    border-bottom: 1.5px solid rgba(254, 254, 254, 0.5);
-}
-
-.list-country,
-.list-section {
-    display: flex;
-    justify-content: center;
-}
-
-.country-section ul li {
-    line-height: 30px;
-    display: flex;
-    justify-content: center;
-}
-
-.country-component,
-.section-component {
-    width: 100%;
-    height: auto;
-}
-
-.video-component {
-    width: 100%;
-    height: auto;
-    padding: 0;
-    margin: 0;
-    border: 0px 1.5px 1.5px 1.5px solid rgba(254, 254, 254, 0.5);
-}
-
-.video-list {
-    width: 100%;
-    height: auto;
-    border: 0px 1.5px 1.5px 1.5px solid rgba(254, 254, 254, 0.5);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.video-card {
-    width: 100%;
-    height: auto;
-}
-
-.video-thumbnail {
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-}
-
-.video-thumbnail img {
-    width: 100%;
-    height: auto;
-}
-
-.owner-view {
-    display: flex;
-    flex-direction: row;
-    position: relative;
-}
-
-.video-view {
-    position: absolute;
-    right: 0;
 }
 
 .form-section {
@@ -135,12 +21,26 @@
     position: relative;
 }
 
+.contact-section {
+    background-color: #daa5a5;
+    width: 97%;
+}
+
 // Extra Large
 @media (min-width: 1201px) {
     .row {
         width: 100%;
         height: auto;
         padding: 10px;
+    }
+
+    .trends-card-row {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .trend-section-row {
+        margin-right: 67px;
     }
 
     .title {
@@ -155,61 +55,6 @@
         color: rgba(93, 93, 93, 0.467);
     }
 
-    .post-component {
-        position: relative;
-        width: 100%;
-        height: 80%;
-        bottom: 0;
-        gap: 5px;
-    }
-
-    .post-list {
-        height: auto;
-        display: flex;
-        margin-top: 20px;
-        margin-left: 22px;
-    }
-
-    .trend-card,
-    .post-card {
-        margin-left: 20px;
-        width: 33%;
-        position: relative;
-    }
-
-    .trend-card {
-        background-color: rgba(254, 254, 254, 0.15);
-    }
-
-    .hashtag-card {
-        background-color: rgba(254, 254, 254, 0.15);
-        padding-right: 10px;
-        margin-left: 10px;
-        width: 25%;
-    }
-
-    .trend-title,
-    .hashtag-title {
-        font-size: 25px;
-        padding: 5px;
-    }
-
-    .trend-view,
-    .hashtag-view {
-        font-size: 16px;
-        padding: 5px;
-    }
-
-    .post-title,
-    .video-title {
-        font-size: 21px;
-    }
-
-    .video-owner,
-    .video-view {
-        font-size: 14px;
-    }
-
     .contact-section {
         width: 100%;
         height: auto;
@@ -221,12 +66,12 @@
     }
 
     .section-heading {
-        font-size: 35px;
-        margin-bottom: 60px;
+        font-size: 28px;
+        font-weight: 450;
+        padding-top: 4rem;;
     }
 
     .contact-left-column {
-        background-color: rgba(254, 254, 254, 0.15);
         width: 50%;
         height: 450px;
         font-size: 27px;
@@ -239,8 +84,7 @@
         padding-right: 20px;
     }
 
-    .contact-right-column {
-        background-color: rgba(254, 254, 254, 0.15);
+    .contact-right-column {   
         width: 50%;
         height: 450px;
         padding-left: 45px;
@@ -282,7 +126,8 @@
 
     .btn-send {
         margin-top: 10px;
-        font-size: 20px;
+        font-size: 18px;
+        width: 13%;
         padding: 4px 10px 4px 10px;
         border: 1px solid rgba(0, 0, 0, 0.33);
         border-radius: 5px;
@@ -297,6 +142,15 @@
         padding: 10px;
     }
 
+    .trends-card-row {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .trend-section-row {
+        margin-right: 67px;
+    }
+
     .title {
         font-size: 31px;
         margin: 0;
@@ -309,61 +163,6 @@
         color: rgba(93, 93, 93, 0.467);
     }
 
-    .post-component {
-        position: relative;
-        width: 100%;
-        height: 80%;
-        bottom: 0;
-        gap: 2.5px;
-    }
-
-    .post-list {
-        height: auto;
-        display: flex;
-        margin-top: 18px;
-        margin-left: 25px;
-    }
-
-    .trend-card,
-    .post-card {
-        margin-left: 11px;
-        width: 33%;
-        position: relative;
-    }
-
-    .trend-card {
-        background-color: rgba(254, 254, 254, 0.15);
-    }
-
-    .hashtag-card {
-        background-color: rgba(254, 254, 254, 0.15);
-        padding-right: 10px;
-        margin-left: 10px;
-        width: 25%;
-    }
-
-    .trend-title,
-    .hashtag-title {
-        font-size: 23px;
-        padding: 4px;
-    }
-
-    .trend-view,
-    .hashtag-view {
-        font-size: 14px;
-        padding: 4px;
-    }
-
-    .post-title,
-    .video-title {
-        font-size: 21px;
-    }
-
-    .video-owner,
-    .video-view {
-        font-size: 14px;
-    }
-
     .contact-section {
         width: 100%;
         height: auto;
@@ -372,11 +171,6 @@
         flex: 1 1 100%;
         justify-content: center;
         margin: 68px 0px 68px 0px;
-    }
-
-    .section-heading {
-        font-size: 33px;
-        margin-bottom: 45px;
     }
 
     .contact-left-column {
@@ -436,19 +230,24 @@
 
     .btn-send {
         margin-top: 10px;
-        font-size: 19px;
+        font-size: 17px;
+        width: 15%;
         padding: 4px 10px 4px 10px;
         border: 1px solid rgba(0, 0, 0, 0.33);
         border-radius: 5px;
     }
 }
-
 //Medium
 @media (min-width: 769px) and (max-width: 992px) {
     .row {
         width: 90%;
         height: auto;
         padding: 10px;
+    }
+
+    .trends-card-row {
+        display: flex;
+        flex-direction: column;
     }
 
     .title {
@@ -463,61 +262,6 @@
         color: rgba(93, 93, 93, 0.467);
     }
 
-    .post-component {
-        position: relative;
-        width: 100%;
-        height: 80%;
-        bottom: 0;
-        gap: 1.75px;
-    }
-
-    .post-list {
-        height: auto;
-        display: flex;
-        margin-top: 17px;
-        margin-left: 28px;
-    }
-
-    .trend-card,
-    .post-card {
-        margin-left: 10px;
-        width: 33%;
-        position: relative;
-    }
-
-    .trend-card {
-        background-color: rgba(254, 254, 254, 0.15);
-    }
-
-    .hashtag-card {
-        background-color: rgba(254, 254, 254, 0.15);
-        padding-right: 7.5px;
-        margin-left: 10px;
-        width: 25%;
-    }
-
-    .trend-title,
-    .hashtag-title {
-        font-size: 22px;
-        padding: 4px;
-    }
-
-    .trend-view,
-    .hashtag-view {
-        font-size: 13px;
-        padding: 4px;
-    }
-
-    .post-title,
-    .video-title {
-        font-size: 21px;
-    }
-
-    .video-owner,
-    .video-view {
-        font-size: 13px;
-    }
-
     .contact-section {
         width: 100%;
         height: auto;
@@ -528,10 +272,6 @@
         margin: 53px 0px 53px 0px;
     }
 
-    .section-heading {
-        font-size: 29px;
-        margin-bottom: 38px;
-    }
 
     .contact-left-column {
         background-color: rgba(254, 254, 254, 0.15);
@@ -590,7 +330,8 @@
 
     .btn-send {
         margin-top: 10px;
-        font-size: 18px;
+        font-size: 16px;
+        width: 17%;
         padding: 3.5px 8.75px 3.5px 8.75px;
         border: 1px solid rgba(0, 0, 0, 0.33);
         border-radius: 5px;
@@ -605,6 +346,11 @@
         padding: 10px;
     }
 
+    .trends-card-row {
+        display: flex;
+        flex-direction: column;
+    }
+
     .title {
         font-size: 29px;
         margin: 0;
@@ -617,64 +363,6 @@
         color: rgba(93, 93, 93, 0.467);
     }
 
-    .post-component {
-        position: relative;
-        width: 100%;
-        height: 80%;
-        bottom: 0;
-        gap: 1.75px;
-    }
-
-    .post-list {
-        height: auto;
-        display: flex;
-        margin-top: 17px;
-        margin-left: 35px;
-    }
-
-    .trend-card,
-    .post-card {
-        margin-left: 8px;
-        width: 33%;
-        position: relative;
-    }
-
-    .trend-card {
-        background-color: rgba(254, 254, 254, 0.15);
-    }
-
-    .hashtag-card {
-        background-color: rgba(254, 254, 254, 0.15);
-        padding-right: 7.5px;
-        margin-left: 10px;
-        width: 25%;
-    }
-
-    .trend-title,
-    .hashtag-title {
-        font-size: 22px;
-        padding: 4px;
-    }
-
-    .trend-view,
-    .hashtag-view {
-        font-size: 13px;
-        padding: 4px;
-    }
-
-    .post-title {
-        font-size: 21px;
-    }
-
-    .video-title {
-        font-size: 24px;
-    }
-
-    .video-owner,
-    .video-view {
-        font-size: 16px;
-    }
-
     .contact-section {
         width: 100%;
         height: auto;
@@ -685,30 +373,25 @@
         margin: 53px 0px 53px 0px;
     }
 
-    .section-heading {
-        font-size: 29px;
-        margin-bottom: 38px;
-    }
-
     .contact-left-column {
         background-color: rgba(254, 254, 254, 0.15);
-        width: 50%;
+        width: 44%;
         height: 450px;
-        font-size: 18px;
+        font-size: px;
         letter-spacing: 0.5px;
         position: relative;
         display: flex;
         flex-direction: column;
         justify-content: center;
         padding-left: 13%;
-        padding-right: 20px;
+        padding-right: 15px;
     }
 
     .contact-right-column {
         background-color: rgba(254, 254, 254, 0.15);
-        width: 50%;
+        width: 56%;
         height: 450px;
-        padding-left: 40px;
+        padding-left: 25px;
         position: relative;
         display: flex;
         flex-direction: column;
@@ -747,7 +430,8 @@
 
     .btn-send {
         margin-top: 10px;
-        font-size: 15px;
+        width: 21%;
+        font-size: 13px;
         padding: 3.5px 8.75px 3.5px 8.75px;
         border: 1px solid rgba(0, 0, 0, 0.33);
         border-radius: 5px;
@@ -774,64 +458,6 @@
         color: rgba(93, 93, 93, 0.467);
     }
 
-    .post-component {
-        position: relative;
-        width: 100%;
-        height: 80%;
-        bottom: 0;
-        gap: 1.75px;
-    }
-
-    .post-list {
-        height: auto;
-        display: flex;
-        margin-top: 17px;
-        margin-left: 35px;
-    }
-
-    .trend-card,
-    .post-card {
-        margin-left: 8px;
-        width: 33%;
-        position: relative;
-    }
-
-    .trend-card {
-        background-color: rgba(254, 254, 254, 0.15);
-    }
-
-    .hashtag-card {
-        background-color: rgba(254, 254, 254, 0.15);
-        padding-right: 7.5px;
-        margin-left: 10px;
-        width: 25%;
-    }
-
-    .trend-title,
-    .hashtag-title {
-        font-size: 22px;
-        padding: 4px;
-    }
-
-    .trend-view,
-    .hashtag-view {
-        font-size: 13px;
-        padding: 4px;
-    }
-
-    .post-title {
-        font-size: 19px;
-    }
-
-    .video-title {
-        font-size: 23px;
-    }
-
-    .video-owner,
-    .video-view {
-        font-size: 16px;
-    }
-
     .contact-section {
         width: 100%;
         height: auto;
@@ -842,30 +468,25 @@
         margin: 53px 0px 53px 0px;
     }
 
-    .section-heading {
-        font-size: 29px;
-        margin-bottom: 38px;
-    }
-
     .contact-left-column {
         background-color: rgba(254, 254, 254, 0.15);
-        width: 50%;
+        width: 40%;
         height: 450px;
-        font-size: 16px;
-        letter-spacing: 0.5px;
+        font-size: 14px;
+        letter-spacing: 0.25px;
         position: relative;
         display: flex;
         flex-direction: column;
         justify-content: center;
         padding-left: 10%;
-        padding-right: 20px;
+        padding-right: 15px;
     }
 
     .contact-right-column {
         background-color: rgba(254, 254, 254, 0.15);
-        width: 50%;
+        width: 60%;
         height: 450px;
-        padding-left: 30px;
+        padding-left: 25px;
         position: relative;
         display: flex;
         flex-direction: column;
@@ -904,18 +525,17 @@
 
     .btn-send {
         margin-top: 10px;
-        font-size: 15px;
+        width: 26%;
+        font-size: 12px;
         padding: 3.5px 8.75px 3.5px 8.75px;
         border: 1px solid rgba(0, 0, 0, 0.33);
         border-radius: 5px;
     }
 }
 
-
-  
   .left-column {
-    flex: 0 0 65%; /* Điều chỉnh chiều rộng của cột bên trái */
-    padding-right: 10px; /* Khoảng cách giữa cột trái và phải */
+    flex: 0 0 63%; /* Điều chỉnh chiều rộng của cột bên trái */
+    padding-right: 20px; /* Khoảng cách giữa cột trái và phải */
   }
 
   

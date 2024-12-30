@@ -3,6 +3,7 @@ import React from 'react';
 import classNames from 'classnames/bind';
 import styles from './trend.scss';
 import { Link } from 'react-router-dom';
+
 const cx = classNames.bind(styles);
 
 const TrendCard = ({ trendContents }) => (
@@ -11,7 +12,7 @@ const TrendCard = ({ trendContents }) => (
         <div className={cx('card2-header')}>
             <div className={cx('rank2')}>Rank</div>
             <div className={cx('content2')}>Content</div>
-            <div className={cx('views2')}>Views</div>
+            <div className={cx('views2')}>Progress Value</div>
         </div>
         <div className={cx('card2-body')}>
             {trendContents.slice(0, 10).map((content, index) => (

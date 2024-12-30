@@ -9,7 +9,7 @@
         height: 205px;
         border-top: 2.5px solid black;
         border-bottom: 2.5px solid black;
-        background: linear-gradient(to right, #182750, #6227ab, #7539acbf);
+        background: black;
         color: #fff;
         display: flex;
         position: relative;
@@ -26,11 +26,11 @@
     .logo {
         position: relative;
         align-self: center;
-        padding-left: 80px;
+        padding-left: 50px;
         top: 23%;
         font-size: 46px;
-        font-weight: bold;
-        letter-spacing: 1.5px;
+        font-weight: 600;
+        letter-spacing: 1.0px;
     }
 
     .logo-link {
@@ -44,8 +44,8 @@
         align-self: center;
         top: 25%;
         font-size: 21px;
-        letter-spacing: 0.5px;
-        padding-left: 80px;
+        letter-spacing: 0.35px;
+        padding-left: 60px;
     }
 
     .contents {
@@ -54,15 +54,15 @@
         flex-direction: row;
         right: 0;
         top: 22px;
-        padding-right: 80px;
-        gap: 120px;
-        letter-spacing: 0.5px;
+        padding-right: 100px;
+        gap: 100px;
+        letter-spacing: 0.35px;
     }
 
     .column h4 {
         color: #fff;
-        font-size: 23px;
-        font-weight: 500;
+        font-size: 22px;
+        font-weight: 530;
     }
 
     .column a {
@@ -84,11 +84,11 @@
         height: 205px;
         border-top: 2.5px solid black;
         border-bottom: 2.5px solid black;
-        background: linear-gradient(to right, #182750, #6227ab, #7539acbf);
-        color: #fff;
+        background: black;
+        color: white;
         display: flex;
         position: relative;
-        text-shadow: 0.5px 0.5px black;
+        text-shadow: 0.5px 0.5px white;
     }
 
     .left {
@@ -101,7 +101,7 @@
     .logo {
         position: relative;
         align-self: center;
-        padding-left: 70px;
+        padding-left: 40px;
         top: 23%;
         font-size: 42px;
         font-weight: bold;
@@ -120,7 +120,7 @@
         top: 25%;
         font-size: 19px;
         letter-spacing: 0.5px;
-        padding-left: 80px;
+        padding-left: 50px;
     }
 
     .contents {
@@ -130,7 +130,7 @@
         right: 0;
         top: 22px;
         padding-right: 70px;
-        gap: 80px;
+        gap: 70px;
         letter-spacing: 0.5px;
     }
 
@@ -160,7 +160,7 @@
         height: 205px;
         border-top: 2.5px solid black;
         border-bottom: 2.5px solid black;
-        background: linear-gradient(to right, #182750, #6227ab, #7539acbf);
+        background: black;
         color: #fff;
         display: flex;
         position: relative;
@@ -176,7 +176,7 @@
     .logo {
         position: relative;
         align-self: center;
-        padding-left: 60px;
+        padding-left: 30px;
         top: 23%;
         font-size: 36px;
         font-weight: bold;
@@ -195,7 +195,7 @@
         top: 25%;
         font-size: 17px;
         letter-spacing: 0.5px;
-        padding-left: 80px;
+        padding-left: 40px;
     }
 
     .contents {
@@ -205,7 +205,7 @@
         right: 0;
         top: 22px;
         padding-right: 60px;
-        gap: 60px;
+        gap: 50px;
         letter-spacing: 0.5px;
     }
 
@@ -234,7 +234,7 @@
         height: 205px;
         border-top: 2.5px solid black;
         border-bottom: 2.5px solid black;
-        background: linear-gradient(to right, #182750, #6227ab, #7539acbf);
+        background: black;
         color: #fff;
         display: flex;
         position: relative;
@@ -250,7 +250,7 @@
     .logo {
         position: relative;
         align-self: center;
-        padding-left: 45px;
+        padding-left: 30px;
         top: 23%;
         font-size: 34px;
         font-weight: bold;
@@ -269,7 +269,7 @@
         top: 25%;
         font-size: 16px;
         letter-spacing: 0.5px;
-        padding-left: 45px;
+        padding-left: 35px;
     }
 
     .contents {
@@ -279,7 +279,7 @@
         right: 0;
         top: 22px;
         padding-right: 45px;
-        gap: 50px;
+        gap: 32px;
         letter-spacing: 0.5px;
     }
 
@@ -310,7 +310,7 @@
         height: 205px;
         border-top: 2.5px solid black;
         border-bottom: 2.5px solid black;
-        background: linear-gradient(to right, #182750, #6227ab, #7539acbf);
+        background: black;
         color: #fff;
         display: flex;
         position: relative;
@@ -330,9 +330,9 @@
         position: relative;
         align-self: center;
         text-align: center;
-        font-size: 34px;
+        font-size: 33px;
         font-weight: bold;
-        letter-spacing: 1.5px;
+        letter-spacing: 1.3px;
         margin-top: 0;
     }
 
@@ -354,8 +354,8 @@
         position: relative;
         display: flex;
         flex-direction: column;
-        letter-spacing: 0.5px;
-        margin-top: 2px;
+        letter-spacing: 0.4px;
+        font-size: 26px;
         width: 100%;
         justify-content: center;
         text-align: center;
@@ -365,8 +365,7 @@
         color: #fff;
         font-size: 16px;
         font-weight: 600;
-        letter-spacing: 1px;
-        margin-top: 4px;
+        margin-top: 8px;
         text-decoration: none;
         justify-items: center;
         width: 100%;
@@ -374,7 +373,7 @@
     }
 
     .media-page {
-        margin-top: 7px;
+        margin-top: 1px;
         position: relative;
         display: flex;
         justify-content: center;

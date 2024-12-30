@@ -82,3 +82,12 @@
   .see-all:hover {
     text-decoration: underline;
   }
+
+  @media (min-width: 577px) and (max-width: 768px) {
+    .google-trend-component {
+      margin-top: 20px;
+      margin-left: 43px;
+      display: flex;
+      justify-content: center;
+    }
+  }

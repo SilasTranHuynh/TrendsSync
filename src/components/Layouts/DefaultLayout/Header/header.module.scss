@@ -1,10 +1,44 @@
 .wrapper {
     position: fixed;
+    width: 100%;
+    height: 128px;
+    color: #fff;
+    text-shadow: 1px 1px black;
+}
+
+.header-top, .header-bottom, .header-top-mobile, .header-bottom-mobile {
+    background: #fff;
+    cursor: pointer;
+}
+
+.header-top, .header-top-mobile {
+    border-bottom: 0.5px solid rgb(62, 62, 62);
+}
+
+.header-bottom, .header-bottom-mobile {
+    box-shadow:  1px 1px rgb(237, 237, 237);
+}
+
+.logo {
+    position: relative;
+    align-self: center;
+    color: #000;
+}
+
+.logo-link {
+    text-decoration: none;
+    color: #000;
+}
+
+.slogan {
+    position: relative;
+    align-self: center;
+    color: #000;
 }
 
 .text {
     text-decoration: none;
-    color: #fff;
+    color: black;
 }
 
 // Desktop : Large - Small
@@ -14,61 +48,37 @@
         display: none;
     }
 
-    .wrapper {
-        width: 100%;
-        height: 128px;
-        color: #fff;
-        text-shadow: 1px 1px black;
-    }
-
-    .header-top,
-    .header-bottom {
-        width: 100%;
-        border-bottom: 2.5px solid black;
-        cursor: pointer;
-    }
-
     .header-top {
+        width: 100%;
         height: 70px;
         display: flex;
-        background: linear-gradient(to right, #182750, #6227ab, #7539acbf);
     }
 
     .header-bottom {
         height: 58px;
-        background: linear-gradient(to left, #2248b0, #6941c5, #9360de);
+        box-shadow: #000;
     }
 
     .logo {
-        position: relative;
-        align-self: center;
         padding-right: 2px;
         padding-left: 60px;
         font-size: 46px;
-        font-weight: bold;
-        letter-spacing: 1.5px;
-        display: inline-block;
+        font-weight: 600;
+        letter-spacing: 1.0px;
     }
 
     .logo-link {
         display: block;
-        text-decoration: none;
-        color: #fff;
         height: 40px;
         width: auto;
         font-size: 36px;
     }
 
-    .logo-link span{
-    
-    }
-
     .slogan {
-        position: relative;
-        align-self: center;
         top: 17%;
         font-size: 21px;
-        letter-spacing: 0.5px;
+        font-weight: 500;
+        letter-spacing: 0.35px;
     }
 
     .media-page {
@@ -92,40 +102,6 @@
         height: 37px;
     }
 
-    .contents {
-        position: absolute;
-        line-height: 58px;
-        display: flex;
-        padding-left: 145px;
-        font-size: 25px;
-        font-weight: bold;
-        letter-spacing: 0.5px;
-    }
-
-    .topic,
-    .hashtag,
-    .post,
-    .video {
-        margin-right: 140px;
-    }
-
-    .topic,
-    .hashtag {
-        color: #fff;
-        text-decoration: none;
-    }
-
-    .inner-box {
-        margin-top: 10px;
-        color: #fff;
-        text-decoration: none;
-    }
-
-    .inner-box:hover {
-        padding-left: 2px;
-        opacity: 0.5;
-    }
-
     .user {
         position: absolute;
         align-self: center;
@@ -147,7 +123,7 @@
     .separation {
         width: 21px;
         height: 58px;
-        border-left: 3px solid black;
+        border-left: 0.5px solid rgb(62, 62, 62);
         margin-left: 14px;
     }
 
@@ -162,7 +138,7 @@
     .text {
         margin-left: 12px;
         font-size: 21px;
-        font-weight: 700;
+        font-weight: 600;
     }
 }
 
@@ -172,52 +148,33 @@
         display: none;
     }
 
-    .wrapper {
-        width: 100%;
-        height: 128px;
-        color: #fff;
-        text-shadow: 1px 1px black;
-    }
-
-    .header-top,
-    .header-bottom {
-        width: 100%;
-        border-bottom: 2.5px solid black;
-        cursor: pointer;
-    }
-
     .header-top {
         height: 70px;
         display: flex;
-        background: linear-gradient(to right, #182750, #6227ab, #7539acbf);
+        width: 100%;
     }
 
     .header-bottom {
         height: 58px;
-        background: linear-gradient(to left, #2248b0, #6941c5, #9360de);
+        background: white;
     }
 
     .logo {
-        position: relative;
-        align-self: center;
         padding-right: 2px;
         padding-left: 60px;
-        font-size: 46px;
+        font-size: 47px;
         font-weight: bold;
         letter-spacing: 1.5px;
     }
 
     .logo-link {
-        text-decoration: none;
-        color: #fff;
         font-size: 33px;
     }
 
     .slogan {
-        position: relative;
-        align-self: center;
         top: 14%;
-        font-size: 21px;
+        font-size: 20px;
+        font-weight: 500;
         letter-spacing: 0.5px;
     }
 
@@ -240,40 +197,6 @@
     .media-logo {
         width: 37px;
         height: 37px;
-    }
-
-    .contents {
-        position: absolute;
-        line-height: 58px;
-        display: flex;
-        padding-left: 145px;
-        font-size: 25px;
-        font-weight: bold;
-        letter-spacing: 0.5px;
-    }
-
-    .topic,
-    .hashtag,
-    .post,
-    .video {
-        margin-right: 80px;
-    }
-
-    .topic,
-    .hashtag {
-        color: #fff;
-        text-decoration: none;
-    }
-
-    .inner-box {
-        margin-top: 10px;
-        color: #fff;
-        text-decoration: none;
-    }
-
-    .inner-box:hover {
-        padding-left: 2px;
-        opacity: 0.5;
     }
 
     .user {
@@ -316,7 +239,7 @@
         text-decoration: none;
     }
 }
-
+//Done 
 // Tablet: Large - Medium - Small
 @media (min-width: 897px) and (max-width: 1024px) {
     .header-top-mobile,
@@ -324,52 +247,32 @@
         display: none;
     }
 
-    .wrapper {
-        width: 100%;
-        height: 128px;
-        color: #fff;
-        text-shadow: 1px 1px black;
-    }
-
-    .header-top,
-    .header-bottom {
-        width: 100%;
-        border-bottom: 2.5px solid black;
-        cursor: pointer;
-    }
-
     .header-top {
         height: 70px;
         display: flex;
-        background: linear-gradient(to right, #182750, #6227ab, #7539acbf);
+        width: 100%;
     }
 
     .header-bottom {
         height: 58px;
-        background: linear-gradient(to left, #2248b0, #6941c5, #9360de);
     }
 
     .logo {
-        position: relative;
-        align-self: center;
         padding-right: 2px;
         padding-left: 60px;
-        font-size: 46px;
+        font-size: 48px;
         font-weight: bold;
         letter-spacing: 1.5px;
     }
 
     .logo-link {
-        text-decoration: none;
-        color: #fff;
         font-size: 30px;
     }
 
     .slogan {
-        position: relative;
-        align-self: center;
-        top: 13%;
-        font-size: 21px;
+        top: 17%;
+        font-size: 19px;
+        font-weight: 500;
         letter-spacing: 0.5px;
     }
 
@@ -392,40 +295,6 @@
     .media-logo {
         width: 37px;
         height: 37px;
-    }
-
-    .contents {
-        position: absolute;
-        line-height: 58px;
-        display: flex;
-        padding-left: 125px;
-        font-size: 25px;
-        font-weight: bold;
-        letter-spacing: 0.5px;
-    }
-
-    .topic,
-    .hashtag,
-    .post,
-    .video {
-        margin-right: 60px;
-    }
-
-    .topic,
-    .hashtag {
-        color: #fff;
-        text-decoration: none;
-    }
-
-    .inner-box {
-        margin-top: 10px;
-        color: #fff;
-        text-decoration: none;
-    }
-
-    .inner-box:hover {
-        padding-left: 2px;
-        opacity: 0.5;
     }
 
     .user {
@@ -475,34 +344,16 @@
         display: none;
     }
 
-    .wrapper {
-        width: 100%;
-        height: 128px;
-        color: #fff;
-        text-shadow: 1px 1px black;
-    }
-
-    .header-top,
-    .header-bottom {
-        width: 100%;
-        border-bottom: 2.5px solid black;
-        cursor: pointer;
-    }
-
     .header-top {
         height: 70px;
         display: flex;
-        background: linear-gradient(to right, #182750, #6227ab, #7539acbf);
     }
 
     .header-bottom {
         height: 58px;
-        background: linear-gradient(to left, #2248b0, #6941c5, #9360de);
     }
 
     .logo {
-        position: relative;
-        align-self: center;
         padding-right: 2px;
         padding-left: 60px;
         font-size: 46px;
@@ -511,16 +362,13 @@
     }
 
     .logo-link {
-        text-decoration: none;
-        color: #fff;
         font-size: 28px;
     }
 
     .slogan {
-        position: relative;
-        align-self: center;
-        top: 12%;
-        font-size: 21px;
+        top: 16%;
+        font-size: 17px;
+        font-weight: 500;
         letter-spacing: 0.5px;
     }
 
@@ -543,40 +391,6 @@
     .media-logo {
         width: 37px;
         height: 37px;
-    }
-
-    .contents {
-        position: absolute;
-        line-height: 58px;
-        display: flex;
-        padding-left: 80px;
-        font-size: 25px;
-        font-weight: bold;
-        letter-spacing: 0.5px;
-    }
-
-    .topic,
-    .hashtag,
-    .post,
-    .video {
-        margin-right: 60px;
-    }
-
-    .topic,
-    .hashtag {
-        color: #fff;
-        text-decoration: none;
-    }
-
-    .inner-box {
-        margin-top: 10px;
-        color: #fff;
-        text-decoration: none;
-    }
-
-    .inner-box:hover {
-        padding-left: 2px;
-        opacity: 0.5;
     }
 
     .user {
@@ -626,53 +440,34 @@
         display: none;
     }
 
-    .wrapper {
-        width: 100%;
-        height: 128px;
-        color: #fff;
-        text-shadow: 1px 1px black;
-    }
-
-    .header-top-mobile,
-    .header-bottom-mobile {
-        width: 100%;
-        border-bottom: 2.5px solid black;
-        cursor: pointer;
-    }
-
     .header-top-mobile {
         height: 70px;
         display: flex;
         flex-direction: row;
-        background: linear-gradient(to right, #182750, #6227ab, #7539acbf);
     }
 
     .header-bottom-mobile {
         height: 58px;
-        background: linear-gradient(to left, #2248b0, #6941c5, #9360de);
         display: flex;
     }
 
     .logo {
-        position: relative;
         padding-right: 2px;
-        padding-left: 5px;
+        padding-left: 46px;
         font-size: 28px;
         font-weight: bold;
         letter-spacing: 1.5px;
     }
 
     .logo-link {
-        text-decoration: none;
-        color: #fff;
         font-size: 26px;
     }
 
     .slogan {
-        position: relative;
         font-size: 14px;
+        font-family: 500;
         letter-spacing: 0.5px;
-        padding-left: 5px;
+        padding-left: 12px;
     }
 
     .login-mobile {
@@ -699,7 +494,7 @@
         align-self: center;
         display: flex;
         right: 0;
-        padding-right: 2px;
+        padding-right: 12px;
         justify-content: center;
         line-height: 70px;
     }
@@ -717,40 +512,6 @@
         height: 28px;
     }
 
-    .contents {
-        position: absolute;
-        line-height: 58px;
-        display: flex;
-        padding-left: 35px;
-        font-size: 25px;
-        font-weight: bold;
-        letter-spacing: 0.5px;
-    }
-
-    .topic,
-    .hashtag,
-    .post,
-    .video {
-        margin-right: 30px;
-    }
-
-    .topic,
-    .hashtag {
-        color: #fff;
-        text-decoration: none;
-    }
-
-    .inner-box {
-        margin-top: 10px;
-        color: #fff;
-        text-decoration: none;
-    }
-
-    .inner-box:hover {
-        padding-left: 2px;
-        opacity: 0.5;
-    }
-
     .user {
         position: absolute;
         align-self: center;
@@ -759,6 +520,13 @@
         right: 0;
         padding-right: 35px;
         align-items: center;
+    }
+
+    .separation {
+        width: 21px;
+        height: 58px;
+        border-left: 3px solid black;
+        margin-left: 14px;
     }
 
     .bell {
@@ -777,51 +545,32 @@
         display: none;
     }
 
-    .wrapper {
-        width: 100%;
-        height: 128px;
-        color: #fff;
-        text-shadow: 1px 1px black;
-    }
-
-    .header-top-mobile,
-    .header-bottom-mobile {
-        width: 100%;
-        border-bottom: 2.5px solid black;
-        cursor: pointer;
-    }
-
     .header-top-mobile {
         height: 70px;
         display: flex;
         flex-direction: row;
-        background: linear-gradient(to right, #182750, #6227ab, #7539acbf);
     }
 
     .header-bottom-mobile {
         height: 58px;
-        background: linear-gradient(to left, #2248b0, #6941c5, #9360de);
         display: flex;
     }
 
     .logo {
-        position: relative;
         padding-right: 2px;
-        padding-left: 5px;
+        padding-left: 48px;
         font-size: 28px;
         font-weight: bold;
         letter-spacing: 1.5px;
     }
 
     .logo-link {
-        text-decoration: none;
-        color: #fff;
         font-size: 25px;
     }
 
     .slogan {
-        position: relative;
         font-size: 14px;
+        font-family: 500;
         letter-spacing: 0.5px;
         padding-left: 5px;
     }
@@ -868,40 +617,6 @@
         height: 28px;
     }
 
-    .contents {
-        position: absolute;
-        line-height: 58px;
-        display: flex;
-        padding-left: 45px;
-        font-size: 25px;
-        font-weight: bold;
-        letter-spacing: 0.5px;
-    }
-
-    .topic,
-    .hashtag,
-    .post,
-    .video {
-        margin-right: 30px;
-    }
-
-    .topic,
-    .hashtag {
-        color: #fff;
-        text-decoration: none;
-    }
-
-    .inner-box {
-        margin-top: 10px;
-        color: #fff;
-        text-decoration: none;
-    }
-
-    .inner-box:hover {
-        padding-left: 2px;
-        opacity: 0.5;
-    }
-
     .user {
         position: absolute;
         align-self: center;
@@ -910,6 +625,13 @@
         right: 0;
         padding-right: 35px;
         align-items: center;
+    }
+
+    .separation {
+        width: 21px;
+        height: 58px;
+        border-left: 3px solid black;
+        margin-left: 14px;
     }
 
     .bell {
@@ -928,35 +650,18 @@
         display: none;
     }
 
-    .wrapper {
-        width: 100%;
-        height: 128px;
-        color: #fff;
-        text-shadow: 1px 1px black;
-    }
-
-    .header-top-mobile,
-    .header-bottom-mobile {
-        width: 100%;
-        border-bottom: 2.5px solid black;
-        cursor: pointer;
-    }
-
     .header-top-mobile {
         height: 70px;
         display: flex;
         flex-direction: row;
-        background: linear-gradient(to right, #182750, #6227ab, #7539acbf);
     }
 
     .header-bottom-mobile {
         height: 58px;
-        background: linear-gradient(to left, #2248b0, #6941c5, #9360de);
         display: flex;
     }
 
     .logo {
-        position: relative;
         padding-right: 2px;
         padding-left: 5px;
         font-size: 28px;
@@ -965,13 +670,12 @@
     }
 
     .logo-link {
-        text-decoration: none;
-        color: #fff;
+
     }
 
     .slogan {
-        position: relative;
         font-size: 11px;
+        font-weight: 500;
         letter-spacing: 0.5px;
         padding-left: 5px;
     }
@@ -1057,6 +761,13 @@
         right: 0;
         padding-right: 15px;
         align-items: center;
+    }
+
+    .separation {
+        width: 21px;
+        height: 58px;
+        border-left: 3px solid black;
+        margin-left: 14px;
     }
 
     .bell {

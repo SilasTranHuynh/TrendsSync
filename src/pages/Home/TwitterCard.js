@@ -7,7 +7,7 @@ const cx = classNames.bind(styles);
 
 const TwitterCard = ({ hashtagContents }) => (
     <div className={cx('popular-card')}>
-        <h2 className={cx('card-title-new')}>Twitter Xu Hướng</h2>
+        <h2 className={cx('card-title-new')}>Trending Twitter</h2>
         <div className={cx('card-header')}>
             <div className={cx('rank-popular')}>Rank</div>
             <div className={cx('content-popular')}>Content</div>

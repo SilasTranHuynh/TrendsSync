@@ -120,3 +120,9 @@
     gap: 20px;
     margin-bottom: 10px;
   }
+
+  @media (min-width: 577px) and (max-width: 768px) {
+    .popular-trend-component {
+      margin-left: 43px;
+    }
+  }

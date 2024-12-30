@@ -54,6 +54,25 @@ function Home() {
         fetchNewsTrends();
     }, []);
 
+
+    // Trend Category xu huong
+    //const [categoryTrends, setCategoryTrends] = useState([]);
+
+    //useEffect(() => {
+        // Fetch dữ liệu từ backend API
+    //    const fetchCategoryTrends = async () => {
+    //        try {
+    //            const response = await axios.get('http://localhost:4900/api/top-categories');
+    //            setCategoryTrends(response.data);
+    //        } catch (error) {
+    //            console.error('Error fetching data:', error);
+    //        }
+    //    };
+    //    fetchCategoryTrends();
+    //}, []);
+
+
+
     // Youtube xu huong
     const [youtubeTrends, setYoutubeTrends] = useState([]);
 
@@ -69,18 +88,6 @@ function Home() {
 
         fetchYouTubeTrends();
     }, []);  // Fetch dữ liệu một lần khi component được render
-
-    const trends = [
-        {
-            trendContents: [
-                { trendTitle: 'Trend 1', trendView: '1000' },
-                { trendTitle: 'Trend 2', trendView: '1500' },
-                { trendTitle: 'Trend 3', trendView: '1200' },
-                { trendTitle: 'Trend 1', trendView: '1000' },
-                { trendTitle: 'Trend 2', trendView: '1500' },
-            ],
-        },
-    ];
 
     // Twitter xu huong
     const [twitterTrends, setTwitterTrends] = useState([]);
@@ -138,14 +145,13 @@ function Home() {
         <div className={cx('container')}>
 
             <div className={cx('left-column')}>
+                
                 <div className={cx('trends-card-row')}>
                     <div className={cx('trend-section-row')}>
-                        {trends.length > 0 ? (
-                            trends.map((trend, index) => (
-                                <TrendSection key={index} trends={trend} />
-                            ))
+                        {googleTrends.length > 0 ? (
+                            <GoogleTrendSection googleSearch = {{ googleContents : googleTrends}}/>
                         ) : (
-                            <p>No featured trends available</p>
+                            <p>No Google trends available</p>
                         )}
                     </div>
 
@@ -160,13 +166,6 @@ function Home() {
                 </div>
     
                 <div className={cx('trends-card-row')}>
-                    <div className={cx('trend-section-row')}>
-                        {googleTrends.length > 0 ? (
-                            <GoogleTrendSection googleSearch = {{ googleContents : googleTrends}}/>
-                        ) : (
-                            <p>No Google trends available</p>
-                        )}
-                    </div>
     
                     <div className={cx('trend-section-row')}>
                         {tiktokTrends.length > 0 ? (
@@ -181,7 +180,7 @@ function Home() {
     
             <div className={cx('right2-column')}>
                 <div className={cx('video2-card-main')}>
-                    <h2 className={cx('cardvideo-title-new')}>Âm nhạc thịnh hành</h2>
+                    <h2 className={cx('cardvideo-title-new')}>Trending Music</h2>
                     <div className={cx('video2-card-container')}>
                         {youtubeTrends.length > 0 ? (
                             youtubeTrends.map((youtubeTrend, index) => (
@@ -288,3 +287,10 @@ function Home() {
 }
 
 export default Home;
+//<div className={cx('trend-section-row')}>
+//    {categoryTrends.length > 0 ? (
+//        <TrendSection categoryTrends = {{ trendContents : categoryTrends}} />
+//    ) : (
+        <p>No featured trends available</p>
+//    )}
+//</div>

@@ -14,6 +14,7 @@ let googleTrendsData = [];
 let tiktokTrends = [];
 let twitterTrends = [];
 let youtubeTrends = [];
+let categoryTrendData = [];
 
 // ==================== Google Trends ====================
 
@@ -157,6 +158,48 @@ const fetchTwitterTrends = async () => {
     }
 };
 
+// ==================== Topic Category Trends ====================
+const fetchCategoryTrends = async () => {
+    let driver;
+    try {
+        // Cấu hình WebDriver với Chrome
+        const chromeOptions = new chrome.Options();
+        chromeOptions.addArguments('--headless'); // Chạy không hiển thị giao diện trình duyệt
+        chromeOptions.addArguments('--disable-dev-shm-usage');
+        chromeOptions.addArguments('--no-sandbox');
+
+        driver = await new Builder().forBrowser("chrome").setChromeOptions(chromeOptions).build();
+
+        await driver.get("https://explodingtopics.com/topics-last-2-years-by-growth");
+        await driver.sleep(5000); // Chờ trang tải xong
+
+        const trends = await driver.findElements(By.className('tileStyle cardHover'));
+
+        categoryTrendData = []; // Xóa dữ liệu cũ
+
+        // Duyệt qua các xu hướng và lấy thông tin
+           
+        for (let i = 0; i < trends.length; i++) {
+            const trend = trends[i];
+        
+            // Lấy tên xu hướng
+            let title = await trend.findElement(By.className('tileKeyword')).getText().catch(() => "Không có dữ liệu");
+        
+            // Lấy sự tăng trưởng của xu hướng
+            let searchVolume = await trend.findElement(By.className('scoreTagTop.growth.scoreTagGradient')).getText().catch(() => "Không có dữ liệu");
+        
+            // Thêm vào dữ liệu xu hướng
+            categoryTrendData.push({ Rank: i + 1, Title: title, SearchVolume: searchVolume });
+        }
+    } catch (error) {
+        console.error("Error fetching Topic Trends:", error);
+    } finally {
+        if (driver) {
+            await driver.quit(); // Đóng trình duyệt
+        }
+    }
+};
+
 // ==================== API Endpoints ====================
 
 // API trả dữ liệu Google Trends
@@ -186,6 +229,20 @@ app.get("/api/twitter-trends", async (req, res) => {
     res.set('Cache-Control', 'no-store');  // Tắt cache
     res.json(twitterTrends);  // Trả về dữ liệu xu hướng Twitter
 });
+
+// API trả dữ liệu Categories
+app.get("/api/top-categories", async (req, res) => {
+    try {
+        await fetchCategoryTrends();
+        res.set('Cache-Control', 'no-store'); // Tắt cache
+        res.json(categoryTrendData); // Trả về dữ liệu xu hướng
+    } catch (error) {
+        console.error("Error in /api/top-categories route:", error);
+        res.status(500).json({ error: "Failed to fetch category trends" });
+    }
+});
+
+
 // ==================== Khởi động server ====================
 
 // Khởi động server
@@ -199,12 +256,14 @@ app.listen(PORT, async () => {
     await fetchYouTubeTrends();
     await fetchTikTokTrends();
     await fetchTwitterTrends();
+    await fetchCategoryTrends();
 
     // Đặt lịch tự động thu thập dữ liệu mỗi 60 phút (1 giờ) cho Google, TikTok, Twitter
     setInterval(async () => {
         await fetchGoogleTrends();  // Thu thập Google Trends
         await fetchTikTokTrends();   // Thu thập TikTok Trends
         await fetchTwitterTrends();  // Thu thập Twitter Trends
+        await fetchCategoryTrends();
     }, 3600000);  // 3600000ms = 1 giờ
 
     // Đặt lịch tự động thu thập dữ liệu mỗi 1 phút cho YouTube
