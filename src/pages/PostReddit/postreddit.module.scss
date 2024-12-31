@@ -6,6 +6,41 @@
     overflow-y: auto;
 }
 
+.reddit-card {
+    border-bottom: 2px solid #c97272;
+}
+
+.waiting {
+    font-size: 1.75rem;
+}
+
+.reddit-card {
+    width: 100%;
+    height: auto;
+    margin: 10px 0px 10px 0px;
+}
+
+.reddit-card:hover {
+    background-color: rgba(121, 120, 120, 0.262);
+    border: 1px solid rgba(121, 120, 120, 0.064);
+    border-radius: 6px;
+}
+
+.reddit-thumbnail {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+}
+
+.reddit-thumbnail-img {
+    max-width: 100%;
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+    align-self: center;
+}
+
 .reddit-author {
     display: flex;
     position: relative;
@@ -26,8 +61,7 @@
     padding-right: 3px;
 }
 
-//
-@media (min-width: 993px) {
+@media (min-width: 1201px) {
     .main-title {
         font-size: 3.25rem;
         padding: 40px 0px 30px 0px;
@@ -43,20 +77,7 @@
         flex-direction: column;
         padding: 7px 0px 0px 0px;
         justify-self: center;
-        width: 65%;
-    }
-
-    .reddit-card {
-        width: 100%;
-        height: auto;
-        border-bottom: 2px solid #727dc9;
-        margin: 10px 0px 10px 0px;
-    }
-
-    .reddit-card:hover {
-        background-color: rgba(121, 120, 120, 0.262);
-        border: 1px solid rgba(121, 120, 120, 0.064);
-        border-radius: 6px;
+        width: 70%;
     }
 
     .author-time {
@@ -66,19 +87,39 @@
         justify-content: space-between;
     }
 
-    .reddit-thumbnail {
-        width: 100%;
-        height: 400px;
-        display: flex;
-        justify-content: center;
+    .reddit-title {
+        font-size: 2.25rem;
     }
 
-    .reddit-thumbnail-img {
-        max-width: 100%;
-        width: auto;
-        height: 100%;
-        object-fit: contain;
-        align-self: center;
+    .reddit-upvotes {
+        font-size: 1.75rem;
+    }
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+    .main-title {
+        font-size: 3.25rem;
+        padding: 40px 0px 30px 0px;
+        text-align: center;
+    }
+
+    .waiting {
+        font-size: 1.75rem;
+    }
+
+    .reddit-list {
+        display: flex;
+        flex-direction: column;
+        padding: 7px 0px 0px 0px;
+        justify-self: center;
+        width: 75%;
+    }
+
+    .author-time {
+        display: flex;
+        font-size: 1.75rem;
+        position: relative;
+        justify-content: space-between;
     }
 
     .reddit-title {
@@ -91,5 +132,107 @@
 }
 
 //
-@media (max-width: 992px) {
+@media (min-width: 769px) and (max-width: 992px) {
+    .main-title {
+        font-size: 3.25rem;
+        padding: 40px 0px 30px 0px;
+        text-align: center;
+    }
+
+    .waiting {
+        font-size: 1.75rem;
+    }
+
+    .reddit-list {
+        display: flex;
+        flex-direction: column;
+        padding: 7px 0px 0px 0px;
+        justify-self: center;
+        width: 85%;
+    }
+
+    .author-time {
+        display: flex;
+        font-size: 1.75rem;
+        position: relative;
+        justify-content: space-between;
+    }
+
+    .reddit-title {
+        font-size: 2.25rem;
+    }
+
+    .reddit-upvotes {
+        font-size: 1.75rem;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+    .main-title {
+        font-size: 3.0rem;
+        padding: 40px 0px 30px 0px;
+        text-align: center;
+    }
+
+    .waiting {
+        font-size: 1.75rem;
+    }
+
+    .reddit-list {
+        display: flex;
+        flex-direction: column;
+        padding: 7px 0px 0px 0px;
+        justify-self: center;
+        width: 90%;
+    }
+
+    .author-time {
+        display: flex;
+        font-size: 1.75rem;
+        position: relative;
+        justify-content: space-between;
+    }
+
+    .reddit-title {
+        font-size: 2.0rem;
+    }
+
+    .reddit-upvotes {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    main-title {
+        font-size: 2.75rem;
+        padding: 40px 0px 30px 0px;
+        text-align: center;
+    }
+
+    .waiting {
+        font-size: 1.75rem;
+    }
+
+    .reddit-list {
+        display: flex;
+        flex-direction: column;
+        padding: 7px 0px 0px 0px;
+        justify-self: center;
+        width: 95%;
+    }
+
+    .author-time {
+        display: flex;
+        font-size: 1.75rem;
+        position: relative;
+        justify-content: space-between;
+    }
+
+    .reddit-title {
+        font-size: 1.75rem;
+    }
+
+    .reddit-upvotes {
+        font-size: 1.25rem;
+    }
 }

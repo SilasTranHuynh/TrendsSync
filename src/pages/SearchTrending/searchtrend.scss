@@ -1,7 +1,5 @@
 .container1 {
-    width: 60%;
     height: 50%;
-    background-color: #3035b7;
     font-family: 'Arial', sans-serif;
     font-size: 1.6rem;
     margin-top: 10px;
@@ -99,7 +97,7 @@
 // Extra Large
 @media (min-width: 1201px) {
     .container1 {
-        width: 60%;
+        width: 75%;
         height: auto;
         background-color: #fff;
         justify-self: center;
@@ -147,7 +145,7 @@
 // Large + Medium
 @media (min-width: 769px) and (max-width: 1200px) {
     .container {
-        width: 70%;
+        width: 85%;
         height: auto;
         background-color: #fff;
         justify-self: center;
@@ -195,7 +193,7 @@
 // Small
 @media (min-width: 577px) and (max-width: 768px) {
     .container {
-        width: 70%;
+        width: 95%;
         height: auto;
         background-color: #fff;
         justify-self: center;
@@ -243,7 +241,7 @@
 // Extra Small
 @media (max-width: 576px) {
     .container {
-        width: 70%;
+        width: 100%;
         height: auto;
         background-color: #fff;
         justify-self: center;
