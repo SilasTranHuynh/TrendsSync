@@ -24,18 +24,26 @@ function Footer() {
             <div className={cx('contents')}>
                 <div className={cx('column')}>
                     <h4>ACCOUNT</h4>
-                    <Link to="/" className={cx('signup')}>
+                    <Link to="/signinsignup" className={cx('signup')}>
                         Sign up
                     </Link>
                     <br></br>
-                    <Link to="/" className={cx('login')}>
-                        Log in
+                    <Link to="/signinsignup" className={cx('login')}>
+                        Sign in
                     </Link>
                 </div>
                 <div className={cx('column')}>
                     <h4>PLATFORM</h4>
-                    <Link to="/topic" className={cx('ggtrends')}>
+                    <Link to="/search" className={cx('ggtrends')}>
                         Google Trends
+                    </Link>
+                    <br></br>
+                    <Link to="/hashtag" className={cx('tiktok')}>
+                        Tiktok Hashtag
+                    </Link>
+                    <br></br>
+                    <Link to="/twitter" className={cx('twitter')}>
+                        Twitter
                     </Link>
                     <br></br>
                     <Link to="/postReddit" className={cx('reddit')}>
@@ -90,7 +98,7 @@ function Footer() {
                     <span>Keep you in sync with future trends</span>
                 </div>
                 <div className={cx('contents-mobile')}>
-                    <Link to="/" className={cx('link-mobile')}>
+                    <Link to="/signinsignup" className={cx('link-mobile')}>
                         ACCOUNT
                     </Link>
                     <Link to="/" className={cx('link-mobile')}>

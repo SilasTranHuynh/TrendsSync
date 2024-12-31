@@ -229,19 +229,19 @@ function Home() {
                             <a href="#" className={cx('contact-location')}>
                                 <img className={cx('contact-logo')} src={locationLogo} alt="Location" />
                             </a>
-                            Chicago, US
+                            Thu Duc, Ho Chi Minh
                         </p>
                         <p>
                             <a className={cx('contact-phone')}>
                                 <img className={cx('contact-logo')} src={phoneLogo} alt="Phone" />
                             </a>
-                            Phone: +00 151515
+                            Phone: +84 869 162 370
                         </p>
                         <p>
                             <a className={cx('contact-email')}>
                                 <img className={cx('contact-logo')} src={mailLogo} alt="Mail" />
                             </a>
-                            Email: mail@mail.com
+                            Email: trendssync@gmail.com
                         </p>
                     </div>
                     <div className={cx('contact-right-column')}>

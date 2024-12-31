@@ -19,7 +19,7 @@ function SignInSignUpForm() {
         <button
           onClick={() => setIsRegister(false)}
           style={{
-            backgroundColor: isRegister ? "#f5f5f5" : "#ffd700",
+            backgroundColor: isRegister ? "#f5f5f5" : "#daa5a5",
             color: isRegister ? "black" : "white",
           }}
         >
@@ -28,7 +28,7 @@ function SignInSignUpForm() {
         <button
           onClick={() => setIsRegister(true)}
           style={{
-            backgroundColor: isRegister ? "#ffd700" : "#f5f5f5",
+            backgroundColor: isRegister ? "#daa5a5" : "#f5f5f5",
             color: isRegister ? "white" : "black",
           }}
         >
