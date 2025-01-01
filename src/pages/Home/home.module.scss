@@ -544,4 +544,12 @@
     flex: 0 0 25%; /* Chiều rộng của cột bên phải */
   }
 
+//{errors && errors.name && (
+//    <span className={cx('text-danger')}>{errors.name.msg}</span>
+//)}
+
+//<% if(errors && errors.name) { %> 
+//    <span className={cx('text-danger')}><%=errors.name.msg %></span>
+//<% } %>
+
   

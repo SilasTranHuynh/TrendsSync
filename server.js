@@ -3,6 +3,10 @@ const { Builder, By } = require("selenium-webdriver");
 const chrome = require("selenium-webdriver/chrome")
 const express = require('express');
 const axios = require('axios');
+const bodyParser = require('body-parser');
+const { check, validationResult } = require('express-validator');
+const ejs = require('ejs');
+const nodemailer = require('nodemailer');
 
 const app = express();
 const PORT = process.env.PORT_POST;
@@ -102,6 +106,55 @@ app.get('/top-headlines', async (req, res) => {
     }
 });
 
+// Chuc nang gui mail
+app.use(bodyParser.urlencoded({ extended: true }));
+
+app.set('view engine', 'ejs');
+
+app.use(express.json());
+
+app.get('/', (request, response) => {
+    response.render('contact', { error : ''});
+})
+
+app.post('/send-mail', 
+    [
+    check('name').notEmpty().withMessage('Name is required'),
+    check('email').isEmail().withMessage('Invalid Email Address'),
+    check('message').notEmpty().withMessage('Message is required')
+    ], (request, response) => {
+    const error = validationResult(request);
+    if(!error.isEmpty())
+    {
+        response.render('contact', {errors : errors.mapped()});
+    }
+    else {
+        const transporter = nodemailer.createTransport({
+            service: 'Gmail',
+            auth: {
+                user: 'trendssync@gmail.com',
+                pass: 'pvastzkwlvllqqbb'
+            }
+        });
+
+        const mail_option = {
+            from: request.body.email,
+            to: 'anhthv21@gmail.com',
+            text: `Name: ${request.body.name}\nEmail: ${request.body.email}\nMessage: ${request.body.message}`,
+        };
+
+        transporter.sendMail(mail_option, (error, info) => {
+            if(error)
+            {
+                console.log(error);
+            }
+            else
+            {
+                response.redirect('/');
+            }
+        });
+    }
+})
 
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);

@@ -245,14 +245,14 @@ function Home() {
                         </p>
                     </div>
                     <div className={cx('contact-right-column')}>
-                        <form>
+                        <form method="post" action="/send-mail">
                             <div className={cx('contact-row')}>
                                 <div className={cx('informations-2')}>
                                     <input
                                         type="text"
                                         placeholder="Name"
-                                        required
                                         name="name"
+                                        required
                                         className={cx('form-control')}
                                     />
                                 </div>
@@ -260,8 +260,8 @@ function Home() {
                                     <input
                                         type="email"
                                         placeholder="Email"
-                                        required
                                         name="email"
+                                        required
                                         className={cx('form-control')}
                                     />
                                 </div>
@@ -270,8 +270,8 @@ function Home() {
                                 <div className={cx('informations-1')}>
                                     <textarea
                                         placeholder="Message"
-                                        required
                                         name="message"
+                                        required
                                         className={cx('form-control')}
                                     />
                                 </div>
