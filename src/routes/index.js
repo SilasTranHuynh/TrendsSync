@@ -9,6 +9,7 @@ import VideoKR from '~/pages/VideoKR';
 import Twitter from '~/pages/TwitterTrending';
 import Search from '~/pages/SearchTrending';
 import SignInSignUpForm from '~/pages/SignInSignUp';
+import SignUpSignInForm from '~/pages/SignUpSignIn';
 
 const publicRoutes = [
     { path: '/', component: Home },
@@ -22,6 +23,7 @@ const publicRoutes = [
     { path: '/twitter', component: Twitter},
     { path: '/search', component: Search},
     { path: '/signinsignup', component: SignInSignUpForm},
+    { path: '/signupsignin', component: SignUpSignInForm},
 ];
 
 const privateRoutes = [];

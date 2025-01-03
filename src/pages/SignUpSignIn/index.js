@@ -1,58 +1,63 @@
 import React, { useState } from 'react';
 import classNames from 'classnames/bind';
 import axios from 'axios';
-import styles from './signinsignup.module.scss';
-import ValidationSignIn from './SignInValidation';
+import styles from './signupsignin.module.scss';
+import ValidationSignUp from './SignUpValidation';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 const cx = classNames.bind(styles);
 
-function SignInSignUpForm() {
+function SignUpSignInForm() {
 
-  /*Sign In*/
+  /*Sign Up*/
   const [values, setValues] = useState({
+    name: '',
     email: '',
     password: ''
   })
   const navigate = useNavigate();
   const [errors, setErrors] = useState({})
-  
   const handleInput = (event) => {
     setValues(prev => ({...prev, [event.target.name]: [event.target.value]}))
   }
-
   const handleSubmit = (event) => {
     event.preventDefault();
-    setErrors(ValidationSignIn(values));
-    if(errors.email === "" && errors.password === "") {
-      axios.post('http://localhost:3307/signin', values)
+    setErrors(ValidationSignUp(values));
+    if(errors.name === "" && errors.email === "" && errors.password === "") {
+      axios.post('http://localhost:3307/signup', values)
       .then(res => {
-        if(res.data === "Success") {
-          alert("Sign in successful");
-          navigate('/');
-        } else {
-          alert("No record existed");
-        }
+        alert("Sign up successful");
+        navigate('/signinsignup');
       })
-      .catch(err => console.log(err));
+      .catch(err => 
+        {
+          alert("Error");
+          console.log(err)
+        });
     }
   }
 
   return (
     <div className={cx('form-container')}>
       <div className={cx('form-buttons')}>
-        <button className={cx('signin-btn')}>
-          Sign In
-        </button>
-        <Link to="/signupsignin" className={cx('signup-btn')}>
+        <Link to="/signinsignup" className={cx('signin-btn')}>
           <button>
-            Sign Up
+            Sign In
           </button>
         </Link>
+        <button className={cx('signup-btn')}>
+          Sign Up
+        </button>
       </div>
 
-      <form className={('login-form')} action="" onSubmit={handleSubmit}>
+      <form className={('register-form')} action="" onSubmit={handleSubmit}>
+        <div>
+          <label htmlFor="name">Name</label>
+          <input id="name" type="text" name="name" placeholder='Enter Name'
+          onChange={handleInput}/>
+          {errors.name && <span className={cx('text-danger')}>{errors.name}</span> }
+        </div>
         <div>
           <label htmlFor="email">Email</label>
           <input id="email" type="email" name="email" placeholder='Enter Email'
@@ -61,14 +66,14 @@ function SignInSignUpForm() {
         </div>
         <div>
           <label htmlFor="password">Password</label>
-          <input id="password" type="password" name="password" placeholder='Enter Password'
+          <input id="password" type="password" name="password" placeholder="Enter Password" 
           onChange={handleInput}/>
           {errors.password && <span className={cx('text-danger')}>{errors.password}</span> }
         </div>
-        <button className={cx('final-btn')} type="submit">Sign In</button> 
+        <button className={cx('final-btn')} type="submit">Sign Up</button>
       </form>
     </div>
   );
 }
   
-  export default SignInSignUpForm;
+export default SignUpSignInForm;

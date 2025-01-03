@@ -3,15 +3,16 @@ const { Builder, By } = require("selenium-webdriver");
 const chrome = require("selenium-webdriver/chrome")
 const express = require('express');
 const axios = require('axios');
+const cors = require('cors');
 const bodyParser = require('body-parser');
 const { check, validationResult } = require('express-validator');
 const ejs = require('ejs');
 const nodemailer = require('nodemailer');
 
 const app = express();
+
 const PORT = process.env.PORT_POST;
 
-const cors = require('cors');
 app.use(cors());
 
 let tokenCache = null;
