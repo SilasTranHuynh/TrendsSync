@@ -239,6 +239,10 @@ app.post('/send-mail',
 // Khởi động server
 app.listen(PORT, async () => {
     console.log(`Server is running on http://localhost:${PORT}`);
+<<<<<<< HEAD
     await fetchRedditTrends();
     saveHistory();
 });
+=======
+});
+>>>>>>> b58e5a0a815e6b80b83601744763af7802b5a122

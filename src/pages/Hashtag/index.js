@@ -1,60 +1,135 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import classNames from 'classnames/bind';
-import styles from './hashtag.module.scss';
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import { Line } from "react-chartjs-2";
+import { Chart, registerables } from "chart.js";
+import classNames from "classnames/bind";
+import styles from "./hashtag.module.scss";
+
+Chart.register(...registerables);
 
 const cx = classNames.bind(styles);
 
-const HashtagCard = ({ rank, hashtag, views }) => {
+const HashtagCard = ({ rank, hashtag, views, viewHistory }) => {
     return (
-        <div className={cx('hashtag-card')}>
-            <p className={cx('hashtag-rank')}>{rank}</p>
-            <p className={cx('hashtag-title')}>{hashtag}</p>
-            <p className={cx('hashtag-view')}>{views}</p>
+        <div className={cx("hashtag-card")}>
+            <p className={cx("hashtag-rank")}>{rank}</p>
+            <p className={cx("hashtag-title")}>{hashtag}</p>
+            <p className={cx("hashtag-view")}>{views}</p>
+            <div className={cx("hashtag-chart")}>
+                <Line
+                    data={{
+                        labels: viewHistory.map((_, i) => `${i * 2} giờ trước`),
+                        datasets: [
+                            {
+                                label: "Lượt Đăng",
+                                data: viewHistory,
+                                borderColor: "#42A5F5",
+                                fill: false,
+                                tension: 0.4,
+                            },
+                        ],
+                    }}
+                    options={{
+                        responsive: true,
+                        plugins: {
+                            tooltip: {
+                                callbacks: {
+                                    label: (context) => `Lượt đăng: ${context.raw}`,
+                                },
+                            },
+                        },
+                        scales: {
+                            x: {
+                                title: {
+                                    display: true,
+                                    text: "Thời Gian",
+                                },
+                            },
+                            y: {
+                                title: {
+                                    display: true,
+                                    text: "Lượt Đăng",
+                                },
+                            },
+                        },
+                    }}
+                />
+            </div>
         </div>
     );
 };
 
 const Hashtag = () => {
     const [data, setData] = useState([]);
+    const [historyFiles, setHistoryFiles] = useState([]);
     const [displayAll, setDisplayAll] = useState(false);
 
     useEffect(() => {
-        axios.get("http://localhost:4900/api/tiktok-trends")
-            .then(response => setData(response.data))
-            .catch(error => console.error("Error fetching TikTok data:", error));
+        axios
+        .get("http://localhost:5002/api/tiktok-trends/history")
+            .then((response) => setHistoryFiles(response.data))
+            .catch((error) => console.error("Error fetching history files:", error));
     }, []);
 
     const toggleSeeAll = () => {
         setDisplayAll(!displayAll);
     };
 
-    // Determine the data to display (top 15 or all)
     const displayedData = displayAll ? data : data.slice(0, 15);
 
     return (
+<<<<<<< HEAD
         <div className={cx('container')}>
             <h1 className={cx('main-title')}>Hashtag Thịnh Hành</h1>
             <div className={cx('hashtag-header')}>
                 <p className={cx('header-rank')}>Thứ</p>
                 <p className={cx('header-title')}>Hashtag</p>
                 <p className={cx('header-view')}>Lượt Đăng</p>
+=======
+        <div className={cx("container")}>
+            <h1 className={cx("main-title")}>Hashtag Thịnh Hành</h1>
+            <div className={cx("history-section")}>
+                <h2>Lịch Sử</h2>
+                <div className={cx("history-slider")}>
+                    {historyFiles.map((file, index) => (
+                        <button
+                            key={index}
+                            onClick={() => axios.get(file.url).then((res) => setData(res.data))}
+                            className={cx("history-button", { disabled: !file.exists })}
+                        >
+                            {file.time}
+                        </button>
+                    ))}
+                </div>
+>>>>>>> b58e5a0a815e6b80b83601744763af7802b5a122
             </div>
-            <div className={cx('hashtag-list')}>
+            <div className={cx("hashtag-header")}>
+                <p className={cx("header-rank")}>Rank</p>
+                <p className={cx("header-title")}>Hashtag</p>
+                <p className={cx("header-view")}>Lượt Đăng</p>
+            </div>
+            <div className={cx("hashtag-list")}>
                 {displayedData.map((item, index) => (
                     <HashtagCard
                         key={index}
                         rank={`#${item.Rank}`}
                         hashtag={item.Hashtag}
                         views={item.Views}
+                        viewHistory={item.ViewHistory || []}
                     />
                 ))}
             </div>
+<<<<<<< HEAD
 
             {/* "See All" Button */}
             <div className={cx('see-all-container')}>
                 <button className={cx('seeall-button')} onClick={toggleSeeAll}>
                     {displayAll ? 'Thu gọn' : 'Xem tất cả'}
+=======
+            <div className={cx("see-all-container")}>
+                <button className={cx("seeall-button")} onClick={toggleSeeAll}>
+                    {displayAll ? "See Less" : "See All"}
+>>>>>>> b58e5a0a815e6b80b83601744763af7802b5a122
                 </button>
             </div>
         </div>
