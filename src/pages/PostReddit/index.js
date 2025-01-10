@@ -1,68 +1,144 @@
-import React, { useEffect, useState } from 'react';
-import classNames from 'classnames/bind';
-import styles from './postreddit.module.scss';
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import { Line } from "react-chartjs-2";
+import { Chart, registerables } from "chart.js";
+import classNames from "classnames/bind";
+import styles from "./postreddit.module.scss";
+
+Chart.register(...registerables);
 
 const cx = classNames.bind(styles);
 
-const RedditCard = ({ redditAuthor, redditTime, redditTitle, thumbnailUrl, redditUpvotes }) => (
-    <div className={cx('reddit-card')}>
-        <div className={cx('author-time')}>
-            <p className={cx('reddit-author')}>{redditAuthor}</p>
-            <p className={cx('reddit-time')}>{redditTime}</p>
+// RedditCard component with chart
+const RedditCard = ({ redditAuthor, redditTime, redditTitle, thumbnailUrl, redditUpvotes, viewHistory }) => (
+    <div className={cx("reddit-card")}>
+        <div className={cx("author-time")}>
+            <p className={cx("reddit-author")}>{redditAuthor}</p>
+            <p className={cx("reddit-time")}>{redditTime}</p>
         </div>
-        <div className={cx('reddit-thumbnail')}>
-            <img className={cx('reddit-thumbnail-img')} src={thumbnailUrl} />
+        <div className={cx("reddit-thumbnail")}>
+            <img className={cx("reddit-thumbnail-img")} src={thumbnailUrl} alt="Thumbnail" />
         </div>
-        <p className={cx('reddit-title')}>{redditTitle}</p>
-        <p className={cx('reddit-upvotes')}>{redditUpvotes}</p>
+        <p className={cx("reddit-title")}>{redditTitle}</p>
+        <p className={cx("reddit-upvotes")}>{redditUpvotes} upvotes</p>
+        <div className={cx("reddit-chart")}>
+            <Line
+                data={{
+                    labels: viewHistory.map((_, i) => `${i * 2} giờ trước`),
+                    datasets: [
+                        {
+                            label: "Lượt upvote",
+                            data: viewHistory,
+                            borderColor: "#42A5F5",
+                            fill: false,
+                            tension: 0.4,
+                        },
+                    ],
+                }}
+                options={{
+                    responsive: true,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                label: (context) => `Lượt upvote: ${context.raw}`,
+                            },
+                        },
+                    },
+                    scales: {
+                        x: { title: { display: true, text: "Thời gian" } },
+                        y: { title: { display: true, text: "Lượt upvote" } },
+                    },
+                }}
+                height={60}
+            />
+        </div>
     </div>
 );
 
-const RedditSection = ({ reddit }) => (
-    <div className={cx('reddit-component')}>
-        <div className={cx('reddit-list')}>
-            {reddit.redditContents.map((redditContent, index) => (
-                <RedditCard
-                    key={index}
-                    redditAuthor={redditContent.redditAuthor}
-                    redditTime={redditContent.redditTime}
-                    thumbnailUrl={redditContent.thumbnailUrl}
-                    redditTitle={redditContent.redditTitle}
-                    redditUpvotes={redditContent.redditUpvotes}
-                />
-            ))}
-        </div>
+// RedditSection component
+const RedditSection = ({ redditContents }) => (
+    <div className={cx("reddit-section")}>
+        {redditContents.length === 0 ? (
+            <p>No posts available for this hour.</p>
+        ) : (
+            <div className={cx("reddit-list")}>
+                {redditContents.map((post, index) => (
+                    <RedditCard
+                        key={index}
+                        redditAuthor={post.Author}
+                        redditTime={post.Time}
+                        thumbnailUrl={post.Thumbnail}
+                        redditTitle={post.Title}
+                        redditUpvotes={post.Upvotes}
+                        viewHistory={post.ViewHistory || []} // Thêm viewHistory cho biểu đồ
+                    />
+                ))}
+            </div>
+        )}
     </div>
 );
 
+// Main App component
 function PostReddit() {
-    const [reddits, setReddits] = useState([]);
-    const [loading, setLoading] = useState(true);
+    const [currentHour, setCurrentHour] = useState("Now");
+    const [redditData, setRedditData] = useState([]);
+    const [historyFiles, setHistoryFiles] = useState([]);
+    const [loading, setLoading] = useState(false);
 
+    // Fetch available history files
     useEffect(() => {
-        // Fetch dữ liệu từ backend API
-        const fetchRedditPosts = async () => {
-            try {
-                const response = await fetch('http://localhost:3000/top-posts');
-                const data = await response.json();
-                setReddits([{ redditContents: data }]);
-                setLoading(false);
-            } catch (error) {
-                console.error('Error fetching data:', error);
-                setLoading(false);
-            }
-        };
-        fetchRedditPosts();
+        axios
+            .get("http://localhost:3000/api/reddit-trends/history")
+            .then((response) => setHistoryFiles(response.data))
+            .catch((error) => console.error("Error fetching history files:", error));
     }, []);
-    
+
+    // Fetch data for current hour or selected history file
+    const fetchRedditData = async (hourOrFileUrl) => {
+        setLoading(true);
+        try {
+            const endpoint = hourOrFileUrl.startsWith("http")
+                ? hourOrFileUrl
+                : `http://localhost:3000/reddit/${hourOrFileUrl === "Now" ? "Now.json" : `${hourOrFileUrl}.json`}`;
+            const response = await axios.get(endpoint);
+            setRedditData(response.data);
+        } catch (error) {
+            console.error("Error fetching Reddit data:", error);
+            setRedditData([]);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    // Fetch data when currentHour changes
+    useEffect(() => {
+        fetchRedditData(currentHour);
+    }, [currentHour]);
 
     return (
-        <div className={cx('container')}>
-            <h1 className={cx('main-title')}>Top Reddit Posts</h1>
+        <div className={cx("container")}>
+            <h1 className={cx("main-title")}>Bài viết xu hướng Reddit </h1>
+            {/* History Section */}
+            <div className={cx("history-section")}>
+                <div className={cx("history-slider")}>
+                    {historyFiles.map((file, index) => (
+                        <button
+                            key={index}
+                            onClick={() => fetchRedditData(file.url)}
+                            className={cx("history-button")}
+                        >
+                            {file.time}
+                        </button>
+                    ))}
+                </div>
+            </div>
+
+            {/* Reddit Posts Section */}
             {loading ? (
-                <p className={cx('waiting')}>Just a little while...</p>
+                <p className={cx("loading")}>Loading data...</p>
             ) : (
-                reddits.map((reddit, index) => <RedditSection key={index} reddit={reddit} />)
+                <RedditSection redditContents={redditData} />
             )}
         </div>
     );

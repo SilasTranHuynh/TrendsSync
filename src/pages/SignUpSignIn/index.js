@@ -43,34 +43,34 @@ function SignUpSignInForm() {
       <div className={cx('form-buttons')}>
         <Link to="/signinsignup" className={cx('signin-btn')}>
           <button>
-            Sign In
+            Đăng Nhập
           </button>
         </Link>
         <button className={cx('signup-btn')}>
-          Sign Up
+          Đăng Kí
         </button>
       </div>
 
       <form className={('register-form')} action="" onSubmit={handleSubmit}>
         <div>
           <label htmlFor="name">Name</label>
-          <input id="name" type="text" name="name" placeholder='Enter Name'
+          <input id="name" type="text" name="name" placeholder='Nhập Name'
           onChange={handleInput}/>
           {errors.name && <span className={cx('text-danger')}>{errors.name}</span> }
         </div>
         <div>
           <label htmlFor="email">Email</label>
-          <input id="email" type="email" name="email" placeholder='Enter Email'
+          <input id="email" type="email" name="email" placeholder='Nhập Email'
           onChange={handleInput}/>
           {errors.email && <span className={cx('text-danger')}>{errors.email}</span> }
         </div>
         <div>
           <label htmlFor="password">Password</label>
-          <input id="password" type="password" name="password" placeholder="Enter Password" 
+          <input id="password" type="password" name="password" placeholder="Nhập Password" 
           onChange={handleInput}/>
           {errors.password && <span className={cx('text-danger')}>{errors.password}</span> }
         </div>
-        <button className={cx('final-btn')} type="submit">Sign Up</button>
+        <button className={cx('final-btn')} type="submit">Đăng Kí</button>
       </form>
     </div>
   );

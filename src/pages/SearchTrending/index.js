@@ -36,7 +36,7 @@ const Search = () => {
         <div className={cx('container1')}>
             <h1 className={cx('main-title')}>Tìm Kiếm Xu Hướng</h1>
             <div className={cx('twitter-header')}>
-                <p className={cx('header-rank')}>Rank</p>
+                <p className={cx('header-rank')}>Thứ hạng</p>
                 <p className={cx('header-content')}>Nội dung</p>
                 <p className={cx('header-tweets')}>Lượt Tìm Kiếm</p>
             </div>
@@ -54,7 +54,7 @@ const Search = () => {
             {/* "See All" Button */}
             <div className={cx('see-all-container')}>
                 <button className={cx('seeall-button')} onClick={toggleSeeAll}>
-                    {displayAll ? 'See Less' : 'See All'}
+                    {displayAll ? 'Thu gọn' : 'Xem tất cả'}
                 </button>
             </div>
         </div>

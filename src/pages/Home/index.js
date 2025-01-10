@@ -12,6 +12,7 @@ import NewsTrendSection from './NewsTrendSection';
 
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 import locationLogo from '~/assets/images/location.png';
 import VideoCard from './videoCard.js'
@@ -21,20 +22,35 @@ import mailLogo from '~/assets/images/mail.png';
 const cx = classNames.bind(styles);
 
 function Home() {
+    //const [name, setName] = useState('')
+    //    const navigate = useNavigate()
+    //    useEffect(() => {
+    //        axios.get('http://localhost:3307/profileserver')
+    //        .then(res => {
+    //            if(res.data.valid){
+    //                setName(res.data.user_name);
+    //            } else {
+    //                navigate('/signinsignup')
+    //            }
+    //        })
+    //        .catch(err => console.log(err))
+    //    })
+
+
     // Reddit xu huong
     const [redditTrends, setRedditTrends] = useState([]);
 
     useEffect(() => {
-        // Fetch dữ liệu từ backend API
         const fetchRedditTrends = async () => {
             try {
-                const response = await fetch('http://localhost:3000/top-posts');
+                const response = await fetch("http://localhost:3000/api/reddit-trends");
                 const data = await response.json();
-                setRedditTrends(data);
+                setRedditTrends(data); 
             } catch (error) {
-                console.error('Error fetching data:', error);
+                console.error("Error fetching Reddit trends:", error);
             }
         };
+
         fetchRedditTrends();
     }, []);
 
@@ -180,7 +196,7 @@ function Home() {
     
             <div className={cx('right2-column')}>
                 <div className={cx('video2-card-main')}>
-                    <h2 className={cx('cardvideo-title-new')}>Trending Music</h2>
+                    <h2 className={cx('cardvideo-title-new')}>Âm nhạc xu hướng Youtube</h2>
                     <div className={cx('video2-card-container')}>
                         {youtubeTrends.length > 0 ? (
                             youtubeTrends.map((youtubeTrend, index) => (
@@ -197,23 +213,23 @@ function Home() {
                     
                 <div className={cx('see-all-container')}>
                     <Link to="/videovn" className={cx('seeall2')}>
-                        See all
+                        Xem tất cả
                     </Link>
                 </div>
             </div>
     
             
-            <div className={cx('row')}>
-                <h2 className={cx('title')}>Reddit Trending Posts</h2>
+            <div className={cx("row")}>
+                <h2 className={cx("title")}>Bài viết xu hướng Reddit</h2>
                 {redditTrends.length > 0 ? (
-                    <RedditTrendSection redditTrends={{ redditContents: redditTrends }} />
+                    <RedditTrendSection redditTrends={redditTrends} />
                 ) : (
                     <p>No Reddit trends available</p>
                 )}
             </div>
 
             <div className={cx('row')}>
-                <h2 className={cx('title')}>News Trending Posts</h2>
+                <h2 className={cx('title')}>Bài viết xu hướng News</h2>
                 {newsTrends.length > 0 ? (
                     <NewsTrendSection newsTrends={{ newsContents: newsTrends }} />
                 ) : (
@@ -222,20 +238,20 @@ function Home() {
             </div>
     
             <div className={cx('contact-section')}>
-                <h2 className={cx('section-heading')}>Contact Mailbox</h2>
+                <h2 className={cx('section-heading')}>Hộp thư liên hệ</h2>
                 <div className={cx('form-section')}>
                     <div className={cx('contact-left-column')}>
                         <p>
                             <a href="#" className={cx('contact-location')}>
                                 <img className={cx('contact-logo')} src={locationLogo} alt="Location" />
                             </a>
-                            Thu Duc, Ho Chi Minh
+                            Thủ Đức, Hồ Chí Minh
                         </p>
                         <p>
                             <a className={cx('contact-phone')}>
                                 <img className={cx('contact-logo')} src={phoneLogo} alt="Phone" />
                             </a>
-                            Phone: +84 869 162 370
+                            SĐT: +84 869 162 370
                         </p>
                         <p>
                             <a className={cx('contact-email')}>
@@ -250,7 +266,7 @@ function Home() {
                                 <div className={cx('informations-2')}>
                                     <input
                                         type="text"
-                                        placeholder="Name"
+                                        placeholder="Tên"
                                         name="name"
                                         required
                                         className={cx('form-control')}
@@ -269,14 +285,14 @@ function Home() {
                             <div className={cx('contact-row')}>
                                 <div className={cx('informations-1')}>
                                     <textarea
-                                        placeholder="Message"
+                                        placeholder="Lời nhắn..."
                                         name="message"
                                         required
                                         className={cx('form-control')}
                                     />
                                 </div>
                             </div>
-                            <input className={cx('btn-send')} type="submit" value="SEND" />
+                            <input className={cx('btn-send')} type="submit" value="GỬI" />
                         </form>
                     </div>
                 </div>
@@ -287,10 +303,11 @@ function Home() {
 }
 
 export default Home;
+
 //<div className={cx('trend-section-row')}>
 //    {categoryTrends.length > 0 ? (
 //        <TrendSection categoryTrends = {{ trendContents : categoryTrends}} />
 //    ) : (
-        <p>No featured trends available</p>
+//        <p>No featured trends available</p>
 //    )}
 //</div>

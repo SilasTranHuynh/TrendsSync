@@ -10,9 +10,9 @@ const TrendCard = ({ trendContents }) => (
     <div className={cx('trend2-card')}>
         <h2 className={cx('card-title-new')}>Cụm Từ Xu Hướng</h2>
         <div className={cx('card2-header')}>
-            <div className={cx('rank2')}>Rank</div>
-            <div className={cx('content2')}>Content</div>
-            <div className={cx('views2')}>Progress Value</div>
+            <div className={cx('rank2')}>Thứ hạng</div>
+            <div className={cx('content2')}>Nội dung</div>
+            <div className={cx('views2')}>Tăng trưởng</div>
         </div>
         <div className={cx('card2-body')}>
             {trendContents.slice(0, 10).map((content, index) => (
@@ -26,7 +26,7 @@ const TrendCard = ({ trendContents }) => (
 
         <div className={cx('see-all-container')}>
             <Link to="/search" className={cx('seeall2')}>
-                See all
+                Xem tất cả
             </Link>
         </div>
     </div>

@@ -38,7 +38,7 @@ const VideoVN = () => {
         <div className={cx('container1')}>
             <h1 className={cx('main-title')}>Âm Nhạc Thịnh Hành</h1>
             <div className={cx('video1-header')}>
-                <p className={cx('header-rank')}>Rank</p>
+                <p className={cx('header-rank')}>Thứ hạng</p>
                 <p className={cx('header-title')}>Bài Hát</p>
                 <p className={cx('header-view')}>Lượt View</p>
             </div>
@@ -56,7 +56,7 @@ const VideoVN = () => {
             {/* "See All" Button */}
             <div className={cx('see-all-container')}>
                 <button className={cx('seeall-button')} onClick={toggleSeeAll}>
-                    {displayAll ? 'See Less' : 'See All'}
+                    {displayAll ? 'Thu gọn' : 'Xem tất cả'}
                 </button>
             </div>
         </div>

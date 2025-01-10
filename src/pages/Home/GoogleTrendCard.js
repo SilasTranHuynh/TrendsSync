@@ -8,11 +8,11 @@ const cx = classNames.bind(styles);
 
 const GoogleTrendCard = ({ googleContents }) => (
     <div className={cx('google-card')}>
-        <h2 className={cx('card-title-new')}>Trending Searches</h2>
+        <h2 className={cx('card-title-new')}>Tìm kiếm xu hướng</h2>
         <div className={cx('card-header')}>
-            <div className={cx('rank-google')}>Rank</div>
-            <div className={cx('content-google')}>Content</div>
-            <div className={cx('views-google')}>Views</div>
+            <div className={cx('rank-google')}>Thứ hạng</div>
+            <div className={cx('content-google')}>Nội dung</div>
+            <div className={cx('views-google')}>Lượt xem</div>
         </div>
         <div className={cx('card-body')}>
             {googleContents.slice(0, 10).map((item, index) => (
@@ -26,7 +26,7 @@ const GoogleTrendCard = ({ googleContents }) => (
         
         <div className={cx('see-all-container')}>
             <Link to="/search" className={cx('seeall2')}>
-                See all
+                Xem tất cả
             </Link>
         </div>
     </div>

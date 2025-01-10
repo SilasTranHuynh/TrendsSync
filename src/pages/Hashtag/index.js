@@ -36,7 +36,7 @@ const Hashtag = () => {
         <div className={cx('container')}>
             <h1 className={cx('main-title')}>Hashtag Thịnh Hành</h1>
             <div className={cx('hashtag-header')}>
-                <p className={cx('header-rank')}>Rank</p>
+                <p className={cx('header-rank')}>Thứ</p>
                 <p className={cx('header-title')}>Hashtag</p>
                 <p className={cx('header-view')}>Lượt Đăng</p>
             </div>
@@ -54,7 +54,7 @@ const Hashtag = () => {
             {/* "See All" Button */}
             <div className={cx('see-all-container')}>
                 <button className={cx('seeall-button')} onClick={toggleSeeAll}>
-                    {displayAll ? 'See Less' : 'See All'}
+                    {displayAll ? 'Thu gọn' : 'Xem tất cả'}
                 </button>
             </div>
         </div>

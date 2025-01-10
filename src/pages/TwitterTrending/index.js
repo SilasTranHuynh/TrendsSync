@@ -36,7 +36,7 @@ const Twitter = () => {
         <div className={cx('container')}>
             <h1 className={cx('main-title')}>Twitter Thịnh Hành</h1>
             <div className={cx('twitter-header')}>
-                <p className={cx('header-rank')}>Rank</p>
+                <p className={cx('header-rank')}>Thứ hạng</p>
                 <p className={cx('header-content')}>Nội dung</p>
                 <p className={cx('header-tweets')}>Lượt Đăng</p>
             </div>
@@ -54,7 +54,7 @@ const Twitter = () => {
             {/* "See All" Button */}
             <div className={cx('see-all-container')}>
                 <button className={cx('seeall-button')} onClick={toggleSeeAll}>
-                    {displayAll ? 'See Less' : 'See All'}
+                    {displayAll ? 'Thu gọn' : 'Xem tất cả'}
                 </button>
             </div>
         </div>

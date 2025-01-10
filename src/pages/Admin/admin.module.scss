@@ -1,0 +1,172 @@
+.container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.list {
+    border: 1px solid #c97272 ;
+    border-radius: 5px;
+}
+
+.btn-add {
+    text-decoration: none;
+    background-color: #fff;
+    border: 1.75px solid #000;
+    border-radius: 2px;
+    color: #000 ;
+    padding: 2px;
+    margin-bottom: 5px;
+}
+
+.table {
+    width: 100%;
+    height: auto;
+    margin-top: 7px;
+}
+
+.btn-update, .btn-delete {
+    display: block;
+    height: auto;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1.75px solid #000;
+    border-radius: 2px;
+    color: #000 ;
+    padding: 2px;
+    margin: 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.add-form h2 {
+    padding: 0;
+    margin: 0 0 15px 0;
+}
+
+@media (min-width: 993px) {
+    .list {
+        width: 70%;
+        height: auto;
+        margin: 100px auto;
+        padding: 20px;
+    }
+    
+    th {
+        font-size: 12px;
+    }
+    
+    td {
+        font-size: 12px;
+    }
+    
+    .action {
+        display: flex;
+    }
+    
+    .btn-update {
+        width: 40px;
+        font-size: 12px;
+    }
+    
+    .btn-delete {
+        width: 40px;
+        font-size: 12px;
+    }
+
+    // Create form
+    .add-form {
+        width: 55%;
+        height: auto;
+        margin: 80px auto;
+        padding: 10px;
+    }
+}
+
+@media (min-width: 577px) {  
+    .list {
+        width: 98%;
+        height: auto;
+        margin: 100px auto;
+        padding: 20px;
+    }
+    
+    th {
+        font-size: 10px;
+    }
+    
+    td {
+        font-size: 10px;
+    }
+    
+    .action {
+        display: flex;
+    }
+    
+    .btn-update {
+        width: 35px;
+        font-size: 10px;
+    }
+    
+    .btn-delete {
+        width: 35px;
+        font-size: 10px;
+    }
+    
+    // Create form
+    .add-form {
+        width: 60%;
+        height: auto;
+        margin: 80px auto;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .list {
+        width: 98%;
+        height: auto;
+        margin: 100px auto;
+        padding: 20px;
+    }
+
+    th {
+        font-size: 10px;
+    }
+    
+    td {
+        font-size: 10px;
+    }
+
+    
+    .action {
+        display: flex;
+    }
+    
+    .btn-update {
+        width: 35px;
+        font-size: 10px;
+    }
+    
+    .btn-delete {
+        width: 35px;
+        font-size: 10px;
+    }
+    
+    .created-at {
+        display: none;
+    }
+
+    // Create form
+    .add-form {
+        width: 60%;
+        height: auto;
+        margin: 80px auto;
+        padding: 10px;
+    }    
+}
