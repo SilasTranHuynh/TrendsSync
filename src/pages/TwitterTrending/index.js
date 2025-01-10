@@ -78,12 +78,6 @@ const Twitter = () => {
     const displayedData = displayAll ? data : data.slice(0, 15);
 
     return (
-        <div className={cx('container')}>
-            <h1 className={cx('main-title')}>Twitter Thịnh Hành</h1>
-            <div className={cx('twitter-header')}>
-                <p className={cx('header-rank')}>Thứ hạng</p>
-                <p className={cx('header-content')}>Nội dung</p>
-                <p className={cx('header-tweets')}>Lượt Đăng</p>
         <div className={cx("container")}>
             <h1 className={cx("main-title")}>Twitter Thịnh Hành</h1>
             <div className={cx("history-section")}>
@@ -105,12 +99,6 @@ const Twitter = () => {
                 <p className={cx("header-content")}>Nội dung</p>
                 <p className={cx("header-tweets")}>Lượt Đăng</p>
             </div>
-            </div>
-            <div className={cx("twitter-header")}>
-                <p className={cx("header-rank")}>Rank</p>
-                <p className={cx("header-content")}>Nội dung</p>
-                <p className={cx("header-tweets")}>Lượt Đăng</p>
-            </div>
             <div className={cx("twitter-list")}>
                 {displayedData.map((item, index) => (
                     <TwitterCard
@@ -122,14 +110,6 @@ const Twitter = () => {
                     />
                 ))}
             </div>
-
-            {/* "See All" Button */}
-            <div className={cx('see-all-container')}>
-                <button className={cx('seeall-button')} onClick={toggleSeeAll}>
-                    {displayAll ? 'Thu gọn' : 'Xem tất cả'}
-            <div className={cx("see-all-container")}>
-                <button className={cx("seeall-button")} onClick={toggleSeeAll}>
-                    {displayAll ? "See Less" : "See All"}
             <div className={cx("see-all-container")}>
                 <button className={cx("seeall-button")} onClick={toggleSeeAll}>
                     {displayAll ? "See Less" : "See All"}
