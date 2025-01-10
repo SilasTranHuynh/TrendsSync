@@ -76,14 +76,12 @@ const Search = () => {
     const displayedData = displayAll ? data : data.slice(0, 15);
 
     return (
-<<<<<<< HEAD
         <div className={cx('container1')}>
             <h1 className={cx('main-title')}>Tìm Kiếm Xu Hướng</h1>
             <div className={cx('twitter-header')}>
                 <p className={cx('header-rank')}>Thứ hạng</p>
                 <p className={cx('header-content')}>Nội dung</p>
                 <p className={cx('header-tweets')}>Lượt Tìm Kiếm</p>
-=======
         <div className={cx("container")}>
             <h1 className={cx("main-title")}>Tìm Kiếm Xu Hướng</h1>
             <div className={cx("history-section")}>
@@ -99,7 +97,12 @@ const Search = () => {
                         </button>
                     ))}
                 </div>
->>>>>>> b58e5a0a815e6b80b83601744763af7802b5a122
+            </div>
+            <div className={cx("search-header")}>
+                <p className={cx("header-rank")}>Rank</p>
+                <p className={cx("header-title")}>Nội dung</p>
+                <p className={cx("header-volume")}>Lượt Tìm Kiếm</p>
+            </div>
             </div>
             <div className={cx("search-header")}>
                 <p className={cx("header-rank")}>Rank</p>
@@ -117,17 +120,19 @@ const Search = () => {
                     />
                 ))}
             </div>
-<<<<<<< HEAD
 
             {/* "See All" Button */}
             <div className={cx('see-all-container')}>
                 <button className={cx('seeall-button')} onClick={toggleSeeAll}>
                     {displayAll ? 'Thu gọn' : 'Xem tất cả'}
-=======
+
             <div className={cx("see-all-container")}>
                 <button className={cx("seeall-button")} onClick={toggleSeeAll}>
                     {displayAll ? "Thu gọn" : "Xem tất cả"}
->>>>>>> b58e5a0a815e6b80b83601744763af7802b5a122
+
+            <div className={cx("see-all-container")}>
+                <button className={cx("seeall-button")} onClick={toggleSeeAll}>
+                    {displayAll ? "Thu gọn" : "Xem tất cả"}
                 </button>
             </div>
         </div>

@@ -78,14 +78,12 @@ const Hashtag = () => {
     const displayedData = displayAll ? data : data.slice(0, 15);
 
     return (
-<<<<<<< HEAD
         <div className={cx('container')}>
             <h1 className={cx('main-title')}>Hashtag Thịnh Hành</h1>
             <div className={cx('hashtag-header')}>
                 <p className={cx('header-rank')}>Thứ</p>
                 <p className={cx('header-title')}>Hashtag</p>
                 <p className={cx('header-view')}>Lượt Đăng</p>
-=======
         <div className={cx("container")}>
             <h1 className={cx("main-title")}>Hashtag Thịnh Hành</h1>
             <div className={cx("history-section")}>
@@ -101,7 +99,12 @@ const Hashtag = () => {
                         </button>
                     ))}
                 </div>
->>>>>>> b58e5a0a815e6b80b83601744763af7802b5a122
+            </div>
+            <div className={cx("hashtag-header")}>
+                <p className={cx("header-rank")}>Rank</p>
+                <p className={cx("header-title")}>Hashtag</p>
+                <p className={cx("header-view")}>Lượt Đăng</p>
+            </div>
             </div>
             <div className={cx("hashtag-header")}>
                 <p className={cx("header-rank")}>Rank</p>
@@ -119,17 +122,17 @@ const Hashtag = () => {
                     />
                 ))}
             </div>
-<<<<<<< HEAD
 
             {/* "See All" Button */}
             <div className={cx('see-all-container')}>
                 <button className={cx('seeall-button')} onClick={toggleSeeAll}>
                     {displayAll ? 'Thu gọn' : 'Xem tất cả'}
-=======
             <div className={cx("see-all-container")}>
                 <button className={cx("seeall-button")} onClick={toggleSeeAll}>
                     {displayAll ? "See Less" : "See All"}
->>>>>>> b58e5a0a815e6b80b83601744763af7802b5a122
+            <div className={cx("see-all-container")}>
+                <button className={cx("seeall-button")} onClick={toggleSeeAll}>
+                    {displayAll ? "See Less" : "See All"}
                 </button>
             </div>
         </div>
