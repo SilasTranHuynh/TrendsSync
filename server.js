@@ -1,6 +1,6 @@
 require('dotenv').config();
 const { Builder, By } = require("selenium-webdriver");
-const chrome = require("selenium-webdriver/chrome")
+const chrome = require("selenium-webdriver/chrome");
 const express = require('express');
 const axios = require('axios');
 const cors = require('cors');
@@ -8,72 +8,151 @@ const bodyParser = require('body-parser');
 const { check, validationResult } = require('express-validator');
 const ejs = require('ejs');
 const nodemailer = require('nodemailer');
+const cron = require('node-cron');
+const fs = require('fs');
+const path = require('path');
 
 const app = express();
-
-const PORT = process.env.PORT_POST;
-
 app.use(cors());
 
-let tokenCache = null;
+const PORT = process.env.PORT_POST;
+const publicDir = path.join(__dirname, "public");
+const dataDir = path.join(publicDir, "reddit");
+
 
 const apiKey = process.env.NEWS_API_KEY;
 
-// Lấy token từ Reddit OAuth
-app.get('/getToken', async (req, res) => {
+// Tạo thư mục nếu chưa tồn tại
+if (!fs.existsSync(publicDir)) {
+    fs.mkdirSync(publicDir);
+}
+if (!fs.existsSync(dataDir)) {
+    fs.mkdirSync(dataDir);
+}
+
+// Danh sách các khung giờ cố định
+const timeSlots = [
+    "Now", "2 giờ trước", "4 giờ trước", "6 giờ trước",
+    "8 giờ trước", "10 giờ trước", "12 giờ trước",
+    "14 giờ trước", "16 giờ trước", "18 giờ trước",
+    "20 giờ trước", "22 giờ trước", "24 giờ trước",
+];
+
+// Bộ nhớ tạm cho dữ liệu Reddit Trends
+let redditTrends = [];
+let tokenCache = null;
+
+// Lấy token từ Reddit API
+const fetchRedditToken = async () => {
     const auth = Buffer.from(`${process.env.REDDIT_CLIENT_ID}:${process.env.REDDIT_CLIENT_SECRET}`).toString('base64');
     try {
         const response = await axios.post(
             'https://www.reddit.com/api/v1/access_token',
-            new URLSearchParams({
-                grant_type: 'client_credentials',
-            }),
+            new URLSearchParams({ grant_type: 'client_credentials' }),
             {
                 headers: {
                     Authorization: `Basic ${auth}`,
                     'Content-Type': 'application/x-www-form-urlencoded',
                     'User-Agent': process.env.REDDIT_USER_AGENT,
                 },
-            },
+            }
         );
-        res.json(response.data);
+        tokenCache = response.data.access_token;
+        console.log("Reddit token fetched successfully!");
     } catch (error) {
-        res.status(500).send('Error retrieving token');
+        console.error("Error fetching Reddit token:", error.message);
     }
-});
+};
 
-// API để lấy các bài viết nổi bật của Reddit
-app.get('/top-posts', async (req, res) => {
+// Thu thập dữ liệu từ Reddit
+const fetchRedditTrends = async () => {
+    if (!tokenCache) await fetchRedditToken();
+
     try {
-        if (!tokenCache) {
-            const tokenResponse = await axios.get('http://localhost:3000/getToken');
-            tokenCache = tokenResponse.data.access_token;
-        }
-
-        const redditResponse = await axios.get('https://oauth.reddit.com/r/all/top', {
+        const response = await axios.get('https://oauth.reddit.com/r/all/top', {
             headers: {
                 Authorization: `Bearer ${tokenCache}`,
                 'User-Agent': process.env.REDDIT_USER_AGENT,
             },
-            params: {
-                t: 'day', // Lấy bài viết nổi bật trong ngày
-                limit: 30, // Giới hạn số lượng bài viết
-            },
+            params: { t: 'day', limit: 30 },
         });
 
-        const redditTrends = redditResponse.data.data.children.map((redditTrend) => ({
-            redditAuthor: redditTrend.data.author,
-            redditTime: new Date(redditTrend.data.created_utc * 1000).toLocaleString(),
-            thumbnailUrl: redditTrend.data.thumbnail.startsWith('http') ? redditTrend.data.thumbnail : '',
-            redditTitle: redditTrend.data.title,
-            redditUpvotes: `↑ ${redditTrend.data.score}`,
+        redditTrends = response.data.data.children.map(post => ({
+            Title: post.data.title,
+            Author: post.data.author,
+            Time: new Date(post.data.created_utc * 1000).toLocaleString(),
+            Thumbnail: post.data.thumbnail.startsWith('http') ? post.data.thumbnail : '',
+            Upvotes: post.data.score,
         }));
-        res.json(redditTrends);
+
+        console.log("Reddit trends fetched successfully!");
     } catch (error) {
-        console.error('Error: ', error.response ? error.response.data : error.message);
-        res.status(500).send('Error retrieving top posts');
+        console.error("Error fetching Reddit trends:", error.message);
+    }
+};
+
+// Lưu dữ liệu vào khung giờ cố định
+const saveHistory = () => {
+    const nowFile = path.join(dataDir, "Now.json");
+    const previousData = fs.existsSync(nowFile) ? JSON.parse(fs.readFileSync(nowFile)) : [];
+
+    // Đẩy dữ liệu cũ xuống các khung giờ tiếp theo
+    for (let i = timeSlots.length - 1; i > 0; i--) {
+        const previousSlot = path.join(dataDir, `${timeSlots[i - 1]}.json`);
+        const currentSlot = path.join(dataDir, `${timeSlots[i]}.json`);
+
+        if (fs.existsSync(previousSlot)) {
+            const previousSlotData = JSON.parse(fs.readFileSync(previousSlot));
+            fs.writeFileSync(currentSlot, JSON.stringify(previousSlotData, null, 2));
+        }
+    }
+
+    // Cập nhật dữ liệu hiện tại
+    const updatedTrends = redditTrends.map(newItem => {
+        const oldItem = previousData.find(item => item.Title === newItem.Title);
+        return {
+            ...newItem,
+            ViewHistory: oldItem ? [...(oldItem.ViewHistory || []), newItem.Upvotes].slice(-12) : [newItem.Upvotes],
+        };
+    });
+
+    fs.writeFileSync(nowFile, JSON.stringify(updatedTrends, null, 2));
+    console.log("History updated: Saved new data to Now.json");
+};
+
+// API trả danh sách lịch sử
+app.get("/api/reddit-trends/history", (req, res) => {
+    const files = timeSlots.map(slot => {
+        const filePath = path.join(dataDir, `${slot}.json`);
+        return {
+            time: slot,
+            exists: fs.existsSync(filePath),
+            url: fs.existsSync(filePath) ? `http://localhost:3000/reddit/${slot}.json` : null,
+        };
+    });
+    res.json(files);
+});
+
+// API trả dữ liệu Reddit Trends hiện tại
+app.get("/api/reddit-trends", (req, res) => {
+    const nowFile = path.join(dataDir, "Now.json");
+    if (fs.existsSync(nowFile)) {
+        res.json(JSON.parse(fs.readFileSync(nowFile)));
+    } else {
+        res.status(404).json({ message: "No data available" });
     }
 });
+
+// File lưu trữ lịch sử
+app.use("/reddit", express.static(dataDir));
+
+// Cronjob: Thu thập dữ liệu và cập nhật lịch sử mỗi 2 giờ
+cron.schedule("0 */2 * * *", async () => {
+    console.log("Running cronjob: Fetching Reddit trends...");
+    await fetchRedditTrends();
+    saveHistory();
+});
+
 
 //Route để lấy tin tức nổi bật
 app.get('/top-headlines', async (req, res) => {
@@ -107,7 +186,7 @@ app.get('/top-headlines', async (req, res) => {
     }
 });
 
-// Chuc nang gui mail
+// Chức năng gửi mail góp ý
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.set('view engine', 'ejs');
@@ -134,7 +213,7 @@ app.post('/send-mail',
             service: 'Gmail',
             auth: {
                 user: 'trendssync@gmail.com',
-                pass: 'pvastzkwlvllqqbb'
+                pass: 'phshpbgdwfktghbn'
             }
         });
 
@@ -157,6 +236,9 @@ app.post('/send-mail',
     }
 })
 
-app.listen(PORT, () => {
+// Khởi động server
+app.listen(PORT, async () => {
     console.log(`Server is running on http://localhost:${PORT}`);
+    await fetchRedditTrends();
+    saveHistory();
 });

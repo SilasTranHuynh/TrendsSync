@@ -6,13 +6,18 @@ import styles from './reddit.module.scss';
 const cx = classNames.bind(styles);
 
 const RedditTrendSection = ({ redditTrends }) => {
-    const redditContents = redditTrends.redditContents;
-    return (
-      <div className={cx('reddit-trend-component')}>
-        <RedditTrendCard redditContents={redditContents} />
+  const redditContents = redditTrends || []; // Fallback khi redditTrends là null/undefined
+  return (
+      <div className={cx("reddit-trend-component")}>
+          {redditContents.length > 0 ? (
+              <RedditTrendCard redditContents={redditContents} />
+          ) : (
+              <p>No Reddit trends available</p>
+          )}
       </div>
-    );
-  };
+  );
+};
+
   
-  export default RedditTrendSection;
+export default RedditTrendSection;
   

@@ -2,17 +2,20 @@ import classNames from 'classnames/bind';
 import styles from './header.module.scss';
 import Tippy from '@tippyjs/react/headless';
 import { wrapper as PopperWrapper } from '../../Popper';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 import facebookLogo from '~/assets/images/facebook_mediapagelogo.png';
 import instagramLogo from '~/assets/images/‌instagram_mediapagelogo.png';
 import tiktokLogo from '~/assets/images/tiktok_mediapagelogo.png';
 import userIcon from '~/assets/images/user.png';
 import bellIcon from '~/assets/images/bell.png';
+import { useEffect, useState } from 'react';
 
 const cx = classNames.bind(styles);
 
 function Header() {
+    
     return (
         <header className={cx('wrapper')}>
             <div className={cx('header-top')}>
@@ -22,7 +25,7 @@ function Header() {
                     </Link>
                 </div>
                 <div className={cx('slogan')}>
-                    <span>Keep you in sync with future trends</span>
+                    <span>Giữ bạn đồng điệu với những xu hướng tương lai</span>
                 </div>
                 <div className={cx('media-page')}>
                     <div className={cx('media-page-instagram')}>
@@ -43,7 +46,7 @@ function Header() {
                     <div className={cx('separation')}> </div>
                     <img className={cx('icon')} src={userIcon} />
                     <Link to="/signinsignup" className={cx("text")}>
-                        <span>Sign In</span>
+                        <span>Đăng nhập</span>
                     </Link>
                 </div>
             </div>
@@ -57,7 +60,7 @@ function Header() {
                         </Link>
                     </div>
                     <div className={cx('slogan')}>
-                        <span>Keep you in sync with future trends</span>
+                        <span>Giữ bạn đồng điệu với những xu hướng tương lai</span>
                     </div>
                 </div>
     
@@ -80,7 +83,7 @@ function Header() {
                     <div className={cx('separation')}> </div>
                     <img className={cx('icon')} src={userIcon} />
                     <Link to="/signinsignup" className={cx("text")}>
-                        <span>Sign In</span>
+                        <span>Đăng nhập</span>
                     </Link>
                 </div>
             </div>

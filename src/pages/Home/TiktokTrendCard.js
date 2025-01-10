@@ -7,11 +7,11 @@ const cx = classNames.bind(styles);
 
 const TiktokTrendCard = ({ tiktokContents }) => (
   <div className={cx('tiktok-card')}>
-    <h2 className={cx('card-title-new')}>Trending HashTags</h2>
+    <h2 className={cx('card-title-new')}>Hashtag xu hướng</h2>
     <div className={cx('card-header')}>
-      <div className={cx('rank-tiktok')}>Rank</div>
-      <div className={cx('content-tiktok')}>Content</div>
-      <div className={cx('views-tiktok')}>Views</div>
+      <div className={cx('rank-tiktok')}>Thứ hạng</div>
+      <div className={cx('content-tiktok')}>Nội dung</div>
+      <div className={cx('views-tiktok')}>Lượt xem</div>
     </div>
 
     <div className={cx('card-body')}>
@@ -26,7 +26,7 @@ const TiktokTrendCard = ({ tiktokContents }) => (
 
     <div className={cx('see-all-container')}>
       <Link to="/hashtag" className={cx('seeall2')}>
-        See all
+        Xem tất cả
       </Link>
     </div>
   </div>

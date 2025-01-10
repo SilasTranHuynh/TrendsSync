@@ -26,28 +26,32 @@ function SignInSignUpForm() {
     event.preventDefault();
     setErrors(ValidationSignIn(values));
     if(errors.email === "" && errors.password === "") {
-      axios.post('http://localhost:3307/signin', values)
-      .then(res => {
-        if(res.data === "Success") {
-          alert("Sign in successful");
-          navigate('/');
-        } else {
-          alert("No record existed");
-        }
-      })
-      .catch(err => console.log(err));
+        axios.post('http://localhost:3307/signin', values)
+        .then(res => {
+            if(res.data.status === "Success") {
+                alert("Sign in successful");
+                if(res.data.role === "admin") {
+                    navigate('/adminpage'); // Điều hướng tới trang admin
+                } else {
+                    navigate('/'); // Điều hướng tới trang người dùng bình thường
+                }
+            } else {
+                alert("No record existed");
+            }
+        })
+        .catch(err => console.log(err));
     }
-  }
+};
 
   return (
     <div className={cx('form-container')}>
       <div className={cx('form-buttons')}>
         <button className={cx('signin-btn')}>
-          Sign In
+          Đăng Nhập
         </button>
         <Link to="/signupsignin" className={cx('signup-btn')}>
           <button>
-            Sign Up
+          Đăng Kí
           </button>
         </Link>
       </div>
@@ -55,17 +59,17 @@ function SignInSignUpForm() {
       <form className={('login-form')} action="" onSubmit={handleSubmit}>
         <div>
           <label htmlFor="email">Email</label>
-          <input id="email" type="email" name="email" placeholder='Enter Email'
+          <input id="email" type="email" name="email" placeholder='Nhập Email'
           onChange={handleInput}/>
           {errors.email && <span className={cx('text-danger')}>{errors.email}</span> }
         </div>
         <div>
           <label htmlFor="password">Password</label>
-          <input id="password" type="password" name="password" placeholder='Enter Password'
+          <input id="password" type="password" name="password" placeholder='Nhập Password'
           onChange={handleInput}/>
           {errors.password && <span className={cx('text-danger')}>{errors.password}</span> }
         </div>
-        <button className={cx('final-btn')} type="submit">Sign In</button> 
+        <button className={cx('final-btn')} type="submit">Đăng Nhập</button> 
       </form>
     </div>
   );

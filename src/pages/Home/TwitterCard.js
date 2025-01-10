@@ -7,10 +7,10 @@ const cx = classNames.bind(styles);
 
 const TwitterCard = ({ hashtagContents }) => (
     <div className={cx('popular-card')}>
-        <h2 className={cx('card-title-new')}>Trending Twitter</h2>
+        <h2 className={cx('card-title-new')}>Twitter xu hướng</h2>
         <div className={cx('card-header')}>
-            <div className={cx('rank-popular')}>Rank</div>
-            <div className={cx('content-popular')}>Content</div>
+            <div className={cx('rank-popular')}>Thứ hạng</div>
+            <div className={cx('content-popular')}>Nội dung</div>
             <div className={cx('views-popular')}>Tweets</div>
         </div>
 
@@ -25,7 +25,9 @@ const TwitterCard = ({ hashtagContents }) => (
         </div>
 
         <div className={cx('see-all-container')}>
-            <Link to="/twitter" className={cx('seeall2')}>See all</Link>
+            <Link to="/twitter" className={cx('seeall2')}>
+                Xem tất cả
+            </Link>
         </div>
     </div>
 );

@@ -78,6 +78,12 @@ const Hashtag = () => {
     const displayedData = displayAll ? data : data.slice(0, 15);
 
     return (
+        <div className={cx('container')}>
+            <h1 className={cx('main-title')}>Hashtag Thịnh Hành</h1>
+            <div className={cx('hashtag-header')}>
+                <p className={cx('header-rank')}>Thứ</p>
+                <p className={cx('header-title')}>Hashtag</p>
+                <p className={cx('header-view')}>Lượt Đăng</p>
         <div className={cx("container")}>
             <h1 className={cx("main-title")}>Hashtag Thịnh Hành</h1>
             <div className={cx("history-section")}>
@@ -99,6 +105,12 @@ const Hashtag = () => {
                 <p className={cx("header-title")}>Hashtag</p>
                 <p className={cx("header-view")}>Lượt Đăng</p>
             </div>
+            </div>
+            <div className={cx("hashtag-header")}>
+                <p className={cx("header-rank")}>Rank</p>
+                <p className={cx("header-title")}>Hashtag</p>
+                <p className={cx("header-view")}>Lượt Đăng</p>
+            </div>
             <div className={cx("hashtag-list")}>
                 {displayedData.map((item, index) => (
                     <HashtagCard
@@ -110,6 +122,14 @@ const Hashtag = () => {
                     />
                 ))}
             </div>
+
+            {/* "See All" Button */}
+            <div className={cx('see-all-container')}>
+                <button className={cx('seeall-button')} onClick={toggleSeeAll}>
+                    {displayAll ? 'Thu gọn' : 'Xem tất cả'}
+            <div className={cx("see-all-container")}>
+                <button className={cx("seeall-button")} onClick={toggleSeeAll}>
+                    {displayAll ? "See Less" : "See All"}
             <div className={cx("see-all-container")}>
                 <button className={cx("seeall-button")} onClick={toggleSeeAll}>
                     {displayAll ? "See Less" : "See All"}

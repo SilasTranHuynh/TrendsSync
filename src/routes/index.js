@@ -10,6 +10,11 @@ import Twitter from '~/pages/TwitterTrending';
 import Search from '~/pages/SearchTrending';
 import SignInSignUpForm from '~/pages/SignInSignUp';
 import SignUpSignInForm from '~/pages/SignUpSignIn';
+import Admin from '~/pages/Admin';
+import CreateUser from '~/pages/Admin/CreateUser';
+import UpdateUser from '~/pages/Admin/UpdateUser';
+import Profile from '~/pages/Profile';
+
 
 const publicRoutes = [
     { path: '/', component: Home },
@@ -24,6 +29,10 @@ const publicRoutes = [
     { path: '/search', component: Search},
     { path: '/signinsignup', component: SignInSignUpForm},
     { path: '/signupsignin', component: SignUpSignInForm},
+    { path: '/adminpage', component: Admin},
+    { path: '/adminpage/createuser', component: CreateUser},
+    { path: '/adminpage/update/:id', component: UpdateUser},
+    { path: '/profile', component: Profile}
 ];
 
 const privateRoutes = [];
