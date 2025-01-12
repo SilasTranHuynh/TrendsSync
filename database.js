@@ -9,7 +9,7 @@ const MySQLStore = require('connect-mysql2')(session);
 const app = express();
 
 app.use(session({
-    secret: 'your_secret_key',
+    secret: 'secret_key',
     resave: false,
     saveUninitialized: false,
     cookie: { secure: false, httpOnly: true }, // Bỏ secure nếu không dùng HTTPS

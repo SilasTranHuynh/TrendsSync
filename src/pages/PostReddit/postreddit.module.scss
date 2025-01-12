@@ -63,15 +63,18 @@
 }
 
 .history-slider button {
-    padding: 2px;
-    margin: 2px;
+    padding: 3px;
+    margin: 3px;
     border: 1.75px solid #000;
     border-radius: 2.5px;
     background-color: #fff;
+    font-size: 13px;
+    font-weight: 500;
 }
 
 .reddit-chart {
     margin-top: 2rem;
+    width: 100%;
 }
 
 @media (min-width: 1201px) {
