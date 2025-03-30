@@ -37,6 +37,11 @@ const Search = () => {
                     </button>
                 ))}
             </div>
+            <div className={cx("twitter-header")}>
+                <p className={cx("header-rank")}>Rank</p>
+                <p className={cx("header-content")}>Nội dung</p>
+                <p className={cx("header-tweets")}>Lượt Đăng</p>
+            </div>
             <div className={cx("twitter-list")}>
                 {data.map((item, index) => (
                     <div key={index} className={cx("twitter-card")}>

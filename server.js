@@ -213,16 +213,14 @@ app.post('/send-mail',
             service: 'Gmail',
             auth: {
                 user: 'trendssync@gmail.com',
-                pass: 'phshpbgdwfktghbn'
+                pass: 'phshpbgdwfktghbn' // App password
             }
         });
-
         const mail_option = {
             from: request.body.email,
             to: 'anhthv21@gmail.com',
             text: `Name: ${request.body.name}\nEmail: ${request.body.email}\nMessage: ${request.body.message}`,
         };
-
         transporter.sendMail(mail_option, (error, info) => {
             if(error)
             {
