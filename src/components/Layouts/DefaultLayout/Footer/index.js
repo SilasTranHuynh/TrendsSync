@@ -18,22 +18,22 @@ function Footer() {
                     </Link>
                 </div>
                 <div className={cx('slogan')}>
-                    <span>Giữ bạn đồng điệu với những xu hướng tương lai</span>
+                    <span>Stay in tune with the latest trends.</span>
                 </div>
             </div>
             <div className={cx('contents')}>
                 <div className={cx('column')}>
-                    <h4>TÀI KHOẢN</h4>
+                    <h4>ACCOUNT</h4>
                     <Link to="/signinsignup" className={cx('signup')}>
-                        Đăng kí
+                        Sign Up
                     </Link>
                     <br></br>
                     <Link to="/signinsignup" className={cx('login')}>
-                        Đăng nhập
+                        Log In
                     </Link>
                 </div>
                 <div className={cx('column')}>
-                    <h4>NỀN TẢNG</h4>
+                    <h4>UPDATES</h4>
                     <Link to="/search" className={cx('ggtrends')}>
                         Google Trends
                     </Link>
@@ -51,29 +51,22 @@ function Footer() {
                     </Link>
                     <br></br>
                     <Link to="/postNews" className={cx('news')}>
-                        News
+                        Weibo
                     </Link>
                 </div>
                 <div className={cx('column')}>
-                    <h4>LIÊN HỆ</h4>
+                    <h4>CONTACT</h4>
                     <Link to="/" className={cx('phone')}>
-                        Số điện thoại
+                        Phone Number
                     </Link>
                     <br></br>
                     <Link to="/" className={cx('email')}>
                         Email
                     </Link>
                     <br></br>
-                    <Link to="/" className={cx('c-facebook')}>
-                        Facebook
-                    </Link>
-                    <br></br>
-                    <Link to="/" className={cx('c-instagram')}>
-                        Instagram
-                    </Link>
                 </div>
                 <div className={cx('column')}>
-                    <h4>TRUYỀN THÔNG</h4>
+                    <h4>SOCIAL MEDIA</h4>
                     <Link to="/" className={cx('m-facebook')}>
                         Facebook
                     </Link>

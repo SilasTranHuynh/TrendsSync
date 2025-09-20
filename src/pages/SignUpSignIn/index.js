@@ -19,7 +19,7 @@ function SignUpSignInForm() {
   const navigate = useNavigate();
   const [errors, setErrors] = useState({})
   const handleInput = (event) => {
-    setValues(prev => ({...prev, [event.target.name]: [event.target.value]}))
+    setValues(prev => ({...prev, [event.target.name]: event.target.value}))
   }
   const handleSubmit = (event) => {
     event.preventDefault();

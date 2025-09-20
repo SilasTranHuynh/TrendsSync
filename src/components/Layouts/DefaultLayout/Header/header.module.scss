@@ -2,43 +2,54 @@
     position: fixed;
     width: 100%;
     height: 128px;
-    color: #fff;
-    text-shadow: 1px 1px black;
+    text-shadow: 0.5px 0.5px rgb(12, 12, 12);
 }
 
 .header-top, .header-bottom, .header-top-mobile, .header-bottom-mobile {
-    background: #fff;
+    background-color: #ffffff;
+}
+
+.header-top, .header-bottom, .header-top-mobile, .header-bottom-mobile .logo {
+    cursor: pointer;
+}
+
+.header-top, .header-bottom, .header-top-mobile, .header-bottom-mobile .media-page {
     cursor: pointer;
 }
 
 .header-top, .header-top-mobile {
-    border-bottom: 0.5px solid rgb(62, 62, 62);
+    border-bottom: 0.25px solid rgb(36, 36, 36, 0.25);
 }
 
 .header-bottom, .header-bottom-mobile {
-    box-shadow:  1px 1px rgb(237, 237, 237);
+    box-shadow:  0.5px 0.5px rgb(12, 12, 12, 0.25);
 }
 
 .logo {
     position: relative;
     align-self: center;
-    color: #000;
+    color: #0C0C0C;
+    border: 0;
 }
 
 .logo-link {
     text-decoration: none;
-    color: #000;
+    color: #0C0C0C;
 }
 
 .slogan {
     position: relative;
     align-self: center;
-    color: #000;
+    color: #0C0C0C;
 }
 
 .text {
     text-decoration: none;
-    color: black;
+    color: #0C0C0C;
+}
+
+.separation {
+        border-left: 0.25px solid rgb(12, 12, 12, 0.25);
 }
 
 // Desktop : Large - Small
@@ -56,7 +67,8 @@
 
     .header-bottom {
         height: 58px;
-        box-shadow: #000;
+        box-shadow: #0C0C0C;
+        display: flex;
     }
 
     .logo {
@@ -98,13 +110,12 @@
     }
 
     .media-logo {
-        width: 37px;
-        height: 37px;
+        width: 28px;
+        height: 28px;
     }
 
-    .user {
+    .header-bottom .user {
         position: absolute;
-        align-self: center;
         line-height: 58px;
         display: flex;
         right: 0;
@@ -116,14 +127,13 @@
         position: relative;
         display: flex;
         top: 15%;
-        width: 37px;
-        height: 37px;
+        width: 28px;
+        height: 28px;
     }
 
     .separation {
         width: 21px;
         height: 58px;
-        border-left: 0.5px solid rgb(62, 62, 62);
         margin-left: 14px;
     }
 
@@ -131,8 +141,8 @@
         position: relative;
         display: flex;
         top: 15%;
-        width: 37px;
-        height: 37px;
+        width: 28px;
+        height: 28px;
     }
 
     .text {
@@ -453,7 +463,7 @@
 
     .logo {
         padding-right: 2px;
-        padding-left: 46px;
+        padding-left: 12px;
         font-size: 28px;
         font-weight: bold;
         letter-spacing: 1.5px;
@@ -558,7 +568,7 @@
 
     .logo {
         padding-right: 2px;
-        padding-left: 48px;
+        padding-left: 5px;
         font-size: 28px;
         font-weight: bold;
         letter-spacing: 1.5px;

@@ -71,7 +71,7 @@ const saveHistory = () => {
 
 // Hàm thu thập dữ liệu từ YouTube API
 const fetchYouTubeTrends = async () => {
-    const apiKey = 'AIzaSyB5xkShZYYRUE4PjfTo1D_O42YRjeJgMis'; // Thay bằng API key của bạn
+    const apiKey = 'AIzaSyB5xkShZYYRUE4PjfTo1D_O42YRjeJgMis'; 
     const youtube = google.youtube({ version: "v3", auth: apiKey });
 
     try {

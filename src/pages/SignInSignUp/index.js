@@ -19,7 +19,7 @@ function SignInSignUpForm() {
   const [errors, setErrors] = useState({})
   
   const handleInput = (event) => {
-    setValues(prev => ({...prev, [event.target.name]: [event.target.value]}))
+    setValues(prev => ({...prev, [event.target.name]: event.target.value}))
   }
 
   const handleSubmit = (event) => {
@@ -31,9 +31,9 @@ function SignInSignUpForm() {
             if(res.data.status === "Success") {
                 alert("Sign in successful");
                 if(res.data.role === "admin") {
-                    navigate('/adminpage'); // Điều hướng tới trang admin
+                    navigate('/adminpage'); // Chuyển đến Admin
                 } else {
-                    navigate('/'); // Điều hướng tới trang người dùng bình thường
+                    navigate('/'); // Chuyển đến Người dùng
                 }
             } else {
                 alert("No record existed");
