@@ -57,10 +57,10 @@ const VideoVN = () => {
 
             {/* Danh sách video */}
             <div className={cx("video1-header")}>
-                <p className={cx("header-rank")}>Rank</p>
+                <p className={cx("header-rank")}>Hạng</p>
                 <p className={cx("header-title")}>Bài Hát</p>
-                <p className={cx("header-view")}>Lượt View</p>
-                <p className={cx("header-chart")}>Thay Đổi View</p>
+                <p className={cx("header-view")}>Lượt Xem</p>
+                <p className={cx("header-chart")}>Thay Đổi Hạng</p>
             </div>
             <div className={cx("video1-list")}>
                 {data.map((item, index) => (

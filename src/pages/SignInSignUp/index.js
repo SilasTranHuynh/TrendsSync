@@ -29,14 +29,14 @@ function SignInSignUpForm() {
         axios.post('http://localhost:3307/signin', values)
         .then(res => {
             if(res.data.status === "Success") {
-                alert("Sign in successful");
+                alert("Đăng nhập thành công.");
                 if(res.data.role === "admin") {
                     navigate('/adminpage'); // Chuyển đến Admin
                 } else {
                     navigate('/'); // Chuyển đến Người dùng
                 }
             } else {
-                alert("No record existed");
+                alert("Người dùng không tồn tại.");
             }
         })
         .catch(err => console.log(err));
@@ -64,7 +64,7 @@ function SignInSignUpForm() {
           {errors.email && <span className={cx('text-danger')}>{errors.email}</span> }
         </div>
         <div>
-          <label htmlFor="password">Password</label>
+          <label htmlFor="password">Mật khẩu</label>
           <input id="password" type="password" name="password" placeholder='Nhập Password'
           onChange={handleInput}/>
           {errors.password && <span className={cx('text-danger')}>{errors.password}</span> }

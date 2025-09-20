@@ -95,7 +95,7 @@ const Twitter = () => {
                 </div>
             </div>
             <div className={cx("twitter-header")}>
-                <p className={cx("header-rank")}>Rank</p>
+                <p className={cx("header-rank")}>Hạng</p>
                 <p className={cx("header-content")}>Nội dung</p>
                 <p className={cx("header-tweets")}>Lượt Đăng</p>
             </div>

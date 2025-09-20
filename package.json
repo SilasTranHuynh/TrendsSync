@@ -45,10 +45,10 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "concurrently \"npm run server\" \"npm run server2\" \"npm run database\" \"npm run gg\" \"npm run search\" \"npm run test\" \"npm run tiktok\" \"npm run twt\" \"npm run ytb\"",
+    "start": "concurrently \"npm run server\" \"npm run server2\" \"npm run user\" \"npm run gg\" \"npm run search\" \"npm run test\" \"npm run tiktok\" \"npm run twt\" \"npm run ytb\"",
     "server": "node server.js",
     "server2": "node server2.js",
-    "database": "node database.js",
+    "user": "node user.js",
     "gg": "node gg.js",
     "search": "node search.js",
     "test": "node test.js",
