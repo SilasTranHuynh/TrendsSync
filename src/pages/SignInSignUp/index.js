@@ -30,6 +30,8 @@ function SignInSignUpForm() {
         .then(res => {
             if(res.data.status === "Success") {
                 alert("Đăng nhập thành công.");
+                if(res.data.access_token) {
+                localStorage.setItem("access_token", res.data.access_token);}
                 if(res.data.role === "admin") {
                     navigate('/adminpage'); // Chuyển đến Admin
                 } else {

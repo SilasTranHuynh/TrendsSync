@@ -179,7 +179,7 @@ app.delete('/delete/:id', (req, res) => {
 })
 
 // Test
-app.get('/profile-server', (req, res) => {
+app.get('/profile', (req, res) => {
     console.log('Session Data:', req.session);
     console.log(req.session.name);
     if (req.session && req.session.name) {

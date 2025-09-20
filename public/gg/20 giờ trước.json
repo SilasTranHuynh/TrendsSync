@@ -23,14 +23,14 @@
     "Title": "real madrid đấu với espanyol",
     "SearchVolume": "20K+",
     "ViewHistory": [
-      10,
-      10,
-      10,
-      10,
-      10,
-      10,
-      10,
-      10,
+      20,
+      20,
+      20,
+      20,
+      20,
+      20,
+      20,
+      20,
       20,
       20,
       20,
@@ -42,9 +42,9 @@
     "Title": "brighton đấu với tottenham",
     "SearchVolume": "10K+",
     "ViewHistory": [
-      5,
-      5,
-      5,
+      10,
+      10,
+      10,
       10,
       10,
       10,
@@ -59,9 +59,19 @@
   {
     "Rank": 4,
     "Title": "hoffenheim đấu với bayern",
-    "SearchVolume": "5K+",
+    "SearchVolume": "10K+",
     "ViewHistory": [
-      5
+      5,
+      5,
+      5,
+      5,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10
     ]
   },
   {
@@ -88,14 +98,14 @@
     "Title": "mu chelsea",
     "SearchVolume": "5K+",
     "ViewHistory": [
-      2,
-      2,
-      2,
-      2,
-      2,
-      2,
-      2,
-      2,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
       5,
       5,
       5,
@@ -104,44 +114,25 @@
   },
   {
     "Rank": 7,
-    "Title": "xổ số miền nam ngày 20 tháng 09",
-    "SearchVolume": "100K+",
+    "Title": "wolves đấu với leeds",
+    "SearchVolume": "2K+",
     "ViewHistory": [
-      100,
-      100,
-      100,
-      100,
-      100,
-      100,
-      100,
-      100,
-      100,
-      100,
-      100,
-      100
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
     ]
   },
   {
     "Rank": 8,
-    "Title": "al-ahli saudi đấu với al hilal",
-    "SearchVolume": "10K+",
-    "ViewHistory": [
-      10,
-      10,
-      10,
-      10,
-      10,
-      10,
-      10,
-      10,
-      10,
-      10,
-      10,
-      10
-    ]
-  },
-  {
-    "Rank": 9,
     "Title": "west ham đấu với crystal palace",
     "SearchVolume": "2K+",
     "ViewHistory": [
@@ -160,34 +151,53 @@
     ]
   },
   {
-    "Rank": 10,
-    "Title": "wolves đấu với leeds",
-    "SearchVolume": "2K+",
+    "Rank": 9,
+    "Title": "al-ahli saudi đấu với al hilal",
+    "SearchVolume": "10K+",
     "ViewHistory": [
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      2,
-      2,
-      2,
-      2
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10
+    ]
+  },
+  {
+    "Rank": 10,
+    "Title": "xổ số miền nam ngày 20 tháng 09",
+    "SearchVolume": "100K+",
+    "ViewHistory": [
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100
     ]
   },
   {
     "Rank": 11,
-    "Title": "leicester đấu với coventry",
+    "Title": "vũ cát tường",
     "SearchVolume": "2K+",
     "ViewHistory": [
-      2,
-      2,
-      2,
-      2,
-      2,
+      1,
+      1,
+      1,
+      1,
+      1,
       2,
       2,
       2,
@@ -199,44 +209,6 @@
   },
   {
     "Rank": 12,
-    "Title": "v league",
-    "SearchVolume": "2K+",
-    "ViewHistory": [
-      2,
-      2,
-      2,
-      2,
-      2,
-      2,
-      2,
-      2,
-      2,
-      2,
-      2,
-      2
-    ]
-  },
-  {
-    "Rank": 13,
-    "Title": "nguyễn thế bình",
-    "SearchVolume": "5K+",
-    "ViewHistory": [
-      5,
-      5,
-      5,
-      5,
-      5,
-      5,
-      5,
-      5,
-      5,
-      5,
-      5,
-      5
-    ]
-  },
-  {
-    "Rank": 14,
     "Title": "hoa hau hhen nie",
     "SearchVolume": "1K+",
     "ViewHistory": [
@@ -255,62 +227,8 @@
     ]
   },
   {
-    "Rank": 15,
-    "Title": "vũ cát tường",
-    "SearchVolume": "1K+",
-    "ViewHistory": [
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1
-    ]
-  },
-  {
-    "Rank": 16,
-    "Title": "real madrid vs espanyol",
-    "SearchVolume": "500+",
-    "ViewHistory": [
-      200,
-      200,
-      200,
-      200,
-      200,
-      200,
-      200,
-      200,
-      500,
-      500,
-      500,
-      500
-    ]
-  },
-  {
-    "Rank": 17,
-    "Title": "miss international queen 2025",
-    "SearchVolume": "500+",
-    "ViewHistory": [
-      200,
-      200,
-      200,
-      200,
-      200,
-      200,
-      200,
-      200,
-      200,
-      200,
-      200,
-      500
-    ]
-  },
-  {
-    "Rank": 18,
-    "Title": "bão ragasa",
+    "Rank": 13,
+    "Title": "leicester đấu với coventry",
     "SearchVolume": "2K+",
     "ViewHistory": [
       2,
@@ -328,7 +246,83 @@
     ]
   },
   {
-    "Rank": 19,
+    "Rank": 14,
+    "Title": "nguyễn thế bình",
+    "SearchVolume": "5K+",
+    "ViewHistory": [
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5
+    ]
+  },
+  {
+    "Rank": 15,
+    "Title": "real madrid vs espanyol",
+    "SearchVolume": "1K+",
+    "ViewHistory": [
+      500,
+      500,
+      500,
+      500,
+      500,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "Rank": 16,
+    "Title": "miss international queen 2025",
+    "SearchVolume": "1K+",
+    "ViewHistory": [
+      200,
+      500,
+      500,
+      500,
+      500,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "Rank": 17,
+    "Title": "v league",
+    "SearchVolume": "2K+",
+    "ViewHistory": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ]
+  },
+  {
+    "Rank": 18,
     "Title": "v fest vietnam today",
     "SearchVolume": "1K+",
     "ViewHistory": [
@@ -347,27 +341,36 @@
     ]
   },
   {
-    "Rank": 20,
-    "Title": "manchester united f.c. vs chelsea f.c. timeline",
-    "SearchVolume": "500+",
+    "Rank": 19,
+    "Title": "lich thi dau mu",
+    "SearchVolume": "1K+",
     "ViewHistory": [
-      200,
-      200,
-      200,
-      200,
-      200,
-      200,
-      200,
-      200,
-      500,
-      500,
-      500,
-      500
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "Rank": 20,
+    "Title": "cơn bão ragasa",
+    "SearchVolume": "2K+",
+    "ViewHistory": [
+      2,
+      2
     ]
   },
   {
     "Rank": 21,
-    "Title": "f1",
+    "Title": "manchester united f.c. vs chelsea f.c. timeline",
     "SearchVolume": "500+",
     "ViewHistory": [
       500,
@@ -386,7 +389,7 @@
   },
   {
     "Rank": 22,
-    "Title": "xổ số bình phước ngày 20 tháng 09",
+    "Title": "f1",
     "SearchVolume": "500+",
     "ViewHistory": [
       500,
@@ -405,18 +408,20 @@
   },
   {
     "Rank": 23,
-    "Title": "lich thi dau mu",
-    "SearchVolume": "1K+",
+    "Title": "nottingham forest",
+    "SearchVolume": "200+",
     "ViewHistory": [
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200
     ]
   },
   {
@@ -425,16 +430,20 @@
     "SearchVolume": "500+",
     "ViewHistory": [
       500,
-      500,
-      500,
       500
     ]
   },
   {
     "Rank": 25,
-    "Title": "nottingham forest",
+    "Title": "gonzalo garcía",
     "SearchVolume": "200+",
     "ViewHistory": [
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
       200
     ]
   }
