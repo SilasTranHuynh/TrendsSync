@@ -5,9 +5,6 @@
     "Tweets": 10,
     "TweetsFormatted": "Under 10K tweets",
     "ViewHistory": [
-      150,
-      150,
-      150,
       139,
       139,
       139,
@@ -16,6 +13,9 @@
       119,
       119,
       109,
+      10,
+      10,
+      10,
       10
     ]
   },
@@ -25,9 +25,9 @@
     "Tweets": 10,
     "TweetsFormatted": "Under 10K tweets",
     "ViewHistory": [
-      161,
-      161,
-      161,
+      10,
+      10,
+      10,
       10,
       10,
       10,
@@ -42,22 +42,22 @@
   {
     "Rank": "3",
     "Content": "NAMTANFILM POM POM CLUB",
-    "Tweets": 13,
-    "TweetsFormatted": "1.3M tweets",
+    "Tweets": 12,
+    "TweetsFormatted": "1.2M tweets",
     "ViewHistory": [
       13,
-      13
+      13,
+      13,
+      12,
+      12
     ]
   },
   {
     "Rank": "4",
     "Content": "DESIRE4 TMA2025 DEBUT STAGE",
-    "Tweets": 284,
-    "TweetsFormatted": "28.4K tweets",
+    "Tweets": 12,
+    "TweetsFormatted": "1.2M tweets",
     "ViewHistory": [
-      8020,
-      8020,
-      8020,
       8025,
       8025,
       8025,
@@ -66,18 +66,18 @@
       14,
       14,
       13,
-      284
+      284,
+      284,
+      12,
+      12
     ]
   },
   {
     "Rank": "5",
     "Content": "BiomeAI",
-    "Tweets": 12,
-    "TweetsFormatted": "1.2M tweets",
+    "Tweets": 269,
+    "TweetsFormatted": "26.9K tweets",
     "ViewHistory": [
-      20,
-      20,
-      20,
       16,
       16,
       16,
@@ -86,18 +86,18 @@
       307,
       307,
       295,
-      12
+      12,
+      12,
+      269,
+      269
     ]
   },
   {
     "Rank": "6",
     "Content": "MILK BRINGS DREAMS TO CQ",
-    "Tweets": 3372,
-    "TweetsFormatted": "337.2K tweets",
+    "Tweets": 3376,
+    "TweetsFormatted": "337.6K tweets",
     "ViewHistory": [
-      1759,
-      1759,
-      1759,
       5330,
       5330,
       5330,
@@ -106,18 +106,18 @@
       11,
       11,
       4013,
-      3372
+      3372,
+      3372,
+      3376,
+      3376
     ]
   },
   {
     "Rank": "7",
     "Content": "DUNK x CHANEL",
-    "Tweets": 1542,
-    "TweetsFormatted": "154.2K tweets",
+    "Tweets": 1560,
+    "TweetsFormatted": "156.0K tweets",
     "ViewHistory": [
-      7498,
-      7498,
-      7498,
       1619,
       1619,
       1619,
@@ -126,18 +126,18 @@
       4679,
       4679,
       1514,
-      1542
+      1542,
+      1542,
+      1560,
+      1560
     ]
   },
   {
     "Rank": "8",
     "Content": "BOUNPREM REVAMP EP5",
-    "Tweets": 2439,
-    "TweetsFormatted": "243.9K tweets",
+    "Tweets": 2465,
+    "TweetsFormatted": "246.5K tweets",
     "ViewHistory": [
-      352,
-      352,
-      352,
       184,
       184,
       184,
@@ -146,27 +146,18 @@
       1464,
       1464,
       2376,
-      2439
+      2439,
+      2439,
+      2465,
+      2465
     ]
   },
   {
     "Rank": "9",
-    "Content": "Shonta Sura",
-    "Tweets": 1073,
-    "TweetsFormatted": "107.3K tweets",
-    "ViewHistory": [
-      1073
-    ]
-  },
-  {
-    "Rank": "10",
     "Content": "The Forte",
-    "Tweets": 216,
-    "TweetsFormatted": "21.6K tweets",
+    "Tweets": 1084,
+    "TweetsFormatted": "108.4K tweets",
     "ViewHistory": [
-      731,
-      731,
-      731,
       216,
       216,
       216,
@@ -175,18 +166,18 @@
       221,
       221,
       222,
-      216
+      216,
+      216,
+      1084,
+      1084
     ]
   },
   {
-    "Rank": "11",
+    "Rank": "10",
     "Content": "PRIM 1ST TIMEPHORIA TH BA",
-    "Tweets": 792,
-    "TweetsFormatted": "79.2K tweets",
+    "Tweets": 220,
+    "TweetsFormatted": "22.0K tweets",
     "ViewHistory": [
-      1414,
-      1414,
-      1414,
       888,
       888,
       888,
@@ -195,23 +186,29 @@
       1026,
       1026,
       1056,
-      792
+      792,
+      792,
+      220,
+      220
+    ]
+  },
+  {
+    "Rank": "11",
+    "Content": "JOONG LOVE IN LAYERS",
+    "Tweets": 796,
+    "TweetsFormatted": "79.6K tweets",
+    "ViewHistory": [
+      847,
+      847,
+      796,
+      796
     ]
   },
   {
     "Rank": "12",
-    "Content": "JOONG LOVE IN LAYERS",
-    "Tweets": 847,
-    "TweetsFormatted": "84.7K tweets",
-    "ViewHistory": [
-      847
-    ]
-  },
-  {
-    "Rank": "13",
     "Content": "$ASTER",
-    "Tweets": 3841,
-    "TweetsFormatted": "384.1K tweets",
+    "Tweets": 807,
+    "TweetsFormatted": "80.7K tweets",
     "ViewHistory": [
       735,
       735,
@@ -221,38 +218,18 @@
       757,
       757,
       785,
-      3841
+      3841,
+      3841,
+      807,
+      807
     ]
   },
   {
-    "Rank": "14",
-    "Content": "SAROCHA NANNING 2025",
-    "Tweets": 10,
-    "TweetsFormatted": "Under 10K tweets",
-    "ViewHistory": [
-      203,
-      203,
-      203,
-      2258,
-      2258,
-      2258,
-      2258,
-      991,
-      991,
-      991,
-      905,
-      10
-    ]
-  },
-  {
-    "Rank": "15",
+    "Rank": "13",
     "Content": "Milk Pansa",
-    "Tweets": 10,
-    "TweetsFormatted": "Under 10K tweets",
+    "Tweets": 4022,
+    "TweetsFormatted": "402.2K tweets",
     "ViewHistory": [
-      10,
-      10,
-      10,
       10,
       10,
       10,
@@ -261,67 +238,50 @@
       132,
       132,
       3568,
+      10,
+      10,
+      4022,
+      4022
+    ]
+  },
+  {
+    "Rank": "14",
+    "Content": "SAROCHA NANNING 2025",
+    "Tweets": 10,
+    "TweetsFormatted": "Under 10K tweets",
+    "ViewHistory": [
+      2258,
+      2258,
+      2258,
+      2258,
+      991,
+      991,
+      991,
+      905,
+      10,
+      10,
+      10,
       10
     ]
   },
   {
+    "Rank": "15",
+    "Content": "Shonta Sura",
+    "Tweets": 134,
+    "TweetsFormatted": "13.4K tweets",
+    "ViewHistory": [
+      1073,
+      1073,
+      134,
+      134
+    ]
+  },
+  {
     "Rank": "16",
-    "Content": "Seneca",
-    "Tweets": 133,
-    "TweetsFormatted": "13.3K tweets",
-    "ViewHistory": [
-      3633,
-      3633,
-      3633,
-      3938,
-      3938,
-      3938,
-      3938,
-      3207,
-      3207,
-      3207,
-      10,
-      133
-    ]
-  },
-  {
-    "Rank": "17",
-    "Content": "Cleta Rhoney",
-    "Tweets": 1765,
-    "TweetsFormatted": "176.5K tweets",
-    "ViewHistory": [
-      1765
-    ]
-  },
-  {
-    "Rank": "18",
-    "Content": "WINK FS WITH FAYE",
-    "Tweets": 1464,
-    "TweetsFormatted": "146.4K tweets",
-    "ViewHistory": [
-      10,
-      10,
-      10,
-      1082,
-      1082,
-      1082,
-      1082,
-      10,
-      10,
-      10,
-      133,
-      1464
-    ]
-  },
-  {
-    "Rank": "19",
     "Content": "EMIBONNIE FATE OF BEAUTY",
-    "Tweets": 4482,
-    "TweetsFormatted": "448.2K tweets",
+    "Tweets": 1799,
+    "TweetsFormatted": "179.9K tweets",
     "ViewHistory": [
-      706,
-      706,
-      706,
       10,
       10,
       10,
@@ -330,18 +290,38 @@
       4315,
       4315,
       4414,
-      4482
+      4482,
+      4482,
+      1799,
+      1799
     ]
   },
   {
-    "Rank": "20",
+    "Rank": "17",
+    "Content": "WINK FS WITH FAYE",
+    "Tweets": 1532,
+    "TweetsFormatted": "153.2K tweets",
+    "ViewHistory": [
+      1082,
+      1082,
+      1082,
+      1082,
+      10,
+      10,
+      10,
+      133,
+      1464,
+      1464,
+      1532,
+      1532
+    ]
+  },
+  {
+    "Rank": "18",
     "Content": "Elixir",
     "Tweets": 10,
     "TweetsFormatted": "Under 10K tweets",
     "ViewHistory": [
-      125,
-      125,
-      125,
       129,
       129,
       129,
@@ -350,78 +330,88 @@
       1051,
       1051,
       1206,
+      10,
+      10,
+      10,
+      10
+    ]
+  },
+  {
+    "Rank": "19",
+    "Content": "Success",
+    "Tweets": 4527,
+    "TweetsFormatted": "452.7K tweets",
+    "ViewHistory": [
+      4527,
+      4527
+    ]
+  },
+  {
+    "Rank": "20",
+    "Content": "Link Group Book Đào",
+    "Tweets": 10,
+    "TweetsFormatted": "Under 10K tweets",
+    "ViewHistory": [
+      2213,
+      2213,
+      2213,
+      2213,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
       10
     ]
   },
   {
     "Rank": "21",
-    "Content": "Link Group Book Đào",
-    "Tweets": 10,
-    "TweetsFormatted": "Under 10K tweets",
+    "Content": "fractionalized nfts",
+    "Tweets": 2779,
+    "TweetsFormatted": "277.9K tweets",
     "ViewHistory": [
-      1675,
-      1675,
-      1675,
-      2213,
-      2213,
-      2213,
-      2213,
       10,
       10,
       10,
       10,
-      10
+      2462,
+      2462,
+      2462,
+      10,
+      10,
+      10,
+      2779,
+      2779
     ]
   },
   {
     "Rank": "22",
-    "Content": "fractionalized nfts",
-    "Tweets": 10,
-    "TweetsFormatted": "Under 10K tweets",
+    "Content": "Orlando",
+    "Tweets": 2642,
+    "TweetsFormatted": "264.2K tweets",
     "ViewHistory": [
-      2056,
-      2056,
-      2056,
       10,
       10,
       10,
       10,
-      2462,
-      2462,
-      2462,
       10,
-      10
+      10,
+      10,
+      10,
+      2586,
+      2586,
+      2642,
+      2642
     ]
   },
   {
     "Rank": "23",
-    "Content": "Orlando",
-    "Tweets": 2586,
-    "TweetsFormatted": "258.6K tweets",
-    "ViewHistory": [
-      10,
-      10,
-      10,
-      10,
-      10,
-      10,
-      10,
-      10,
-      10,
-      10,
-      10,
-      2586
-    ]
-  },
-  {
-    "Rank": "24",
     "Content": "Défi",
-    "Tweets": 2699,
-    "TweetsFormatted": "269.9K tweets",
+    "Tweets": 10,
+    "TweetsFormatted": "Under 10K tweets",
     "ViewHistory": [
-      10,
-      10,
-      10,
       10,
       10,
       10,
@@ -430,7 +420,30 @@
       10,
       10,
       2597,
-      2699
+      2699,
+      2699,
+      10,
+      10
+    ]
+  },
+  {
+    "Rank": "24",
+    "Content": "Evening",
+    "Tweets": 2043,
+    "TweetsFormatted": "204.3K tweets",
+    "ViewHistory": [
+      334,
+      334,
+      334,
+      334,
+      2445,
+      2445,
+      2445,
+      10,
+      10,
+      10,
+      2043,
+      2043
     ]
   },
   {
@@ -455,20 +468,10 @@
   },
   {
     "Rank": "26",
-    "Content": "Evening",
+    "Content": "Damion Kellebrew",
     "Tweets": 10,
     "TweetsFormatted": "Under 10K tweets",
     "ViewHistory": [
-      10,
-      10,
-      10,
-      334,
-      334,
-      334,
-      334,
-      2445,
-      2445,
-      2445,
       10,
       10
     ]
@@ -476,51 +479,51 @@
   {
     "Rank": "27",
     "Content": "Jed Mcfeeters",
-    "Tweets": 10,
-    "TweetsFormatted": "Under 10K tweets",
+    "Tweets": 136,
+    "TweetsFormatted": "13.6K tweets",
     "ViewHistory": [
-      10
+      10,
+      10,
+      136,
+      136
     ]
   },
   {
     "Rank": "28",
-    "Content": "Khemjira The Series EP7",
-    "Tweets": 140,
-    "TweetsFormatted": "14.0K tweets",
+    "Content": "Denver",
+    "Tweets": 1747,
+    "TweetsFormatted": "174.7K tweets",
     "ViewHistory": [
-      160,
-      160,
-      160,
-      2531,
-      140
+      1747,
+      1747
     ]
   },
   {
     "Rank": "29",
-    "Content": "Kia Progl",
-    "Tweets": 1847,
-    "TweetsFormatted": "184.7K tweets",
+    "Content": "Looping RWAs",
+    "Tweets": 1454,
+    "TweetsFormatted": "145.4K tweets",
     "ViewHistory": [
-      12,
-      1847
+      1847,
+      1847,
+      1847,
+      1847,
+      1507,
+      1507,
+      1507,
+      10,
+      10,
+      10,
+      1454,
+      1454
     ]
   },
   {
     "Rank": "30",
-    "Content": "Looping RWAs",
+    "Content": "NINESTAR SHAME LASTS",
     "Tweets": 10,
     "TweetsFormatted": "Under 10K tweets",
     "ViewHistory": [
-      1984,
-      1984,
-      1984,
-      1847,
-      1847,
-      1847,
-      1847,
-      1507,
-      1507,
-      1507,
       10,
       10
     ]

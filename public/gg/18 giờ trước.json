@@ -58,25 +58,6 @@
   },
   {
     "Rank": 4,
-    "Title": "brighton đấu với tottenham",
-    "SearchVolume": "20K+",
-    "ViewHistory": [
-      20,
-      20,
-      20,
-      20,
-      20,
-      20,
-      20,
-      20,
-      20,
-      20,
-      20,
-      20
-    ]
-  },
-  {
-    "Rank": 5,
     "Title": "al-nassr đấu với al-riyadh",
     "SearchVolume": "10K+",
     "ViewHistory": [
@@ -95,19 +76,38 @@
     ]
   },
   {
+    "Rank": 5,
+    "Title": "brighton đấu với tottenham",
+    "SearchVolume": "20K+",
+    "ViewHistory": [
+      20,
+      20,
+      20,
+      20,
+      20,
+      20,
+      20,
+      20,
+      20,
+      20,
+      20,
+      20
+    ]
+  },
+  {
     "Rank": 6,
-    "Title": "man utd",
+    "Title": "hoffenheim đấu với bayern",
     "SearchVolume": "10K+",
     "ViewHistory": [
       10,
       10,
       10,
       10,
-      5,
-      5,
-      5,
-      5,
-      5,
+      10,
+      10,
+      10,
+      10,
+      10,
       10,
       10,
       10
@@ -134,21 +134,21 @@
   },
   {
     "Rank": 8,
-    "Title": "hoffenheim đấu với bayern",
-    "SearchVolume": "10K+",
+    "Title": "man utd",
+    "SearchVolume": "20K+",
     "ViewHistory": [
+      5,
+      5,
       10,
       10,
       10,
       10,
       10,
-      10,
-      10,
-      10,
-      10,
-      10,
-      10,
-      10
+      20,
+      20,
+      20,
+      20,
+      20
     ]
   },
   {
@@ -172,13 +172,13 @@
   },
   {
     "Rank": 10,
-    "Title": "al nassr",
+    "Title": "west ham đấu với crystal palace",
     "SearchVolume": "5K+",
     "ViewHistory": [
-      2,
-      2,
-      2,
-      2,
+      5,
+      5,
+      5,
+      5,
       5,
       5,
       5,
@@ -191,7 +191,7 @@
   },
   {
     "Rank": 11,
-    "Title": "west ham đấu với crystal palace",
+    "Title": "al nassr",
     "SearchVolume": "5K+",
     "ViewHistory": [
       5,
@@ -267,16 +267,9 @@
   },
   {
     "Rank": 15,
-    "Title": "villarreal đấu với osasuna",
+    "Title": "fulham",
     "SearchVolume": "1K+",
     "ViewHistory": [
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
       1,
       1,
       1,
@@ -324,25 +317,6 @@
   },
   {
     "Rank": 18,
-    "Title": "socolive",
-    "SearchVolume": "5K+",
-    "ViewHistory": [
-      5,
-      5,
-      5,
-      5,
-      5,
-      5,
-      5,
-      5,
-      5,
-      5,
-      5,
-      5
-    ]
-  },
-  {
-    "Rank": 19,
     "Title": "xổ số miền nam ngày 20 tháng 09",
     "SearchVolume": "100K+",
     "ViewHistory": [
@@ -361,12 +335,48 @@
     ]
   },
   {
+    "Rank": 19,
+    "Title": "socolive",
+    "SearchVolume": "5K+",
+    "ViewHistory": [
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5
+    ]
+  },
+  {
     "Rank": 20,
-    "Title": "epl",
+    "Title": "villarreal đấu với osasuna",
+    "SearchVolume": "1K+",
+    "ViewHistory": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "Rank": 21,
+    "Title": "vũ cát tường",
     "SearchVolume": "2K+",
     "ViewHistory": [
-      2,
-      2,
       2,
       2,
       2,
@@ -380,30 +390,15 @@
     ]
   },
   {
-    "Rank": 21,
-    "Title": "fullham vs",
-    "SearchVolume": "1K+",
-    "ViewHistory": [
-      1,
-      1,
-      1
-    ]
-  },
-  {
     "Rank": 22,
-    "Title": "benfica",
-    "SearchVolume": "200+",
-    "ViewHistory": [
-      200,
-      200,
-      200
-    ]
-  },
-  {
-    "Rank": 23,
     "Title": "stake",
     "SearchVolume": "100+",
     "ViewHistory": [
+      100,
+      100,
+      100,
+      100,
+      100,
       100,
       100,
       100,
@@ -414,23 +409,35 @@
     ]
   },
   {
-    "Rank": 24,
-    "Title": "real madrid vs espanyol",
-    "SearchVolume": "5K+",
-    "ViewHistory": [
-      5,
-      5,
-      5
-    ]
-  },
-  {
-    "Rank": 25,
-    "Title": "vũ cát tường",
+    "Rank": 23,
+    "Title": "leicester đấu với coventry",
     "SearchVolume": "2K+",
     "ViewHistory": [
       2,
       2,
+      2,
+      2,
       2
+    ]
+  },
+  {
+    "Rank": 24,
+    "Title": "v fest vietnam today",
+    "SearchVolume": "2K+",
+    "ViewHistory": [
+      2,
+      2,
+      2,
+      2,
+      2
+    ]
+  },
+  {
+    "Rank": 25,
+    "Title": "real madrid – espanyol",
+    "SearchVolume": "5K+",
+    "ViewHistory": [
+      5
     ]
   }
 ]
