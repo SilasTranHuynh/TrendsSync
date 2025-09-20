@@ -6,7 +6,7 @@ import styles from './reddit.module.scss';
 const cx = classNames.bind(styles);
 
 const RedditTrendSection = ({ redditTrends }) => {
-  const redditContents = redditTrends || []; // Fallback khi redditTrends là null/undefined
+  const redditContents = redditTrends || []; // Fallback when redditTrends is null/undefined
   return (
       <div className={cx("reddit-trend-component")}>
           {redditContents.length > 0 ? (

@@ -94,6 +94,32 @@
     background-color: #2a2f91;
 }
 
+.history-slider {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 3rem;
+}
+  
+.history-button {
+    padding: 10px 15px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  
+    &:hover {
+        background-color: #e0e0e0;
+    }
+  
+    &.disabled {
+        background-color: #f0f0f0;
+        cursor: not-allowed;
+    }
+}
+  
+
 // Extra Large
 @media (min-width: 1201px) {
     .container1 {

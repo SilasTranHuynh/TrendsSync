@@ -71,7 +71,7 @@ const saveHistory = () => {
 
 // Hàm thu thập dữ liệu từ YouTube API
 const fetchYouTubeTrends = async () => {
-    const apiKey = 'AIzaSyB5xkShZYYRUE4PjfTo1D_O42YRjeJgMis'; // Thay bằng API key của bạn
+    const apiKey = 'AIzaSyB5xkShZYYRUE4PjfTo1D_O42YRjeJgMis'; 
     const youtube = google.youtube({ version: "v3", auth: apiKey });
 
     try {
@@ -107,7 +107,7 @@ app.get("/api/youtube-trends/history", (req, res) => {
         return {
             time: slot,
             exists: fs.existsSync(filePath),
-            url: fs.existsSync(filePath) ? `http://localhost:5000/data/${slot}.json` : null,
+            url: fs.existsSync(filePath) ? `http://localhost:5001/data/${slot}.json` : null,
         };
     });
 
@@ -127,7 +127,7 @@ app.get("/api/youtube-trends", (req, res) => {
 
 
 // Khởi động server
-const PORT = 5000;
+const PORT = 5001;
 app.listen(PORT, async () => {
     console.log(`YouTube server is running on http://localhost:${PORT}`);
     await fetchYouTubeTrends();

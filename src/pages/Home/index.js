@@ -37,7 +37,7 @@ function Home() {
     //    })
 
 
-    // Reddit xu huong
+    // Reddit 
     const [redditTrends, setRedditTrends] = useState([]);
 
     useEffect(() => {
@@ -54,7 +54,7 @@ function Home() {
         fetchRedditTrends();
     }, []);
 
-    // News xu huong
+    // News 
     const [newsTrends, setNewsTrends] = useState([]);
 
     useEffect(() => {
@@ -89,7 +89,7 @@ function Home() {
 
 
 
-    // Youtube xu huong
+    // Youtube
     const [youtubeTrends, setYoutubeTrends] = useState([]);
 
     useEffect(() => {
@@ -105,7 +105,7 @@ function Home() {
         fetchYouTubeTrends();
     }, []);  // Fetch dữ liệu một lần khi component được render
 
-    // Twitter xu huong
+    // Twitter
     const [twitterTrends, setTwitterTrends] = useState([]);
 
     useEffect(() => {
@@ -125,7 +125,7 @@ function Home() {
 
     const [googleTrends, setGoogleTrends] = useState([]);
 
-    // Google xu huong
+    // Google
     useEffect(() => {
         const fetchGoogleTrendsData = async () => {
             try {
@@ -140,7 +140,7 @@ function Home() {
         fetchGoogleTrendsData();
     }, []);
 
-    // Tiktok xu huong
+    // Tiktok
     const [tiktokTrends, setTiktokTrends] = useState([]);
 
     useEffect(() => {
@@ -202,7 +202,7 @@ function Home() {
                             youtubeTrends.map((youtubeTrend, index) => (
                                 <VideoCard
                                     key={index}
-                                    youtubeTrend={youtubeTrend}  // Truyền youtubeTrend toàn bộ đối tượng
+                                    youtubeTrend={youtubeTrend}  
                                 />
                             ))
                         ) : (

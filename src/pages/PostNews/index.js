@@ -11,7 +11,7 @@ function PostNews() {
     const [loading, setLoading] = useState(true);
 
         useEffect(() => {
-            // Fetch dữ liệu từ backend API
+            // Fetch data from backend API
             const fetchNewsData = async () => {
                 try {
                     const response = await axios.get('http://localhost:3000/top-headlines');

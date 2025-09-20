@@ -33,12 +33,12 @@ function Admin() {
                 <table className={cx('table')}>
                     <thead>
                         <tr>
-                            <th>Tên</th>
-                            <th>Email</th>
-                            <th>Password</th>
-                            <th className={cx('created-at')}>Tạo</th>
-                            <th>Dùng lần cuối</th>
-                            <th>Hành động</th>
+                            <th className={cx('table-title')}>Tên</th>
+                            <th className={cx('table-title')}>Email</th>
+                            <th className={cx('table-title')}>Password</th>
+                            <th className={cx('table-title')}>Tạo</th>
+                            <th className={cx('table-title')}>Dùng lần cuối</th>
+                            <th className={cx('table-title')}>Hành động</th>
                         </tr>
                     </thead>
                     <tbody>

@@ -5,11 +5,12 @@ const session = require('express-session');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser')
 const MySQLStore = require('connect-mysql2')(session);
+const bcrypt = require('bcrypt');
 
 const app = express();
 
 app.use(session({
-    secret: 'your_secret_key',
+    secret: 'secret_key',
     resave: false,
     saveUninitialized: false,
     cookie: { secure: false, httpOnly: true }, // Bỏ secure nếu không dùng HTTPS
@@ -23,7 +24,7 @@ app.use(session({
 //    store: new session.MemoryStore() // Hoặc cấu hình Redis/FileStore
 //}));
 app.use(cors({
-    origin: 'http://localhost:9988', // Địa chỉ frontend của bạn
+    origin: 'http://localhost:9988', 
     credentials: true, // Cho phép gửi cookie
 }));
 app.use(express.json());
@@ -40,55 +41,58 @@ const db = mysql.createConnection({
 })
 
 app.post('/signup', (req, res) => {
-    const sql = "INSERT INTO `user` (`user_name`, `user_username`, `user_password`) VALUES ('"+ req.body.name +"', '"+ req.body.email +"', '"+ req.body.password +"')";
-    const values = [
-        req.body.name,
-        req.body.email,
-        req.body.password
-    ]
-    db.query(sql, [values], (err, data) => {
-        if(err) {
-            return res.json("Error");
-        }
-        return res.json(data);
-    })
-})
+    const { name, email, password } = req.body;
 
-app.post('/signin', (req, res) => {
-    const sql = "SELECT * FROM user WHERE `user_username` = ? AND `user_password` = ?";
-    db.query(sql, [req.body.email, req.body.password], (err, data) => {
+    const saltRounds = 10;
+    bcrypt.hash(password, saltRounds, (err, hashedPassword) => {
         if (err) {
-            return res.json({ status: "Error", message: "Database query error" });
+            return res.json("Error hashing password");
         }
 
-        if (data.length > 0) {
-            const user = data[0];
-            req.session.name = user.user_name;
-            req.session.email = user.user_username;
-            req.session.password = user.user_password;
+        const sql = "INSERT INTO users (user_name, user_username, user_password) VALUES (?, ?, ?)";
+        const values = [name, email, hashedPassword];
 
-            req.session.save((err) => {
-                if (err) {
-                    console.error('Error saving session:', err);
-                    return res.json({ status: "Error saving session" });
-                }
-                // Gửi response sau khi session đã được lưu
-                const role = user.user_username === "trendssync@gmail.com" ? "admin" : "user";
-                return res.json({
-                    Login: true,
-                    status: "Success",
-                    role: role,
-                    user: { name: user.user_name, email: user.user_username }
-                });
-            });
-        } else {
-            return res.json({ status: "Failed", message: "Invalid credentials" });
-        }
+        db.query(sql, values, (err, data) => {
+            if (err) {
+                return res.json("Lỗi lưu người dùng");
+            }
+            return res.json("Đăng kí thành công");
+        });
     });
 });
 
+app.post('/signin', (req, res) => {
+    const { email, password } = req.body;
+    const sql = "SELECT * FROM users WHERE `user_username` = ?";
+
+    db.query(sql, [email], (err, data) => {
+        if (err) {
+            return res.json({ status: "Lỗi", message: "Lỗi" });
+        }
+
+        if (data.length === 0) {
+            return res.json({ status: "Thất bại", message: "Không tìm thấy người dùng" });
+        }
+        const user = data[0];
+        bcrypt.compare(password, user.user_password, (err, result) => {
+      if (err) {
+        console.error('Kiểm tra lỗi bcrypt: ', err);
+        return res.status(500).json({ status: "Lỗi", message: "Lỗi so sánh mật khẩu" });
+      }
+
+      console.log('Kết quả so sánh bcrypt: ', result);
+      if (result) {
+        return res.json({ status: "Success", role: user.role, user: {name: user.user_name, email: user.user_username} });
+      } else {
+        return res.status(401).json({ status: "Thất bại", message: "Mật khẩu không chính xác." });
+      }
+    });
+  });
+});
+
+
 app.get('/admin', (req, res) => {
-    const sql = "SELECT * FROM user";
+    const sql = "SELECT * FROM users";
     db.query(sql, (err, data) => {
         if(err) return res.json("Error");
         return res.json(data);
@@ -97,7 +101,7 @@ app.get('/admin', (req, res) => {
 
 app.post('/create', (req, res) => {
     // Lấy `user_id` lớn nhất hiện tại
-    const getMaxID= "SELECT MAX(user_id) AS maxId FROM `user`";
+    const getMaxID= "SELECT MAX(user_id) AS maxId FROM `users`";
 
     db.query(getMaxID, (err, result) => {
         if (err) {
@@ -107,7 +111,7 @@ app.post('/create', (req, res) => {
 
         const newID = result[0].maxId ? result[0].maxId + 1 : 1;
 
-        const sql = "INSERT INTO `user` (`user_id`, `user_name`, `user_username`, `user_password`) VALUES (?, ?, ?, ?)";
+        const sql = "INSERT INTO `users` (`user_id`, `user_name`, `user_username`, `user_password`) VALUES (?, ?, ?, ?)";
         const values = [
             newID, 
             req.body.name,
@@ -126,7 +130,7 @@ app.post('/create', (req, res) => {
 });
 
 app.put('/update/:id', (req, res) => {
-    const sql = "UPDATE user set user_name = ?, user_username = ?, user_password = ? WHERE user_id = ?";
+    const sql = "UPDATE users set user_name = ?, user_username = ?, user_password = ? WHERE user_id = ?";
     const values = [
         req.body.name,
         req.body.email,
@@ -143,7 +147,7 @@ app.put('/update/:id', (req, res) => {
 })
 
 app.delete('/delete/:id', (req, res) => {
-    const sql = "DELETE FROM user WHERE user_id = ?";
+    const sql = "DELETE FROM users WHERE user_id = ?";
     const id = req.params.id;
     db.query(sql, [id], (err, data) => {
         if (err) {
@@ -159,7 +163,7 @@ app.get('/profile-server', (req, res) => {
     console.log('Session Data:', req.session);
     console.log(req.session.name);
     if (req.session && req.session.name) {
-        const sql = "SELECT * FROM user WHERE `user_name` = ?";
+        const sql = "SELECT * FROM users WHERE `user_name` = ?";
         db.query(sql, [req.session.name], (err, data) => {
             if (err) {
                 return res.json({ status: "Error", message: "Database error" });

@@ -25,7 +25,7 @@ function Header() {
                     </Link>
                 </div>
                 <div className={cx('slogan')}>
-                    <span>Giữ bạn đồng điệu với những xu hướng tương lai</span>
+                    <span>Stay in tune with the latest trends.</span>
                 </div>
                 <div className={cx('media-page')}>
                     <div className={cx('media-page-instagram')}>
@@ -46,7 +46,7 @@ function Header() {
                     <div className={cx('separation')}> </div>
                     <img className={cx('icon')} src={userIcon} />
                     <Link to="/signinsignup" className={cx("text")}>
-                        <span>Đăng nhập</span>
+                        <span>Log In</span>
                     </Link>
                 </div>
             </div>
@@ -60,7 +60,7 @@ function Header() {
                         </Link>
                     </div>
                     <div className={cx('slogan')}>
-                        <span>Giữ bạn đồng điệu với những xu hướng tương lai</span>
+                        <span>Stay in tune with the latest trends.</span>
                     </div>
                 </div>
     
@@ -83,7 +83,7 @@ function Header() {
                     <div className={cx('separation')}> </div>
                     <img className={cx('icon')} src={userIcon} />
                     <Link to="/signinsignup" className={cx("text")}>
-                        <span>Đăng nhập</span>
+                        <span>Log In</span>
                     </Link>
                 </div>
             </div>

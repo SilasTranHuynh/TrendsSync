@@ -85,9 +85,9 @@ const fetchRedditTrends = async () => {
             Upvotes: post.data.score,
         }));
 
-        console.log("Reddit trends fetched successfully!");
+        console.log("Lấy dữ liệu thịnh hành Reddit thành công!");
     } catch (error) {
-        console.error("Error fetching Reddit trends:", error.message);
+        console.error("Lỗi lấy dữ liệu:", error.message);
     }
 };
 
@@ -148,7 +148,7 @@ app.use("/reddit", express.static(dataDir));
 
 // Cronjob: Thu thập dữ liệu và cập nhật lịch sử mỗi 2 giờ
 cron.schedule("0 */2 * * *", async () => {
-    console.log("Running cronjob: Fetching Reddit trends...");
+    console.log("Khởi động cronjob: Lấy dữ liệu từ thịnh hành Reddit...");
     await fetchRedditTrends();
     saveHistory();
 });
@@ -161,7 +161,7 @@ app.get('/top-headlines', async (req, res) => {
             params: {
                 country: 'us', // Mã quốc gia
                 apiKey: apiKey,
-                pageSize: 30,
+               pageSize: 30,
             },
         });
 
@@ -170,18 +170,18 @@ app.get('/top-headlines', async (req, res) => {
         if (response.data && response.data.articles) {
             newsposts = response.data.articles.map((newspost) => ({
                 newsSource: newspost.source.name, // Nguồn tin
-                newsTitle: newspost.title, // Tiêu đề bài viết
+               newsTitle: newspost.title, // Tiêu đề bài viết
                 newsAuthor: newspost.author || 'Unknown', // Tác giả (có thể là rỗng)
                 thumbnailUrl: newspost.urlToImage, // URL hình ảnh
                 newsTime: new Date(newspost.publishedAt).toLocaleString(), // Thời gian xuất bản
-            }));
+           }));
             res.json({ newsposts });
-        } else {
+       } else {
             console.error('No articles found', response.data);
-            res.status(404).json({ message: 'No articles found' });
+           res.status(404).json({ message: 'No articles found' });
         }
     } catch (error) {
-        console.error(error);
+       console.error(error);
         res.status(500).json({ message: 'Failed to fetch news' });
     }
 });
@@ -213,16 +213,14 @@ app.post('/send-mail',
             service: 'Gmail',
             auth: {
                 user: 'trendssync@gmail.com',
-                pass: 'phshpbgdwfktghbn'
+                pass: 'nubltvyqyayigcgl' // App password
             }
         });
-
         const mail_option = {
             from: request.body.email,
             to: 'anhthv21@gmail.com',
             text: `Name: ${request.body.name}\nEmail: ${request.body.email}\nMessage: ${request.body.message}`,
         };
-
         transporter.sendMail(mail_option, (error, info) => {
             if(error)
             {

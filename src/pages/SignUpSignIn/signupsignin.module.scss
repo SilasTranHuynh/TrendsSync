@@ -62,10 +62,12 @@
     width: 50%;
     background-color: #daa5a5;
     color: #fff;
+    border-radius: 4px;
   }
 
   .signin-btn {
     width: 50%;
+    border-radius: 4px;
   }
 
   .signin-btn button {
@@ -83,29 +85,9 @@
     cursor: pointer;
   }
 
-  .save-pass {
-    display: flex;
-  }
-  
-  .save-pass-checkbox {
-    width: 12px;
-    height: 12px;
-    margin: 4.5px 5px 0 0;
-
-  }
-
-  .save-pass-text {
-    margin: 0;
-  }
-
-  .forget-pass {
-    text-align: right;
-    margin-bottom: 0 !important;
-    margin-top: 8px;
-  }
-
   .final-btn {
     background-color: #daa5a5;
+    border-radius: 4px;
   }
 
   @media (min-width: 1201px) {

@@ -53,9 +53,9 @@ const fetchGoogleTrends = async () => {
             googleTrendsData.push({ Rank: i + 1, Title: title, SearchVolume: searchVolume });
         }
 
-        console.log("Google Trends data fetched successfully!");
+        console.log("Lấy dữ liệu Google Trends thành công");
     } catch (error) {
-        console.error("Error fetching Google Trends:", error);
+        console.error("Lỗi lấy dữ liệu Google Trends:", error);
     } finally {
         if (driver) {
             await driver.quit(); // Đóng trình duyệt
@@ -67,7 +67,7 @@ const fetchGoogleTrends = async () => {
 
 // Hàm thu thập dữ liệu YouTube
 const fetchYouTubeTrends = async () => {
-    const apiKey = 'AIzaSyB5xkShZYYRUE4PjfTo1D_O42YRjeJgMis'; // API key của bạn
+    const apiKey = 'AIzaSyB5xkShZYYRUE4PjfTo1D_O42YRjeJgMis'; // API key 
     const youtube = google.youtube({ version: "v3", auth: apiKey });
 
     try {
@@ -87,9 +87,9 @@ const fetchYouTubeTrends = async () => {
             Image: video.snippet.thumbnails.high.url, // Thêm hình ảnh thumbnail
         }));
 
-        console.log("YouTube trends fetched successfully!");
+        console.log("Lấy dữ liệu thịnh hành Youtube thành công!");
     } catch (error) {
-        console.error("Error fetching YouTube trends:", error.message);
+        console.error("Lỗi lấy dữ liệu:", error.message);
     }
 };
 
@@ -119,9 +119,9 @@ const fetchTikTokTrends = async () => {
             });
         });
 
-        console.log("TikTok trends fetched successfully!");
+        console.log("Lấy dữ liệu thịnh hành Tiktok thành công!");
     } catch (error) {
-        console.error("Error fetching TikTok trends:", error.message);
+        console.error("Lỗi lấy dữ liệu:", error.message);
     }
 };
 
@@ -152,9 +152,9 @@ const fetchTwitterTrends = async () => {
             });
         });
 
-        console.log("Twitter trends fetched successfully!");
+        console.log("Lấy dữ liệu thịnh hành X thành công!");
     } catch (error) {
-        console.error("Error fetching Twitter trends:", error.message);
+        console.error("Lỗi lấy dữ liệu:", error.message);
     }
 };
 
