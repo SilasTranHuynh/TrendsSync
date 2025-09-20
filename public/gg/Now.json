@@ -1,21 +1,21 @@
 [
   {
     "Rank": 1,
-    "Title": "real madrid đấu với espanyol",
-    "SearchVolume": "20K+",
+    "Title": "man utd đấu với chelsea",
+    "SearchVolume": "100K+",
     "ViewHistory": [
-      20,
-      20,
-      20,
-      20,
-      20,
-      20,
-      20,
-      20,
-      20,
-      20,
-      20,
-      20
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100
     ]
   },
   {
@@ -39,15 +39,15 @@
   },
   {
     "Rank": 3,
-    "Title": "brighton đấu với tottenham",
+    "Title": "real madrid đấu với espanyol",
     "SearchVolume": "20K+",
     "ViewHistory": [
-      10,
-      10,
-      10,
-      10,
-      10,
-      10,
+      20,
+      20,
+      20,
+      20,
+      20,
+      20,
       20,
       20,
       20,
@@ -58,7 +58,7 @@
   },
   {
     "Rank": 4,
-    "Title": "hoffenheim đấu với bayern",
+    "Title": "al-nassr đấu với al-riyadh",
     "SearchVolume": "10K+",
     "ViewHistory": [
       10,
@@ -77,32 +77,7 @@
   },
   {
     "Rank": 5,
-    "Title": "man utd đấu với chelsea",
-    "SearchVolume": "10K+",
-    "ViewHistory": [
-      10
-    ]
-  },
-  {
-    "Rank": 6,
-    "Title": "hà nội đấu với thể công",
-    "SearchVolume": "10K+",
-    "ViewHistory": [
-      10,
-      10,
-      10,
-      10,
-      10,
-      10,
-      10,
-      10,
-      10,
-      10
-    ]
-  },
-  {
-    "Rank": 7,
-    "Title": "betis đấu với real sociedad",
+    "Title": "brighton đấu với tottenham",
     "SearchVolume": "20K+",
     "ViewHistory": [
       20,
@@ -120,46 +95,8 @@
     ]
   },
   {
-    "Rank": 8,
-    "Title": "wolves đấu với leeds",
-    "SearchVolume": "2K+",
-    "ViewHistory": [
-      2,
-      2,
-      2,
-      2,
-      2,
-      2,
-      2,
-      2,
-      2,
-      2,
-      2,
-      2
-    ]
-  },
-  {
-    "Rank": 9,
-    "Title": "west ham đấu với crystal palace",
-    "SearchVolume": "2K+",
-    "ViewHistory": [
-      2,
-      2,
-      2,
-      2,
-      2,
-      2,
-      2,
-      2,
-      2,
-      2,
-      2,
-      2
-    ]
-  },
-  {
-    "Rank": 10,
-    "Title": "al-ahli saudi đấu với al hilal",
+    "Rank": 6,
+    "Title": "hoffenheim đấu với bayern",
     "SearchVolume": "10K+",
     "ViewHistory": [
       10,
@@ -177,10 +114,154 @@
     ]
   },
   {
-    "Rank": 11,
+    "Rank": 7,
+    "Title": "fulham đấu với brentford",
+    "SearchVolume": "2K+",
+    "ViewHistory": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ]
+  },
+  {
+    "Rank": 8,
     "Title": "verona đấu với juventus",
+    "SearchVolume": "5K+",
+    "ViewHistory": [
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5
+    ]
+  },
+  {
+    "Rank": 9,
+    "Title": "west ham đấu với crystal palace",
+    "SearchVolume": "5K+",
+    "ViewHistory": [
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5
+    ]
+  },
+  {
+    "Rank": 10,
+    "Title": "al nassr",
+    "SearchVolume": "5K+",
+    "ViewHistory": [
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5
+    ]
+  },
+  {
+    "Rank": 11,
+    "Title": "wolves đấu với leeds",
+    "SearchVolume": "5K+",
+    "ViewHistory": [
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5
+    ]
+  },
+  {
+    "Rank": 12,
+    "Title": "manchester united",
+    "SearchVolume": "10K+",
+    "ViewHistory": [
+      10,
+      10
+    ]
+  },
+  {
+    "Rank": 13,
+    "Title": "man utd",
+    "SearchVolume": "5K+",
+    "ViewHistory": [
+      10,
+      10,
+      10,
+      10,
+      10,
+      20,
+      20,
+      20,
+      20,
+      20,
+      5,
+      5
+    ]
+  },
+  {
+    "Rank": 14,
+    "Title": "xoilac",
+    "SearchVolume": "50K+",
+    "ViewHistory": [
+      50,
+      50,
+      50,
+      50,
+      50,
+      50,
+      50,
+      50,
+      50,
+      50,
+      50,
+      50
+    ]
+  },
+  {
+    "Rank": 15,
+    "Title": "ac milan",
     "SearchVolume": "1K+",
     "ViewHistory": [
+      1,
+      1,
       1,
       1,
       1,
@@ -194,7 +275,59 @@
     ]
   },
   {
-    "Rank": 12,
+    "Rank": 16,
+    "Title": "fulham",
+    "SearchVolume": "1K+",
+    "ViewHistory": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "Rank": 17,
+    "Title": "bang xep hang bong da anh",
+    "SearchVolume": "1K+",
+    "ViewHistory": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "Rank": 18,
+    "Title": "hà nội đấu với thể công",
+    "SearchVolume": "10K+",
+    "ViewHistory": [
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10
+    ]
+  },
+  {
+    "Rank": 19,
     "Title": "xổ số miền nam ngày 20 tháng 09",
     "SearchVolume": "100K+",
     "ViewHistory": [
@@ -213,26 +346,26 @@
     ]
   },
   {
-    "Rank": 13,
-    "Title": "miss international queen 2025",
-    "SearchVolume": "2K+",
+    "Rank": 20,
+    "Title": "socolive",
+    "SearchVolume": "5K+",
     "ViewHistory": [
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      2
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5
     ]
   },
   {
-    "Rank": 14,
+    "Rank": 21,
     "Title": "vũ cát tường",
     "SearchVolume": "2K+",
     "ViewHistory": [
@@ -251,27 +384,8 @@
     ]
   },
   {
-    "Rank": 15,
-    "Title": "hoa hau hhen nie",
-    "SearchVolume": "2K+",
-    "ViewHistory": [
-      1,
-      1,
-      2,
-      2,
-      2,
-      2,
-      2,
-      2,
-      2,
-      2,
-      2,
-      2
-    ]
-  },
-  {
-    "Rank": 16,
-    "Title": "real madrid vs espanyol",
+    "Rank": 22,
+    "Title": "villarreal đấu với osasuna",
     "SearchVolume": "1K+",
     "ViewHistory": [
       1,
@@ -280,107 +394,12 @@
       1,
       1,
       1,
-      500,
-      500,
-      500,
-      500,
-      500,
+      1,
+      1,
+      1,
+      1,
+      1,
       1
-    ]
-  },
-  {
-    "Rank": 17,
-    "Title": "real madrid – espanyol",
-    "SearchVolume": "500+",
-    "ViewHistory": [
-      500,
-      500,
-      500,
-      500,
-      500,
-      500
-    ]
-  },
-  {
-    "Rank": 18,
-    "Title": "chủ tịch hđqt agribank nguyễn thế bình",
-    "SearchVolume": "5K+",
-    "ViewHistory": [
-      5
-    ]
-  },
-  {
-    "Rank": 19,
-    "Title": "v fest vietnam today",
-    "SearchVolume": "2K+",
-    "ViewHistory": [
-      1,
-      1,
-      2,
-      2,
-      2,
-      2,
-      2,
-      2,
-      2,
-      2,
-      2,
-      2
-    ]
-  },
-  {
-    "Rank": 20,
-    "Title": "manchester united f.c. vs chelsea f.c. timeline",
-    "SearchVolume": "500+",
-    "ViewHistory": [
-      500,
-      500,
-      500,
-      500,
-      500,
-      500,
-      500,
-      500,
-      500,
-      500,
-      500,
-      500
-    ]
-  },
-  {
-    "Rank": 21,
-    "Title": "hoffenheim – bayern",
-    "SearchVolume": "200+",
-    "ViewHistory": [
-      100,
-      100,
-      100,
-      100,
-      200,
-      200,
-      200,
-      200,
-      200,
-      200
-    ]
-  },
-  {
-    "Rank": 22,
-    "Title": "cơn bão ragasa",
-    "SearchVolume": "2K+",
-    "ViewHistory": [
-      2,
-      2,
-      2,
-      2,
-      2,
-      2,
-      2,
-      2,
-      2,
-      2,
-      2,
-      2
     ]
   },
   {
@@ -394,6 +413,15 @@
       2,
       2,
       2,
+      2
+    ]
+  },
+  {
+    "Rank": 24,
+    "Title": "v fest vietnam today",
+    "SearchVolume": "2K+",
+    "ViewHistory": [
+      2,
       2,
       2,
       2,
@@ -403,19 +431,13 @@
     ]
   },
   {
-    "Rank": 24,
-    "Title": "nottingham forest",
-    "SearchVolume": "500+",
-    "ViewHistory": [
-      500
-    ]
-  },
-  {
     "Rank": 25,
-    "Title": "gonzalo garcía",
-    "SearchVolume": "200+",
+    "Title": "real madrid – espanyol",
+    "SearchVolume": "5K+",
     "ViewHistory": [
-      200
+      5,
+      5,
+      5
     ]
   }
 ]
