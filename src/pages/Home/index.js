@@ -22,21 +22,6 @@ import mailLogo from '~/assets/images/mail.png';
 const cx = classNames.bind(styles);
 
 function Home() {
-    //const [name, setName] = useState('')
-    //    const navigate = useNavigate()
-    //    useEffect(() => {
-    //        axios.get('http://localhost:3307/profileserver')
-    //        .then(res => {
-    //            if(res.data.valid){
-    //                setName(res.data.user_name);
-    //            } else {
-    //                navigate('/signinsignup')
-    //            }
-    //        })
-    //        .catch(err => console.log(err))
-    //    })
-
-
     // Reddit 
     const [redditTrends, setRedditTrends] = useState([]);
 
@@ -70,25 +55,6 @@ function Home() {
         fetchNewsTrends();
     }, []);
 
-
-    // Trend Category xu huong
-    //const [categoryTrends, setCategoryTrends] = useState([]);
-
-    //useEffect(() => {
-        // Fetch dữ liệu từ backend API
-    //    const fetchCategoryTrends = async () => {
-    //        try {
-    //            const response = await axios.get('http://localhost:4900/api/top-categories');
-    //            setCategoryTrends(response.data);
-    //        } catch (error) {
-    //            console.error('Error fetching data:', error);
-    //        }
-    //    };
-    //    fetchCategoryTrends();
-    //}, []);
-
-
-
     // Youtube
     const [youtubeTrends, setYoutubeTrends] = useState([]);
 
@@ -121,11 +87,10 @@ function Home() {
 
         fetchTwitterData();
     }, []); // Chạy một lần khi component được render
+   
 
-
-    const [googleTrends, setGoogleTrends] = useState([]);
-
-    // Google
+    // Google Trends
+     const [googleTrends, setGoogleTrends] = useState([]);
     useEffect(() => {
         const fetchGoogleTrendsData = async () => {
             try {
@@ -190,6 +155,7 @@ function Home() {
                             <p>No TikTok trends available</p>
                         )}
                     </div>
+                    
                 </div>
 
             </div>

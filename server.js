@@ -186,6 +186,31 @@ app.get('/top-headlines', async (req, res) => {
     }
 });
 
+//
+//app.get("/ggtopics", async (req, res) => {
+//  try {
+//    const url = "https://trends.google.com/trends/explore?geo=VN&hl=en-US";
+//    const { data } = await axios.get(url, {
+//        headers: {
+//            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+//        }
+//    });
+//   await new Promise(resolve => setTimeout(resolve, 1000));
+//    const $ = cheerio.load(data);
+
+//    const items = [];
+//    $(".widget-container .item").each((i, el) => {
+//      items.push($(el).text().trim());
+//   });
+
+//    res.json({ items });
+//  } catch (err) {
+//    console.error("Lỗi crawl:", err.message);
+//    res.status(500).json({ error: err.message });
+//  }
+//});
+
+
 // Chức năng gửi mail góp ý
 app.use(bodyParser.urlencoded({ extended: true }));
 

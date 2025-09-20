@@ -192,7 +192,7 @@ const fetchCategoryTrends = async () => {
             categoryTrendData.push({ Rank: i + 1, Title: title, SearchVolume: searchVolume });
         }
     } catch (error) {
-        console.error("Error fetching Topic Trends:", error);
+        console.error("Lỗi tải chủ đề xu hướng: ", error);
     } finally {
         if (driver) {
             await driver.quit(); // Đóng trình duyệt

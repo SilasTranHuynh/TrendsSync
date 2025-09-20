@@ -83,9 +83,9 @@ const fetchTwitterTrends = async () => {
             });
         });
 
-        console.log("Twitter Trends data fetched successfully!");
+        console.log("Lấy dữ liệu xu hướng tweets X thành công!");
     } catch (error) {
-        console.error("Error fetching Twitter Trends:", error.message);
+        console.error("Lỗi lấy dữ liệu:", error.message);
     }
 };
 
@@ -96,7 +96,7 @@ app.get("/api/twitter-trends", (req, res) => {
         const data = JSON.parse(fs.readFileSync(nowFile));
         res.json(data);
     } else {
-        res.status(404).json({ message: "No data available" });
+        res.status(404).json({ message: "Không có data khả dụng." });
     }
 });
 

@@ -79,14 +79,14 @@ const RedditSection = ({ redditContents }) => (
     </div>
 );
 
-// Main App component
+// 
 function PostReddit() {
     const [currentHour, setCurrentHour] = useState("Now");
     const [redditData, setRedditData] = useState([]);
     const [historyFiles, setHistoryFiles] = useState([]);
     const [loading, setLoading] = useState(false);
 
-    // Fetch available history files
+    // Tải file lịch sử
     useEffect(() => {
         axios
             .get("http://localhost:3000/api/reddit-trends/history")
@@ -94,7 +94,7 @@ function PostReddit() {
             .catch((error) => console.error("Error fetching history files:", error));
     }, []);
 
-    // Fetch data for current hour or selected history file
+    // Lấy dữ liệu cho thời điểm hiện tại hoặc tệp lịch sử đã chọn
     const fetchRedditData = async (hourOrFileUrl) => {
         setLoading(true);
         try {
@@ -104,14 +104,14 @@ function PostReddit() {
             const response = await axios.get(endpoint);
             setRedditData(response.data);
         } catch (error) {
-            console.error("Error fetching Reddit data:", error);
+            console.error("Lỗi khi tải dữ liệu Reddit: ", error);
             setRedditData([]);
         } finally {
             setLoading(false);
         }
     };
 
-    // Fetch data when currentHour changes
+    // Lấy dữ liệu khi currentHour thay đổi
     useEffect(() => {
         fetchRedditData(currentHour);
     }, [currentHour]);
@@ -136,7 +136,7 @@ function PostReddit() {
 
             {/* Reddit Posts Section */}
             {loading ? (
-                <p className={cx("loading")}>Loading data...</p>
+                <p className={cx("loading")}>Tải dữ liệu...</p>
             ) : (
                 <RedditSection redditContents={redditData} />
             )}
