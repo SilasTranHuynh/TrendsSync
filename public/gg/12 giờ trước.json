@@ -1,74 +1,58 @@
 [
   {
     "Rank": 1,
-    "Title": "man utd đấu với chelsea",
-    "SearchVolume": "200K+",
+    "Title": "arsenal đấu với man city",
+    "SearchVolume": "50K+",
     "ViewHistory": [
-      100,
-      100,
-      100,
-      100,
-      100,
-      100,
-      100,
-      100,
-      100,
-      100,
-      100,
-      200
+      20,
+      50,
+      50,
+      50
     ]
   },
   {
     "Rank": 2,
-    "Title": "liverpool đấu với everton",
-    "SearchVolume": "50K+",
+    "Title": "bournemouth đấu với newcastle",
+    "SearchVolume": "20K+",
     "ViewHistory": [
-      50,
-      50,
-      50,
-      50,
-      50,
-      50,
-      50,
-      50,
-      50,
-      50,
-      50,
-      50
+      10,
+      20,
+      20,
+      20
     ]
   },
   {
     "Rank": 3,
-    "Title": "real madrid đấu với espanyol",
-    "SearchVolume": "50K+",
+    "Title": "al-nassr đấu với al-riyadh",
+    "SearchVolume": "20K+",
     "ViewHistory": [
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
       20,
       20,
       20,
-      20,
-      20,
-      20,
-      20,
-      20,
-      20,
-      20,
-      20,
-      50
+      20
     ]
   },
   {
     "Rank": 4,
-    "Title": "al-nassr đấu với al-riyadh",
+    "Title": "fulham đấu với brentford",
     "SearchVolume": "10K+",
     "ViewHistory": [
-      10,
-      10,
-      10,
-      10,
-      10,
-      10,
-      10,
-      10,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
       10,
       10,
       10,
@@ -77,36 +61,20 @@
   },
   {
     "Rank": 5,
-    "Title": "brighton đấu với tottenham",
-    "SearchVolume": "20K+",
-    "ViewHistory": [
-      20,
-      20,
-      20,
-      20,
-      20,
-      20,
-      20,
-      20,
-      20,
-      20,
-      20,
-      20
-    ]
-  },
-  {
-    "Rank": 6,
-    "Title": "hoffenheim đấu với bayern",
+    "Title": "becamex tphcm đấu với catphcm",
     "SearchVolume": "10K+",
     "ViewHistory": [
       10,
       10,
       10,
-      10,
-      10,
-      10,
-      10,
-      10,
+      10
+    ]
+  },
+  {
+    "Rank": 6,
+    "Title": "bão",
+    "SearchVolume": "10K+",
+    "ViewHistory": [
       10,
       10,
       10,
@@ -115,17 +83,31 @@
   },
   {
     "Rank": 7,
-    "Title": "fulham đấu với brentford",
+    "Title": "sông lam nghệ an đấu với hồng lĩnh hà tĩnh",
+    "SearchVolume": "10K+",
+    "ViewHistory": [
+      10,
+      10,
+      10,
+      10
+    ]
+  },
+  {
+    "Rank": 8,
+    "Title": "aston villa",
     "SearchVolume": "2K+",
     "ViewHistory": [
+      1,
       2,
       2,
-      2,
-      2,
-      2,
-      2,
-      2,
-      2,
+      2
+    ]
+  },
+  {
+    "Rank": 9,
+    "Title": "torino đấu với atalanta",
+    "SearchVolume": "2K+",
+    "ViewHistory": [
       2,
       2,
       2,
@@ -133,56 +115,10 @@
     ]
   },
   {
-    "Rank": 8,
-    "Title": "verona đấu với juventus",
-    "SearchVolume": "5K+",
-    "ViewHistory": [
-      5,
-      5,
-      5,
-      5,
-      5,
-      5,
-      5,
-      5,
-      5,
-      5,
-      5,
-      5
-    ]
-  },
-  {
-    "Rank": 9,
-    "Title": "west ham đấu với crystal palace",
-    "SearchVolume": "5K+",
-    "ViewHistory": [
-      5,
-      5,
-      5,
-      5,
-      5,
-      5,
-      5,
-      5,
-      5,
-      5,
-      5,
-      5
-    ]
-  },
-  {
     "Rank": 10,
-    "Title": "al nassr",
+    "Title": "đức phúc",
     "SearchVolume": "5K+",
     "ViewHistory": [
-      5,
-      5,
-      5,
-      5,
-      5,
-      5,
-      5,
-      5,
       5,
       5,
       5,
@@ -191,17 +127,74 @@
   },
   {
     "Rank": 11,
-    "Title": "wolves đấu với leeds",
+    "Title": "newcastle",
+    "SearchVolume": "2K+",
+    "ViewHistory": [
+      2,
+      2,
+      2,
+      2
+    ]
+  },
+  {
+    "Rank": 12,
+    "Title": "xổ số miền nam ngày 21 tháng 09",
+    "SearchVolume": "20K+",
+    "ViewHistory": [
+      20,
+      20,
+      20,
+      20
+    ]
+  },
+  {
+    "Rank": 13,
+    "Title": "inter miami đấu với dc united",
+    "SearchVolume": "20K+",
+    "ViewHistory": [
+      20,
+      20,
+      20,
+      20
+    ]
+  },
+  {
+    "Rank": 14,
+    "Title": "monaco đấu với metz",
+    "SearchVolume": "500+",
+    "ViewHistory": [
+      200,
+      500,
+      500,
+      500
+    ]
+  },
+  {
+    "Rank": 15,
+    "Title": "aston villa vs",
+    "SearchVolume": "1K+",
+    "ViewHistory": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "Rank": 16,
+    "Title": "atletico madrid",
+    "SearchVolume": "500+",
+    "ViewHistory": [
+      500,
+      500,
+      500,
+      500
+    ]
+  },
+  {
+    "Rank": 17,
+    "Title": "lazio đấu với roma",
     "SearchVolume": "5K+",
     "ViewHistory": [
-      5,
-      5,
-      5,
-      5,
-      5,
-      5,
-      5,
-      5,
       5,
       5,
       5,
@@ -209,215 +202,87 @@
     ]
   },
   {
-    "Rank": 12,
-    "Title": "mu vs che",
-    "SearchVolume": "10K+",
+    "Rank": 18,
+    "Title": "nico o'reilly",
+    "SearchVolume": "200+",
     "ViewHistory": [
-      10
+      200,
+      200,
+      200,
+      200
     ]
   },
   {
-    "Rank": 13,
-    "Title": "ac milan",
-    "SearchVolume": "1K+",
+    "Rank": 19,
+    "Title": "ars",
+    "SearchVolume": "200+",
     "ViewHistory": [
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1
+      200,
+      200,
+      200
     ]
   },
   {
-    "Rank": 14,
-    "Title": "fulham",
-    "SearchVolume": "2K+",
+    "Rank": 20,
+    "Title": "manchester city",
+    "SearchVolume": "200+",
     "ViewHistory": [
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      2
+      200,
+      200,
+      200
     ]
   },
   {
-    "Rank": 15,
-    "Title": "xoilac",
+    "Rank": 21,
+    "Title": "ballon d'or 2025",
+    "SearchVolume": "200+",
+    "ViewHistory": [
+      200,
+      200,
+      200,
+      200
+    ]
+  },
+  {
+    "Rank": 22,
+    "Title": "abdukodir khusanov",
+    "SearchVolume": "200+",
+    "ViewHistory": [
+      200,
+      200,
+      200
+    ]
+  },
+  {
+    "Rank": 23,
+    "Title": "mu vs chelsea xem",
     "SearchVolume": "50K+",
     "ViewHistory": [
-      50,
-      50,
-      50,
-      50,
-      50,
-      50,
-      50,
-      50,
-      50,
       50,
       50,
       50
     ]
   },
   {
-    "Rank": 16,
-    "Title": "bang xep hang bong da anh",
-    "SearchVolume": "1K+",
-    "ViewHistory": [
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1
-    ]
-  },
-  {
-    "Rank": 17,
-    "Title": "hà nội đấu với thể công",
-    "SearchVolume": "10K+",
-    "ViewHistory": [
-      10,
-      10,
-      10,
-      10,
-      10,
-      10,
-      10,
-      10,
-      10,
-      10,
-      10,
-      10
-    ]
-  },
-  {
-    "Rank": 18,
-    "Title": "manchester united",
-    "SearchVolume": "2K+",
-    "ViewHistory": [
-      10,
-      10,
-      2
-    ]
-  },
-  {
-    "Rank": 19,
-    "Title": "xổ số miền nam ngày 20 tháng 09",
-    "SearchVolume": "100K+",
-    "ViewHistory": [
-      100,
-      100,
-      100,
-      100,
-      100,
-      100,
-      100,
-      100,
-      100,
-      100,
-      100,
-      100
-    ]
-  },
-  {
-    "Rank": 20,
-    "Title": "vũ cát tường",
-    "SearchVolume": "2K+",
-    "ViewHistory": [
-      2,
-      2,
-      2,
-      2,
-      2,
-      2,
-      2,
-      2,
-      2,
-      2,
-      2,
-      2
-    ]
-  },
-  {
-    "Rank": 21,
-    "Title": "villarreal đấu với osasuna",
-    "SearchVolume": "1K+",
-    "ViewHistory": [
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1
-    ]
-  },
-  {
-    "Rank": 22,
-    "Title": "leicester đấu với coventry",
-    "SearchVolume": "2K+",
-    "ViewHistory": [
-      2,
-      2,
-      2,
-      2,
-      2,
-      2,
-      2,
-      2
-    ]
-  },
-  {
-    "Rank": 23,
-    "Title": "v fest vietnam today",
-    "SearchVolume": "2K+",
-    "ViewHistory": [
-      2,
-      2,
-      2,
-      2,
-      2,
-      2,
-      2,
-      2
-    ]
-  },
-  {
     "Rank": 24,
-    "Title": "joão pedro",
-    "SearchVolume": "1K+",
+    "Title": "t1 vs geng",
+    "SearchVolume": "2K+",
     "ViewHistory": [
-      1
+      2,
+      2,
+      2,
+      2
     ]
   },
   {
     "Rank": 25,
-    "Title": "câu lạc bộ bóng đá manchester united",
-    "SearchVolume": "500+",
+    "Title": "ragasa",
+    "SearchVolume": "200+",
     "ViewHistory": [
-      500
+      200,
+      200,
+      200,
+      200
     ]
   }
 ]
