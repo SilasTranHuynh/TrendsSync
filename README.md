@@ -21,6 +21,8 @@ _CRUD for user database
 
 → The last two features were set as a foundation for potential future updates (if given the opportunity).
 
+** For the News section, the detailed list will not include a chart showing the ranking changes of each article, because the News API works by aggregating articles tagged as "headline" or "top" (displayed on the front page) from news sites that use its API. Therefore, the articles do not have a fixed ranking; they are only characterized as being the newest and most relevant/most viewed.
+
 For the database (CRUD: users), the structure is as follows:
 
 | Column          | Description             |
